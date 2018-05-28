@@ -1,0 +1,168 @@
+.service {
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #d3d3d3;
+	padding: 36px 5px 46px;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 20px; 
+	transition: all 0.4s;
+	background: #fff;
+	flex-grow: 1;
+	max-width: 100%;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		border-radius: 3px;
+		transform: rotate(45deg);
+		bottom: -14px;
+		left: 50%;
+		margin-left: -14px;
+		border: 1px solid transparent;
+		background: transparent;
+	}
+
+	&:after {
+		z-index: -1;
+		transition: all 0s;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 1px;
+		right: 1px;
+		height: 45px;
+		z-index: 1;
+		background: #fff;
+		transition: all 0s 0s;
+	}
+
+	&.is-active, &:hover {
+		box-shadow: $box-shadow;
+
+		&:after {
+			border: 1px solid #d3d3d3;
+			box-shadow: $box-shadow;
+			background: #fff;
+			transition: all 0.4s;
+		}
+
+		&:before {
+			background: #fff;
+			transition: all 0s 0s;
+		}
+
+	}
+
+	@media (max-width: $screen-md-max) {
+		flex-direction: row;
+		padding: 10px;
+		align-items: center;
+		margin-bottom: 0px;
+
+		&.is-active {
+			background: #f9f8f8;
+		}
+
+		&:before, &:after {
+			display: none;
+		}
+	}
+
+	&__img-holder {
+		width: 89px;
+		height: 89px;
+		margin: 0 auto;
+		margin-bottom: 23px;
+		flex: 0 0 auto; 
+
+		@media (max-width: $screen-md-max) {
+			width: 40px;
+			height: 40px;
+			margin: 0 10px 0 0;
+		}
+	}
+
+	&__title-holder {
+		text-align: center;
+
+		@media (max-width: $screen-md-max) {
+			text-align: left;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 25px;
+
+		@media (max-width: $screen-sm-max) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	&__img {
+		width: 89px;
+		height: 89px;
+		vertical-align: middle;
+		text-align: center;
+
+		@media (max-width: $screen-md-max) {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+		}
+
+		svg, img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: 100%;
+
+		&--instruments {
+			fill: #ee530e; 
+		}
+
+		&--electric-light {
+			fill: #ffbb02;
+		}
+
+		&--crane {
+			fill: #0802ff;
+		}
+
+		&--broom {
+			fill: #46cd38;
+		}
+
+		&--signaling {
+			fill: #ee530e;
+		}
+
+		&--video {
+			stroke: #ffbb02;
+		}
+
+		&--install-counter {
+			fill: #0802ff;
+		}
+
+		&--check-counter {
+			fill: #29c519;
+			stroke: #29c519;
+		}
+	}
+}

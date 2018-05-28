@@ -1,0 +1,19 @@
+<nav class="aside-nav">
+    <ul class="aside-nav__list">
+        <li class="aside-nav__item @@if (page == 'about') {aside-nav__item--active}">
+            <a class="aside-nav__link" href="#">
+                <div class="aside-nav__text">О проекте</div>
+            </a>
+        </li>
+        <li class="aside-nav__item @@if (page == 'faq') {aside-nav__item--active}">
+            <a class="aside-nav__link" href="#">
+                <div class="aside-nav__text">Часто задаваемые вопросы </div>
+            </a>
+        </li>
+        <li class="aside-nav__item @@if (page == 'contacts') {aside-nav__item--active}">
+            <a class="aside-nav__link" href="#">
+                <div class="aside-nav__text">Контакты</div>
+            </a>
+        </li>
+    </ul>
+</nav>

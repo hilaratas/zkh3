@@ -1,0 +1,7 @@
+.footer-free {
+	margin-top: 60px;
+
+	@media (max-width: $screen-sm) {
+		margin-top: 50px;
+	}
+}

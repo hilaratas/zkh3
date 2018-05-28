@@ -1,0 +1,164 @@
+﻿@import "variables";
+
+@import "bootstrap/mixins";
+@import "components/custom_mixins";
+@import "../tmp/Iconfont/iconfont";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+//@import "bootstrap/print";
+
+//components
+@import "components/blocks/reset"; // Надо
+@import "components/blocks/page"; // Надо
+@import "components/blocks/header"; // Надо
+@import "components/blocks/common"; // Надо
+@import "components/blocks/slogan"; // Надо
+@import "components/blocks/cmn-toggle-switch"; // Надо
+@import "components/blocks/footer"; // Надо
+@import "components/blocks/footer-free"; // Надо
+@import "components/blocks/main-menu"; //надо
+@import "components/blocks/main-menu-footer"; //надо
+@import "components/blocks/footer-last-line"; //надо
+@import "components/blocks/copyright"; //надо
+@import "components/blocks/footer-last-menu"; //надо
+@import "components/vendor/owl.carousel"; //надо
+@import "components/vendor/slick"; //надо
+@import "components/vendor/nouislider"; //надо
+@import "components/blocks/footer-services"; //надо
+@import "components/blocks/enter-block"; //надо
+@import "components/blocks/enter-soc"; //надо
+@import "components/blocks/header-menu"; //надо
+@import "components/blocks/section"; //надо
+@import "components/blocks/title"; //надо
+@import "components/blocks/lenta1"; //надо
+@import "components/blocks/lenta-item-type1";
+@import "components/blocks/lenta2"; //надо
+// @import "components/blocks/lenta3"; //надо
+@import "components/blocks/lenta4"; //надо
+@import "components/blocks/lenta5"; //надо
+@import "components/blocks/item2"; //надо
+@import "components/blocks/item3"; //надо
+@import "components/blocks/form"; //Надо
+@import "components/blocks/input"; //Надо
+@import "components/blocks/checkbox"; //Надо
+@import "components/blocks/radio"; //Надо
+@import "components/blocks/button"; //Надо
+@import "components/blocks/select"; //Надо
+@import "components/blocks/banner";  //надо
+@import "components/blocks/text"; //Надо
+@import "components/blocks/row"; //Надо
+@import "components/blocks/oplata"; //Надо
+@import "components/blocks/tab-menu";
+@import "components/blocks/tabs"; //Надо
+@import "components/blocks/breadcrumbs"; //Надо
+@import "components/blocks/list4";
+@import "components/blocks/article-wrapper"; //Надо
+@import "components/blocks/article"; //Надо
+@import "components/blocks/ya-share2"; //Надо
+@import "components/blocks/share"; //Надо
+@import "components/blocks/small-title";
+@import "components/blocks/subscribe";
+@import "components/blocks/subscribe2";
+@import "components/blocks/faq"; //Надо
+@import "components/blocks/list";
+@import "components/vendor/magnific"; //Надо
+@import "components/blocks/uslugi"; //Надо
+@import "components/blocks/usluga"; //Надо
+@import "components/blocks/icon"; //Надо
+@import "components/blocks/link"; //надо
+@import "components/blocks/table-responsive"; // Надо
+@import "components/blocks/logos";
+@import "components/blocks/logo-item";
+@import "components/blocks/pagination";
+@import "components/blocks/link-icon";
+@import "components/blocks/fullscreen-menu"; //надо
+@import "components/blocks/tabs";
+@import "components/blocks/under-main-content"; // Надо
+@import "components/blocks/mobile-table";
+@import "components/blocks/sign-up";
+@import "components/blocks/pseudo-tab-menu";
+@import "components/blocks/pseudo-tab";
+@import "components/blocks/corp-place";
+@import "components/blocks/advantages";
+@import "components/blocks/advantage";
+//@import "components/blocks/masonry";
+//@import "components/blocks/map";
+//@import "components/blocks/map-menu";
+//@import "components/blocks/map-legend";
+//@import "components/blocks/map-header";
+@import "components/blocks/wrappers";
+@import "components/blocks/slider2";
+@import "components/blocks/slider2-elem";
+@import "components/blocks/shadow-block";
+@import "components/blocks/shadow-block2";
+@import "components/blocks/login-block";
+@import "components/blocks/interactive";
+@import "components/blocks/last-update";
+@import "components/blocks/vacancy-contact";
+@import "components/blocks/administration";
+@import "components/blocks/detail";
+@import "components/blocks/photo-gallery1";
+@import "components/blocks/enter-system";
+@import "components/vendor/jquery-ui";
+@import "components/blocks/pay-tabs";
+@import "components/blocks/main-slider"; //надо
+@import "components/blocks/info-small"; //надо
+@import "components/blocks/aside-calc"; //надо
+@import "components/blocks/psevdo-table"; //надо
+@import "components/blocks/psevdo-tip"; //надо
+@import "components/blocks/services"; //надо
+@import "components/blocks/questions"; //надо
+@import "components/blocks/cabinet";
+@import "components/blocks/last-orders"; //надо
+@import "components/blocks/aside-basket"; // Надо
+@import "components/blocks/basket-container"; // Надо
+@import "components/blocks/property"; //надо
+@import "components/blocks/aside-nav"; //надо
+@import "components/blocks/aside-question"; //надо
+@import "components/blocks/order"; // надо
+@import "components/blocks/order-nav"; //надо
+@import "components/blocks/order-basket"; //надо
+@import "components/blocks/order-contacts"; //надо
+@import "components/blocks/order-description"; //надо
+@import "components/blocks/order-time"; //надо
+@import "components/blocks/order-thanks"; //надо
+@import "components/blocks/order-detail";  //надо
+@import "components/blocks/list-link"; //надо
+@import "components/blocks/menu-select"; //надо
+@import "components/blocks/popup"; //надо
+@import "components/blocks/content-block"; //надо
+@import "components/blocks/popular-services"; //пока надо
+@import "components/blocks/popular-services2"; //надо
+
+@import "components/blocks/widget"; //надо
+@import "components/blocks/service"; //надо
+@import "components/blocks/faq-button"; //надо
+@import "components/blocks/inline-align"; //надо
+@import "components/blocks/popup-toggle-menu"; //надо
+@import "components/blocks/results"; //надо
+@import "components/blocks/pay-system";
+@import "components/blocks/message";  //надо
+@import "components/blocks/masonry";  //надо
+@import "components/blocks/prev-icon";  //надо
+@import "components/blocks/feedback-form";  //надо
+@import "components/blocks/phone";  //надо
+@import "components/blocks/shadow-card";  //надо
+@import "components/blocks/payment-method";  //надо
+@import "components/blocks/shadow-cards-row";  //надо
+@import "components/blocks/card-radio";  //надо
+@import "components/blocks/order-actions";  //надо
+@import "components/blocks/order-status";  //надо
+@import "components/blocks/select-filter";  //надо
+@import "components/blocks/toddler";  //надо
+@import "components/blocks/from-what";  //надо
+@import "components/blocks/en";  //надо
+@import "components/blocks/aside-en";  //надо
+@import "components/blocks/time";  //надо
+@import "components/blocks/fixed-en";  //надо
+@import "components/blocks/fixed-quad";  //надо
+@import "components/blocks/hint-text";  //надо
+
+@import "components/blocks/service-button"; //надо
+@import "components/blocks/order-file"; //надо
+@import "components/vendor/jquery.kladr.min";

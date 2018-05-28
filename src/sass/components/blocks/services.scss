@@ -1,0 +1,184 @@
+.services {
+	margin-bottom: 40px;
+
+	&__title--wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__list {
+		margin-right: -15px;
+		margin-left: -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		max-width: 25%;
+		flex-basis: 25%;
+		text-align: center;
+		padding: 0 15px 30px;
+
+		@media (max-width: $screen-sm-max) {
+			max-width: 50%;
+			flex-basis: 50%;
+		}
+
+		@media (max-width: 639px) {
+			max-width: 100%;
+			flex-basis: 100%;
+		}
+
+	}
+
+	&__link {
+		display: block;
+		height: 100%;
+		border: 1px solid #d3d3d3 ;
+		border-radius: 3px;
+		padding: 30px 15px 15px 15px;
+		color: black;
+		text-decoration: none;
+		position: relative;
+	}
+
+	a.services__link {
+		&:hover {
+			box-shadow: 0px 0px 7px 0px rgba(135, 135, 135, 0.55);
+			.button {
+				background: #efefef;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 21px;
+		max-width: 165px;
+		margin: 0 auto;
+	}
+
+	&__icon {
+		margin-bottom: 20px;
+
+		&--house {
+			fill: #ee530e;
+		}
+
+		&--lock {
+			fill: #ffbb02;
+		}
+
+		&--speed {
+			fill: #0802ff;
+		}
+
+		&--instruments {
+			fill: #31c721;
+		}
+	}
+
+	&__button-holder {
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
+
+.services-search {
+	border-radius: 3px;
+	border: 1px solid #d3d3d3 ;
+	padding: 4px 10px;
+
+	@media (max-width:$screen-sm) {
+		float: none;
+		//margin-top: 30px;
+		margin-bottom: 30px;
+		width: 100%;
+
+		&__input {
+			width: 83%;
+		}
+	}
+
+	&__input {
+		display: inline-block;
+		vertical-align: middle;
+		border: none;
+		width: auto;
+		padding: 0;
+
+		@media (max-width:$screen-xs) {
+			width: 83%;
+		}
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		border: none;
+		background-color: white;
+		padding-top: 6px;
+		float: right;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.services--property {
+	
+	.services__text {
+		text-transform: uppercase;
+		text-align: center;
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-bottom: 40px;
+		max-width: none; 
+		line-height: 1.2;
+		position: relative;
+
+		&:after {
+			content: '';
+			height: 1px;
+			background: #d6d6d6;
+			display: block;
+			position: absolute;
+			bottom: -23px;
+			right: -5px;
+			left: -5px;
+		}
+	}
+
+	.services__icon {
+		margin-bottom: 7px;
+	}
+
+	.text {
+		text-align: left;
+
+		li {
+			&:before {
+				content: "";
+				display: block;
+				background: url("../img/checked.png") no-repeat;
+				width: 18px;
+				height: 18px;
+				top: 0;
+			}
+		}
+	}
+
+	.services__icon--crane {
+		fill: #29c519;
+	}
+
+	.services__link {
+		padding: 23px 15px 82px 15px;
+	}
+}
+

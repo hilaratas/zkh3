@@ -1,0 +1,48 @@
+.lenta5 {
+
+	&__list {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-around; 
+		margin-left: -10px;
+		margin-right: -10px;
+
+		@media (max-width: $screen-md-max) {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		max-width: 135px;
+		text-align: center;
+		margin-top: 30px;
+
+		@media (min-width: $screen-lg-min)  {
+			&:nth-child(-n+6) {
+				margin-top: 0;
+			}
+		}
+
+		@media (min-width: 481px) and (max-width: $screen-md-max) {
+			flex-basis: 33.33%;
+			max-width: 33.33%;
+
+			&:nth-child(-n+3) {
+				margin-top: 0;
+			}
+		}
+
+		@media (max-width: 480px) {
+			flex-basis: 50%;
+			max-width: 50%;
+
+			&:nth-child(-n+2) {
+				margin-top: 0;
+			}
+		}
+	}
+}

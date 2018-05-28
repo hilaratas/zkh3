@@ -1,0 +1,108 @@
+.map-legend {
+	background: $color-brand-6;
+	display: flex;
+
+	&-wrapper {
+		max-width: $screen-lg;
+		padding-left: 48px;
+		padding-right: 48px;
+		margin: 0 auto;
+		overflow-x: hidden;
+	}
+
+	&__counters-holder {
+		width: 66.66%;
+	}
+
+	&__counters {
+		display: flex;
+	}
+
+	&__counter {
+		width: 33.33%;
+		padding:  35px 0;
+		border-right: 1px solid $grey-brand-1;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: $font-size-extra-small;
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	&__count {
+		display: block;
+		margin: 0 auto;
+		color: 
+
+$color-brand-5;
+		font-size: 42px;
+		font-weight: $font-bold;
+		line-height: 1;
+	}
+
+	&__button-holder {
+		width: 33.33%;
+		text-align: center;
+		align-self: center;
+	}
+
+	&__button {
+		display: inline-block;
+		font-size: 24px;
+		line-height: $line-height-ratio;
+		font-weight: $font-medium;
+		background: 
+
+$color-brand-5;
+		color: $color-brand-6;
+		text-decoration: none;
+		padding: 20px 10px;
+		border-radius: $border-radius;
+		border: 1px solid 
+
+$color-brand-5;
+
+			&:hover {
+				border: 1px solid darken(
+
+$color-brand-5, 20%);
+				background: darken(
+
+$color-brand-5, 13%);
+			}
+	}
+
+	@media (max-width: $screen-sm-max) {
+		&-wrapper {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0; 
+			border-bottom: 1px solid $grey-brand-1;
+		}
+
+		&__button-holder {
+			padding: 10px;
+		}
+
+		&__counters {
+			border-left: 1px solid $grey-brand-1;
+		}
+
+		&__counter {
+			padding: 28px 0;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__counters-holder {
+			display: none;
+		}
+
+		&__button-holder {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,213 @@
+<div class="js-aside-basket aside-en" data-block="ensurance" id="aside-en">
+    <h2 class="title title--h3 title--bottom-no">Ваш заказ</h2>
+    <div class="aside-basket__total-count" style="display:none;" data-role="basket__total-count">Заказано 0 услуг:</div>
+    <div class="aside-basket__content-holder">
+        <form class="aside-basket__wrap" method="post" action="#">
+            <div class="aside-basket__empty" data-role="empty" style="display:none;">
+                Ваша корзина пуста.
+            </div>
+            <!--<table class="aside-basket__table no-rotate" data-role="list">
+                <tr class="aside-basket__tr">
+                    <td class="aside-basket__td aside-basket__td&#45;&#45;title">
+                        <div class="aside-basket__total">Итого</div>
+                    </td>
+                    <td class="aside-basket__td" colspan="3">
+                        <span class="aside-basket__total js-aside-basket__total" data-role="basket__total-price">99000</span>
+                        <span class="aside-basket__total-rub">руб.</span>
+                    </td>
+                </tr>
+            </table>-->
+
+             <table class="aside-basket__table no-rotate no-scroll" data-role="list">
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1001" >
+                    <td class="aside-basket__td aside-basket__td--title">
+                        <span data-role="name">Жилое помещение (квартира, комната), включая его конструктивные элементы</span>
+                        <input type="hidden" name="service[id]" value="1001" data-role="basket__count" />
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                        <span class="aside-basket__cost" data-role="price">1000</span> <br/> Руб
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                    </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1002" >
+                    <td class="aside-basket__td aside-basket__td--title">
+                        <span data-role="name">Объекты общего имущества собственников помещений в многоквартирных домах</span>
+                        <input type="hidden" name="service[id]" value="1002" data-role="basket__count "/>
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                        <span class="aside-basket__cost" data-role="price">1500</span> <br/> Руб
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                    </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1003" >
+                    <td class="aside-basket__td aside-basket__td--title">
+                        <span data-role="name">Конструктивные элементы</span>
+                        <input type="hidden" name="service[id]" value="1003" data-role="basket__count" />
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                        <span class="aside-basket__cost" data-role="price">2000</span> <br/> Руб
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                    </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1004" >
+                    <td class="aside-basket__td aside-basket__td--title">
+                        <span data-role="name">Полный пакет</span>
+                        <input type="hidden" name="service[id]" value="1004" data-role="basket__count" />
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                        <span class="aside-basket__cost" data-role="price">2500</span> <br/> Руб
+                    </td>
+                    <td class="aside-basket__td aside-basket__td--fix">
+                        <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                    </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1001" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Жилое помещение (квартира, комната), включая его конструктивные элементы</span>
+                     <input type="hidden" name="service[id]" value="1001" data-role="basket__count" />
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">1000</span> <br/> Руб
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1002" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Объекты общего имущества собственников помещений в многоквартирных домах</span>
+                     <input type="hidden" name="service[id]" value="1002" data-role="basket__count "/>
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">1500</span> <br/> Руб
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1003" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Конструктивные элементы</span>
+                     <input type="hidden" name="service[id]" value="1003" data-role="basket__count" />
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">2000</span> <br/> Руб
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1004" >
+                     <td class="aside-basket__td aside-basket__td--title">
+                         <span data-role="name">Полный пакет</span>
+                         <input type="hidden" name="service[id]" value="1004" data-role="basket__count" />
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix">
+                         <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                         <span class="aside-basket__cost" data-role="price">2500</span> <br/> Руб
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix">
+                         <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                     </td>
+                 </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1001" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Жилое помещение (квартира, комната), включая его конструктивные элементы</span>
+                     <input type="hidden" name="service[id]" value="1001" data-role="basket__count" />
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">1000</span> <br/> Руб
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1002" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Объекты общего имущества собственников помещений в многоквартирных домах</span>
+                     <input type="hidden" name="service[id]" value="1002" data-role="basket__count "/>
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">1500</span> <br/> Руб
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1003" >
+                 <td class="aside-basket__td aside-basket__td--title">
+                     <span data-role="name">Конструктивные элементы</span>
+                     <input type="hidden" name="service[id]" value="1003" data-role="basket__count" />
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                     <span class="aside-basket__cost" data-role="price">2000</span> <br/> Руб
+                 </td>
+                 <td class="aside-basket__td aside-basket__td--fix">
+                     <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                 </td>
+                </tr>
+                <tr class="aside-basket__tr" data-role="basket__elem" data-elem-id="1004" >
+                     <td class="aside-basket__td aside-basket__td--title">
+                         <span data-role="name">Полный пакет распределительной</span>
+                         <input type="hidden" name="service[id]" value="1004" data-role="basket__count" />
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix">
+                         <input type="number" name="service[count]" value='1' step='1' min='1' class="input input--small input--fill input--no-ellipsis aside-basket__count" data-role="basket__count">
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix1 aside-basket__td--fix">
+                         <span class="aside-basket__cost" data-role="price">2500</span> <br/> Руб
+                     </td>
+                     <td class="aside-basket__td aside-basket__td--fix">
+                         <span class="aside-basket__delete" data-role="basket__delete"><i class="aside-basket__delete-space"></i></span>
+                     </td>
+                 </tr>
+                <tr class="aside-basket__tr">
+                    <td class="aside-basket__td aside-basket__td--title">
+                        <div class="aside-basket__total">Итого</div>
+                    </td>
+                    <td class="aside-basket__td" colspan="3">
+                        <span class="aside-basket__total js-aside-basket__total" data-role="basket__total-price">99000</span>
+                        <span class="aside-basket__total-rub">руб.</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <a href="#aside-basket" class="fixed-quad visible-xs" id="js-go-to-href">Корзина</a>
+</div>

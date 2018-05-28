@@ -1,0 +1,556 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-cabinet">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<div class="breadcrumbs__list">
+						<div class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></div>
+						<div class="breadcrumbs__item"><span class="breadcrumbs__last">Личный кабинет</span></div>
+					</div>
+				</nav>
+				<h1 class="title title--h1 title--main">Личный кабинет</h1>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+				
+				@@include('./menu-select.html')
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+
+						<div class="row">
+							<div class="col-sm-8 col-md-9 cabinet-edit">
+								<div class="cabinet">
+									<div class="cabinet-left">
+										<div class="cabinet-left__avatar">
+											<img src="./img/administration-no-foto.png" class="cabinet-left__img">
+										</div>
+										<button class="button cabinet-left__btn">
+											Выбрать...
+										</button>
+									</div>
+									<div class="cabinet-right">
+										<div class="title title--h3 cabinet-right__title">
+											Иванов Александр Сергеевич
+										</div>
+										<form class="form js-form-validate cabinet-edit-form js-form-kladr" action="#" id="js-form-cabinet-edit">
+											<div class="cabinet-edit-form__list">
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="email" class="cabinet-edit-form__label">Email</label>
+														<div class="input--wrapper">
+															<input type="email" id="email" name="email" class="input input--fill required" value="alex.ivanov@gmail.com" placeholder="" data-msg-required="Поле не заполнено" data-msg-email="Адрес некорректен">
+														</div>
+													</div>
+												</div>
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="tel" class="cabinet-edit-form__label">Домашний телефон:</label>
+														<div class="input--wrapper">
+															<input type="tel" id="tel" name="tel" class="input input--fill required js-mask-tel" value="+7 (916) 123-45-67" placeholder="+7 (___) ___-____" data-msg-required="Поле не заполнено">
+														</div>
+													</div>
+												</div>
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="mobl" class="cabinet-edit-form__label">Мобильный телефон:</label>
+														<div class="input--wrapper">
+															<input type="tel" id="mobl" name="mobl" class="input input--fill required js-mask-tel js-popup-mobile-change" value="+7 (916) 123-45-67"  placeholder="+7 (___) ___-____" readonly tabindex="-1" data-href="#popup-mobile-change">
+														</div>
+													</div>
+												</div>
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="has_lk" class="cabinet-edit-form__label">У меня есть лицевой счет ВЦКП:</label>
+													
+														<label class="checkbox">
+															<input type="checkbox" id="has_lc" name="has_lc" checked>
+															<span class="checkbox__indicator"></span>
+														</label>
+													
+													</div>
+
+													<script>
+														var newLcTemplate = '<div class="cabinet-edit-form__list js-lc-data__context" data-action="/ajax/form-ajax-lc-data.html" data-method="GET"><input type="hidden" name="lc[%next%][number]" class="js-lc-data__number" id="js-lc-data__number-%next%" value="%next%"><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__lc-%next%" class="cabinet-edit-form__label">Лицевой счет:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow"><input name="lc[%next%][lc]" class="input input--fill js-mask-lk js-lc-data__lc js-lc-data__empty-full" id="js-lc-data__lc-%next%" placeholder="_________"></div><div class="lenta4__item lenta4__item--no-grow minus--wrapper"><button type="button" class="hidden js-lc-data__remove"></button> <button type="button" class="button button--no-fill cabinet-edit-form__minus js-lc-data__modal">-</button></div></div></div></div></div></div><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__city-%next%" class="cabinet-edit-form__label">Город:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow lenta4__item--minus"><input name="lc[%next%][city]" class="input input--fill js-lc-data__city js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__city-%next%" readonly></div></div></div></div></div></div><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__street-%next%" class="cabinet-edit-form__label">Улица:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow lenta4__item--minus"><input name="lc[%next%][street]" class="input input--fill js-lc-data__street js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__street-%next%" readonly></div></div></div></div></div></div><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__house-%next%" class="cabinet-edit-form__label">Дом:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow lenta4__item--minus"><input name="lc[%next%][house]" class="input input--fill js-lc-data__house js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__house-%next%" readonly></div></div></div></div></div></div><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__housing-%next%" class="cabinet-edit-form__label">Стр./корпус:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow lenta4__item--minus"><input name="lc[%next%][housing]" class="input input--fill js-lc-data__housing js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__housing-%next%" readonly></div></div></div></div></div></div><div class="cabinet-edit-form__item"><div class="form__row"><label for="js-lc-data__flat-%next%" class="cabinet-edit-form__label">Квартира:</label><div class="input--wrapper"><div class="lenta4"><div class="lenta4__list lenta4__list--nowrap lenta4__list--8px"><div class="lenta4__item lenta4__item--grow lenta4__item--minus"><input name="lc[%next%][flat]" class="input input--fill js-lc-data__flat js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__flat-%next%" readonly></div></div></div></div></div></div></div>';
+													</script>
+												</div>
+
+												<!-- Если у "У меня есть лицевой счет ВЦКП" стоит галка, то на id="js-lc-data" надо повесить "style='display: none'"-->
+												<div class="cabinet-edit-form__item" id="js-lc-data" data-next="3" >
+
+													<!-- На запрограммированном сайте заменить data-method на POST -->
+													<div class="cabinet-edit-form__list js-lc-data__context"  data-action="/ajax/form-ajax-lc-data.html" data-method="GET">
+														<input type="hidden" name="lc[0][number]" class="js-lc-data__number" id="js-lc-data__number-0" value="0">
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																
+																<label for="js-lc-data__lc-0" class="cabinet-edit-form__label">Лицевой счет: (пример, когда данные подтянутся)</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow">
+																				<input type="text" name="lc[0][lc]" class="input input--fill js-mask-lk js-lc-data__lc js-lc-data__empty-full" id="js-lc-data__lc-0" value="" placeholder="_________">
+																			</div>
+																			<div class="lenta4__item lenta4__item--no-grow minus--wrapper">
+																				<button type="button" class="hidden js-lc-data__remove"></button>
+																				<button type="button" class="button button--no-fill cabinet-edit-form__minus js-lc-data__modal">-</button>
+																			</div>
+																		</div>	
+																	</div>
+																	
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__city-0" class="cabinet-edit-form__label">Город:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[0][city]" class="input input--fill js-lc-data__city js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__city-0" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__street-0" class="cabinet-edit-form__label">Улица:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[0][street]" class="input input--fill js-lc-data__street js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__street-0" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__house-0" class="cabinet-edit-form__label">Дом<span class="cabinet-edit-form__hidden-940-less">:</span>  <br class="cabinet-edit-form__hidden-940-less"><span class="hint-text">корпус/ строение/ литера</span><span class="cabinet-edit-form__hidden-941-more">:</span></label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[0][house]" class="input input--fill js-lc-data__house js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__house-0" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__flat-0" class="cabinet-edit-form__label">Квартира:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[0][flat]" class="input input--fill js-lc-data__flat js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__flat-0" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- На запрограммированном сайте заменить data-method на POST -->
+													<div class="cabinet-edit-form__list js-lc-data__context"  data-action="/ajax/form-ajax-lc-data-false.html" data-method="GET">
+														<input type="hidden" name="lc[1][number]" class="js-lc-data__number" id="js-lc-data__number-1" value="0">
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																
+																<label for="js-lc-data__lc-1" class="cabinet-edit-form__label">Лицевой счет: (пример, когда данные для ЛС не найдены)</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow">
+																				<input type="text" name="lc[1][lc]" class="input input--fill js-mask-lk js-lc-data__lc js-lc-data__empty-full" id="js-lc-data__lc-1" value="" placeholder="_________">
+																			</div>
+																			<div class="lenta4__item lenta4__item--no-grow minus--wrapper">
+																				<button type="button" class="hidden js-lc-data__remove"></button>
+																				<button type="button" class="button button--no-fill cabinet-edit-form__minus js-lc-data__modal">-</button>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__city-1" class="cabinet-edit-form__label">Город:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[1][city]" class="input input--fill js-lc-data__city js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__city-0" value='Этот город будет стерт' readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__street-1" class="cabinet-edit-form__label">Улица:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[1][street]" class="input input--fill js-lc-data__street js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__street-0" value='Эта улица будет стерта' readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__house-1" class="cabinet-edit-form__label">Дом<span class="cabinet-edit-form__hidden-940-less">:</span>  <br class="cabinet-edit-form__hidden-940-less"><span class="hint-text">корпус/ строение/ литера</span><span class="cabinet-edit-form__hidden-941-more">:</span></label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[1][house]" class="input input--fill js-lc-data__house js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__house-0" value='Этот дом будет стерт' readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__flat-1" class="cabinet-edit-form__label">Квартира:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[1][flat]" class="input input--fill js-lc-data__flat js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__flat-0"  value='Эта квартира будет стерта' readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- На запрограммированном сайте заменить data-method на POST -->
+													<div class="cabinet-edit-form__list js-lc-data__context"  data-action="/ajax/form-ajax-lc-data.html1" data-method="GET">
+														<input type="hidden" name="lc[2][number]" class="js-lc-data__number" id="js-lc-data__number-2" value="0">
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																
+																<label for="js-lc-data__lc-2" class="cabinet-edit-form__label">Лицевой счет: (пример, ошибка сервера)</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow">
+																				<input type="text" name="lc[2][lc]" class="input input--fill js-mask-lk js-lc-data__lc js-lc-data__empty-full" id="js-lc-data__lc-2" value="" placeholder="_________">
+																			</div>
+																			<div class="lenta4__item lenta4__item--no-grow minus--wrapper">
+																				<button type="button" class="hidden js-lc-data__remove"></button>
+																				<button type="button" class="button button--no-fill cabinet-edit-form__minus js-lc-data__modal">-</button>
+																			</div>
+																		</div>	
+																	</div>
+																	
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__city-2" class="cabinet-edit-form__label">Город:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[2][city]" class="input input--fill  js-lc-data__city js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__city-2" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__street-2" class="cabinet-edit-form__label">Улица:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[2][street]" class="input input--fill js-lc-data__street js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__street-2" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__house-2" class="cabinet-edit-form__label">Дом<span class="cabinet-edit-form__hidden-940-less">:</span>  <br class="cabinet-edit-form__hidden-940-less"><span class="hint-text">корпус/ строение/ литера</span><span class="cabinet-edit-form__hidden-941-more">:</span></label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[2][house]" class="input input--fill js-lc-data__house js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__house-2" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="cabinet-edit-form__item">
+															<div class="form__row">
+																<label for="js-lc-data__flat-2" class="cabinet-edit-form__label">Квартира:</label>
+																<div class="input--wrapper">
+																	<div class="lenta4">
+																		<div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+																			<div class="lenta4__item lenta4__item--grow lenta4__item--minus">
+																				<input type="text" name="lc[2][flat]" class="input input--fill js-lc-data__flat js-lc-data__empty js-lc-data__empty-full" id="js-lc-data__flat-2" value="" readonly>
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Если у "У меня есть лицевой счет ВЦКП" стоит галка, то на id="js-lc-data__add-holder" надо повесить "style='display: none'"-->
+												<div class="cabinet-edit-form__list inline-align inline-align--right" id="js-lc-data__add-holder">
+													<button type="button" class="button button--no-fill cabinet-edit-form__add-lc" id="js-lc-data__add">Добавить новый лицевой счет</button>
+												</div>
+												
+
+
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="city" class="cabinet-edit-form__label">Город:</label>
+														<div class="input--wrapper">
+															<input type="text" id="city" name="city" class="input input--fill js-form-validate__city js-kladr-form__for-copy" value="Санкт-Петербург" readonly placeholder="" autocomplete="off" required data-kladr-type="city" data-kladr-id="7800000000000" required>
+															<input type="hidden" name="kladrCityId" class="js-kladr-form__copy" value="">
+														</div>
+													</div>
+												</div>
+
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="street" class="cabinet-edit-form__label">Улица:</label>
+														<div class="input--wrapper">
+															<input type="text" id="street" name="street" class="input input--fill js-form-validate__street js-kladr-form__for-copy" value="Александра Невского ул." placeholder="" autocomplete="off" data-kladr-type="street" data-kladr-id="78000000000004000" required>
+															<input type="hidden" name="kladrStreetId" class="js-kladr-form__copy" value="">
+														</div>
+													</div>
+												</div>
+
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="house" class="cabinet-edit-form__label">Дом<span class="cabinet-edit-form__hidden-940-less">:</span>  <br class="cabinet-edit-form__hidden-940-less"><span class="hint-text">корпус/ строение/ литера</span><span class="cabinet-edit-form__hidden-941-more">:</span></label>
+														<div class="input--wrapper">
+															<input type="text" id="house" name="house" class="input input--fill js-form-validate__house js-kladr-form__for-copy" value="" placeholder="" autocomplete="off" data-kladr-type="building" required>
+															<input type="hidden" name="kladrHouseId" class="js-kladr-form__copy" value="">
+														</div>
+													</div>
+												</div>
+
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="flat" class="cabinet-edit-form__label">Квартира:</label>
+														<div class="input--wrapper">
+															<input type="text" id="flat" name="flat" class="input input--fill" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true">
+														</div>
+													</div>
+												</div>
+
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="checkbox1" class="cabinet-edit-form__label">Подписка на рассылку:</label>
+													
+														<label class="checkbox">
+															<input type="checkbox" id="checkbox1" name="checkbox">
+															<span class="checkbox__indicator" ></span>
+														</label>
+													
+													</div>
+												</div>
+											</div>
+											<div class="form__row cabinet-edit__btn">
+												<input type="submit" name="name" value="Сохранить" class="button button--big">
+												<input class="button button--big button--no-fill" type="reset" name="name" value="Отмена">
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="cabinet cabinet-password">
+									<div class="cabinet-left">
+									</div>
+									<div class="cabinet-right">
+										<div class="title title--h4 title--medium cabinet-right__title">
+											Изменить пароль
+										</div>
+										<form class="form js-form-validate cabinet-edit-form" id="js-form-cabinet-edit">
+											<div class="cabinet-edit-form__list">
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="oldpass" class="cabinet-edit-form__label">Старый пароль:</label>
+														<div class="input--wrapper">
+															<input type="password" id="oldpass" class="input input--fill" placeholder="*******">
+														</div>
+													</div>
+												</div>
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="newpass" class="cabinet-edit-form__label">Новый пароль:</label>
+														<div class="input--wrapper">
+															<input type="password" id="newpass" class="input input--fill" placeholder="*******">
+														</div>
+													</div>
+												</div>
+												<div class="cabinet-edit-form__item">
+													<div class="form__row">
+														<label for="repeatpass" class="cabinet-edit-form__label">Подтверждение пароль:</label>
+														<div class="input--wrapper">
+															<input type="password" id="repeatpass" class="input input--fill" placeholder="*******">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form__row cabinet-edit__btn">
+												<input type="submit" name="name" value="Изменить" class="button button--big">
+												<input class="button button--big button--no-fill" type="reset" name="name" value="Отмена">
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="cabinet cabinet-soc">
+									<div class="cabinet-left">
+									</div>
+									<div class="cabinet-right">
+										<div class="title title--h4 title--medium cabinet-right__title">
+											Привязка к социальным сетям
+										</div>
+										<article class="text">
+											<p>Вы можете привязать свои аккаунты соц сетей
+												для упрощения входа на сайт</p>
+										</article>
+										<form>
+											<div class="cabinet-right__socials">
+												<div class="cabinet-right__socials--item">
+													<div class="cabinet-right__socials--img">
+														<a href="#" class="enter-soc__link enter-soc__link--fb">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-fb" })</a>
+													</div>
+													<div class="cabinet-right__socials--text">
+														Вход через Facebook
+													</div>
+													<div class="cabinet-right__socials--btn">
+														<input class="button button--gray" type="submit" name="name" value="Убрать">
+													</div>
+												</div>
+												<div class="cabinet-right__socials--item">
+													<div class="cabinet-right__socials--img">
+														<a href="#" class="enter-soc__link enter-soc__link--vk">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-vk" })</a>
+													</div>
+													<div class="cabinet-right__socials--text">
+														Вход через вКонтакте
+													</div>
+													<div class="cabinet-right__socials--btn">
+														<input class="button button--gray" type="submit" name="name" value="Привязать">
+													</div>
+												</div>
+												<div class="cabinet-right__socials--item">
+													<div class="cabinet-right__socials--img">
+														<a href="#" class="enter-soc__link enter-soc__link--od">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-od" })</a>
+													</div>
+													<div class="cabinet-right__socials--text">
+														Вход через Одноклассники
+													</div>
+													<div class="cabinet-right__socials--btn">
+														<input class="button button--gray" type="submit" name="name" value="Привязать">
+													</div>
+												</div>
+												<div class="cabinet-right__socials--item">
+													<div class="cabinet-right__socials--img">
+														<a href="#" class="enter-soc__link enter-soc__link--hand">@@include('./icon.html', { "class": "icon icon--soc", "width" : "28", "height" : "28", "name" : "icon-hand" })</a>
+													</div>
+													<div class="cabinet-right__socials--text">
+														Вход через ГосУслуги
+													</div>
+													<div class="cabinet-right__socials--btn">
+														<input class="button button--gray" type="submit" name="name" value="Привязать">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<aside class="col-sm-4 col-md-3">
+								<nav class="aside-nav">
+									<div class="aside-nav__list">
+										<div class="aside-nav__item aside-nav__item--active">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Общая информация</div>
+											</a>
+										</div>
+										<div class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">История заказов</div>
+											</a>
+										</div>
+										<div class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Редактирование профиля</div>
+											</a>
+										</div>
+										<div class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Выход</div>
+											</a>
+										</div>
+									</div>
+								</nav>
+								<div class="aside-question">
+									<div class="aside-question__title">
+										Возникли вопросы?
+									</div>
+									<div class="aside-question__text">
+										Связитесь с нами через форму обратной связи
+									</div>
+									<a href="#popup-feedback" class="button button--big aside-question__btn  js-popup-inline">
+										Задать вопрос
+									</a>
+								</div>
+
+								@@include('./aside-calc.html')
+								
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

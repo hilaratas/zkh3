@@ -1,0 +1,9 @@
+.shadow-cards-row {
+  display: flex;
+  //justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}

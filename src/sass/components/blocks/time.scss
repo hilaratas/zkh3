@@ -1,0 +1,34 @@
+.time {
+
+	position: relative;
+
+	&__checkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+
+	&__indicator {
+		display: block;
+		padding: 27px 10px;
+		text-align: center;
+		border: $border-gray;
+		border-radius: $border-radius;
+		box-shadow: none;
+		transition: box-shadow 0.4s;	
+	}
+
+	&__checkbox:checked + &__indicator {
+		background-color: #f4f4f4;
+	}
+
+	&__checkbox:focus + &__indicator {
+		box-shadow: $box-shadow;
+	}
+
+
+	&__indicator:hover {
+		box-shadow: $box-shadow;
+	}
+}

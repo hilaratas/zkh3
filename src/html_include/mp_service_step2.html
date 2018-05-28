@@ -1,0 +1,167 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="section__header section__header-news">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+                        <li class="breadcrumbs__item"><span class="breadcrumbs__last">Страхование</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Мунипальное страхование</h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                    
+                        <!-- Контентная часть -->
+
+                        <div class="row row--flex">
+                            <div class="col-xs-12 col-sm-8 col-md-9">
+                                <main class="main-content" role="main">
+                                    <!-- На запрограммированном сайте поменять метод на POST -->
+                                    <form class="order order--mb0 form js-form-validate" action="#" method="GET">
+                                        <div class="order__title">
+                                            Введите контактные данные
+                                        </div>
+                                        <div class="order-form"> 
+                                            <div class="order-form__text">
+                                                Заполните поля для оформления полиса:
+                                            </div>
+                                            <ul class="order-form__list">
+                                                <li class="order-contacts__item">
+                                                    <div  class="order-contacts__label">Фамилия</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="surname" class="input input--fill order-contacts__input js-form-validate__cyrillic" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="div order-contacts__label">Имя</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="name" class="input input--fill order-contacts__input js-form-validate__cyrillic" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Отчество</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="patronymic" class="input input--fill order-contacts__input js-form-validate__cyrillic" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Серия и номер паспорта</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="tel" name="seria" class="input input--fill order-contacts__input js-mask-passport" required placeholder="__ __ ______" value="">
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Дата выдачи паспорта</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <div class="form__date-holder">
+                                                            <input type="tel" name="passport_date" class="input input--fill order-contacts__input input--date js-datepicker js-mask-date js-form-validate__passport-date" required placeholder="дд.мм.гггг" data-change-Month="true" data-change-Year="true">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Дата рождения</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <div class="form__date-holder">
+                                                            <input type="tel" name="birthday" class="input input--fill order-contacts__input input--date js-datepicker js-mask-date js-form-validate__majority" value="" required placeholder="дд.мм.гггг" data-change-Month="true" data-change-Year="true" data-min-Date="01.01.1920" data-max-Date="-18y">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Пол</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <div class="select select--fill order-contacts__select">
+                                                            <select name="gender">
+                                                                <option value="m">Мужчина</option>
+                                                                <option value="w">Женщина</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Мобильный телефон</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="tel" name="mobile" class="input input--fill order-contacts__input js-mask-tel" placeholder="+7 (___) ___-__-__" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">E-mail:</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="email" name="mail" class="input input--fill order-contacts__input" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                   <div class="order-contacts__address-holder">
+                                                       <b>Адрес страхуемого объекта</b>
+                                                   </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Населенный пункт</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="city" class="input input--fill order-contacts__input" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Улица</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="street" class="input input--fill order-contacts__input" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Дом</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="house" class="input input--fill order-contacts__input order-contacts__input--house js-form-validate__hause" required>
+                                                    </div>
+                                                </li>
+                                                <li class="order-contacts__item">       
+                                                    <div class="order-contacts__label">Стр./корп</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="text" name="build" class="input input--fill order-contacts__input order-contacts__input--house js-form-validate__digits-and-cyr-chars">
+                                                    </div>  
+                                                </li>
+                                                <li class="order-contacts__item">
+                                                    <div class="order-contacts__label">Квартира</div>
+                                                    <div class="form__row order-contacts__input-holder">
+                                                        <input type="number" name="flat" class="input input--fill order-contacts__input" required data-digit="true">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order__btn row">
+                                            <button type="submit" class="button button--big">Оплатить</button>
+                                        </div>
+                                    </form>
+                                </main>
+                            </div>
+
+                            <aside class="col-xs-12 col-sm-4 col-md-3 aside-en-holder">
+                                @@include('./aside-en.html')
+                            </aside>
+                        </div>
+
+                        <!-- /Контентная часть -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+
+</section>

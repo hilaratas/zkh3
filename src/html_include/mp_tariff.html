@@ -1,0 +1,438 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section__header section__header-order">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Тарифы на услуги</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Тарифы на услуги</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <!-- Контентная часть -->
+
+                        <div class="row row--flex">
+                            <div class="col-sm-8 col-md-9">
+                                <div class="content-block">
+                                    <h2 class="title title--h3">Страхование собственного или арендованного жилья позволяет быстро получить адекватную страховую выплату и компенсировать расходы на ремонт помещения, восстановление отделочных покрытий и инженерного оборудования. </h2>
+                                    <article class="text">
+                                        <p>Страховой полис станет Вашей подушкой безопасности, в случае если квартиру зальют соседи сверху, лопнет канализационная труба во время Вашего отсутствия, возникнет пожар или в жилье проникнут воры. Страхование само по себе не является гарантом неприкосновенности имущества, но позволяет свести риск потерь к минимуму.</p>
+                                    </article>  
+                                </div>
+
+                                <main class="main-content" role="main">
+
+                                    <!-- faq -->
+                                    <div class="faq faq--level1">
+                                        <ul class="faq__list js-accordion1">
+                                            <!-- Бытовые и сервисные услуги -->
+                                            <li class="faq__item faq__item--level1 js-accordion__item1">
+                                                <div class="faq__q js-accordion__click1">
+                                                    <h2 class="title faq__title faq__title--level1">Бытовые и сервисные услуги</h2>
+                                                </div>
+                                                <div class="faq__a faq__a--level1">
+
+                                                    <div class="faq faq--level2">
+                                                        <ul class="faq__list js-accordion2">
+                                                            <!-- Бытовые и сервисные услуги -->
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Мелкий бытовой ремонт</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    <div class="uslugi js-accordion3">
+                                                                        <!-- <div class="uslugi__title-holder">
+                                                                            <h3 class=" title title--h2">Неэлектро работы</h3>
+                                                                        </div> -->
+                                                                        <div class="uslugi__item">
+                                                                            <article class="usluga js-accordion__item3">
+                                                                                <div class="usluga__header usluga__header--pointer js-accordion__click3 ">
+                                                                                    <h4 class="usluga__title title title--h3 title--bottom-no">Двери</h4>
+                                                                                    <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                                                                </div>
+                                                                                <div class="usluga__text js-accordion__toogle">
+
+                                                                                    <!-- Контент таба -->
+                                                                                    <div class="psevdo-table-wrap">
+                                                                                        <div class="psevdo-table">
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1001" data-elem-price="1000">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Жилое помещение (квартира, комната), включая его конструктивные элементы
+                                                                                                    <input type="hidden" name="service[id]" value="1001" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1000 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1002" data-elem-price="1500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Объекты общего имущества собственников помещений в многоквартирных домах
+                                                                                                    <input type="hidden" name="service[id]" value="1002" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1003" data-elem-price="2000">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Конструктивные элементы
+                                                                                                    <input type="hidden" name="service[id]" value="1003" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2000 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1004" data-elem-price="2500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Полный пакет
+                                                                                                    <input type="hidden" name="service[id]" value="1004" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- /Контент таба -->
+
+                                                                                </div>
+                                                                            </article>
+                                                                        </div>
+
+                                                                        <div class="uslugi__item">
+                                                                            <article class="usluga js-accordion__item3">
+                                                                                <div class="usluga__header usluga__header--pointer js-accordion__click3 ">
+                                                                                    <h4 class="usluga__title title title--h3 title--bottom-no">Навеска предметов интерьера</h4>
+                                                                                    <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                                                                </div>
+                                                                                <div class="usluga__text js-accordion__toogle">
+
+                                                                                    <!-- Контент таба -->
+                                                                                    <div class="psevdo-table-wrap">
+                                                                                        <div class="psevdo-table">
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1333" data-elem-price="555">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Повесить фотографию
+                                                                                                    <input type="hidden" name="service[id]" value="1333" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">555 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1334" data-elem-price="666">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Прибить гвоздик
+                                                                                                    <input type="hidden" name="service[id]" value="1334" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">666 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1335" data-elem-price="777">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Повесить люстру
+                                                                                                    <input type="hidden" name="service[id]" value="1335" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">777 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1336" data-elem-price="2500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Полный пакет (Повесить фотографию, Прибить гвоздик, Повесить люстру)
+                                                                                                    <input type="hidden" name="service[id]" value="1336" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- /Контент таба -->
+
+                                                                                </div>
+                                                                            </article>
+                                                                        </div>
+
+                                                                        <div class="uslugi__item">
+                                                                            <article class="usluga js-accordion__item3">
+                                                                                <div class="usluga__header usluga__header--pointer js-accordion__click3 ">
+                                                                                    <h4 class="usluga__title title title--h3 title--bottom-no">Сборка мебели</h4>
+                                                                                    <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                                                                </div>
+                                                                                <div class="usluga__text">
+
+                                                                                    <!-- Контент таба -->
+                                                                                    <div class="psevdo-table-wrap">
+                                                                                        <div class="psevdo-table">
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1337" data-elem-price="1200">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Собрать шкаф
+                                                                                                    <input type="hidden" name="service[id]" value="1337" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1200 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1338" data-elem-price="300">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Собрать стол
+                                                                                                    <input type="hidden" name="service[id]" value="1338" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">300 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1339" data-elem-price="200">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Собрать стул
+                                                                                                    <input type="hidden" name="service[id]" value="1339" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">200 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1340" data-elem-price="1700">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Собрать шкаф, стол и стул
+                                                                                                    <input type="hidden" name="service[id]" value="1340" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1700 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- /Контент таба -->
+
+                                                                                </div>
+                                                                            </article>
+                                                                        </div>
+
+                                                                        <!-- <div class="uslugi__title-holder">
+                                                                            <h3 class=" title title--h2">Электро работы</h3>
+                                                                        </div> -->
+                                                                        <div class="uslugi__item">
+                                                                            <article class="usluga js-accordion__item3">
+                                                                                <div class="usluga__header usluga__header--pointer js-accordion__click3 ">
+                                                                                    <h4 class="usluga__title title title--h3 title--bottom-no">Включатели / Выключатели</h4>
+                                                                                    <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                                                                </div>
+                                                                                <div class="usluga__text js-accordion__toogle">
+
+                                                                                    <!-- Контент таба -->
+                                                                                    <div class="psevdo-table-wrap">
+                                                                                        <div class="psevdo-table">
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1523" data-elem-price="700">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Поставить новый включатель
+                                                                                                    <input type="hidden" name="service[id]" value="1523" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">700 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1524" data-elem-price="500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Перенести включатель выше или ниже
+                                                                                                    <input type="hidden" name="service[id]" value="1524" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1525" data-elem-price="1500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Заменить алюминиевые провода на медные
+                                                                                                    <input type="hidden" name="service[id]" value="1525" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- /Контент таба -->
+
+                                                                                </div>
+                                                                            </article>
+                                                                        </div>
+
+                                                                        <div class="uslugi__item">
+                                                                            <article class="usluga js-accordion__item3">
+                                                                                <div class="usluga__header usluga__header--pointer js-accordion__click3 ">
+                                                                                    <h4 class="usluga__title title title--h3 title--bottom-no">Замена проводки</h4>
+                                                                                    <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                                                                </div>
+                                                                                <div class="usluga__text js-accordion__toogle">
+
+                                                                                    <!-- Контент таба -->
+                                                                                    <div class="psevdo-table-wrap">
+                                                                                        <div class="psevdo-table">
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1333" data-elem-price="555">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Повесить фотографию
+                                                                                                    <input type="hidden" name="service[id]" value="1333" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">555 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1334" data-elem-price="666">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Прибить гвоздик
+                                                                                                    <input type="hidden" name="service[id]" value="1334" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">666 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1335" data-elem-price="777">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Повесить люстру
+                                                                                                    <input type="hidden" name="service[id]" value="1335" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">777 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                            <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1336" data-elem-price="2500">
+                                                                                                <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                                                    Полный пакет (Повесить фотографию, Прибить гвоздик, Повесить люстру)
+                                                                                                    <input type="hidden" name="service[id]" value="1336" />
+                                                                                                </div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2500 Рублей</div>
+                                                                                                <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- /Контент таба -->
+
+                                                                                </div>
+                                                                            </article>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Сантехнические работы</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Клининговые услуги</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </li>
+                                            <!-- Страхование имущества -->
+                                            <li class="faq__item faq__item--level1 js-accordion__item1">
+                                                <div class="faq__q js-accordion__click1">
+                                                    <h2 class="title faq__title1 faq__title--level1">Страхование имущества</h2>
+                                                </div>
+                                                <div class="faq__a faq__a--level1">
+                                                    <ul class="faq faq--level2">
+                                                        <ul class="faq__list js-accordion2">
+
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Муниципальное страхование</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Страхование при ипотеке</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Страхование квартиры</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Страхование гражданской ответственности</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+
+                                            <!-- Установка и обслуживание приборов учета -->
+                                            <li class="faq__item faq__item--level1 js-accordion__item1">
+                                                <div class="faq__q js-accordion__click1">
+                                                    <h2 class="title faq__title1 faq__title--level1">Установка и обслуживание приборов учета</h2>
+                                                </div>
+                                                <div class="faq__a faq__a--level1">
+                                                    <ul class="faq faq--level2">
+                                                        <ul class="faq__list js-accordion2">
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">Установка приборов учета</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                            <li class="faq__item faq__item--level2 js-accordion__item2">
+                                                                <div class="faq__q js-accordion__click2">
+                                                                    <h2 class="title faq__title faq__title--level2">обслуживание приборов учета</h2>
+                                                                </div>
+                                                                <div class="faq__a faq__a--level2">
+                                                                    Контент идентичен "Бытовые и сервисные услуги" -> "Мелкий бытовой ремонт"
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- /faq -->
+
+                                </main>
+                            </div>
+
+                            <div class="col-sm-4 col-md-3  basket-container">
+                                @@include('./aside-calc.html')
+
+                                @@include('./aside-basket.html')
+                            </div>
+
+                        </div>
+                        <!-- /Контентная часть -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+
+</section>

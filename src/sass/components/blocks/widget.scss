@@ -1,0 +1,50 @@
+.widget_wrap {
+  position:fixed; top:0; left:0; bottom: 0; z-index:9999; width: 280px; padding:0px 0px 0px 0px; background:#5b5b5b; border-bottom-right-radius:10px;
+  -webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-99%,0);-ms-transform:translate(-99%,0);
+  transform:translate(-99%,0);
+}
+.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#fff; border: 8px solid #000;cursor:pointer}
+.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
+.widget_list {padding: 10px 10px 10px 20px; max-height: 100%; overflow-y: auto; }
+.widget_item{padding:0 0 10px; color: #d5d5d5; font-size: 12px;}
+.widget_link{display: block; color:#3283f8;text-decoration:none;font-size:16px;}
+.widget_link:hover{text-decoration:underline; }
+
+.nav-accordion-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+button.nav-accordion {
+  background-color: #a6a6a6;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+  background-color: #ddd;
+}
+
+div.nav-panel {
+  box-sizing: content-box;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #5b5b5b;
+  color: #fff;
+}
+
+div.nav-panel > ul {
+  padding: 10px 0 10px 30px;
+}

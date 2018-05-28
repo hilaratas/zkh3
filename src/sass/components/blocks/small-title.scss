@@ -1,0 +1,55 @@
+.small-title {
+
+	margin-bottom: 20px;
+	position: relative;
+
+	&--underline {
+		border-bottom: 1px solid $grey-brand-1;
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+	}
+
+	&__back {
+		position: absolute;
+		bottom:100%;
+		padding-bottom: 35px;
+	}
+
+	&__back-link {
+		color: $grey-brand-1;
+		@include no-decoration();
+		position: relative;
+
+		&:hover {
+			color: $grey-brand-1;
+			
+			.small-title__back-icon {
+				transform: translateX(-2px);
+			}
+
+		}
+	}
+
+	&__back-link-arrow {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		left: -30px;
+		top: 50%;
+		margin-top: -10px;
+		background: $grey-brand-1;
+		border-radius: 3px; 
+		text-align: center;
+		line-height: 20px;
+	}
+
+	&__back-icon {
+		display: inline-block;
+		fill: $grey-brand-1;
+		transform: translateX(0);
+		transition: transform $transition-duration;
+		position: relative;
+		top: 2px;
+	}
+
+}

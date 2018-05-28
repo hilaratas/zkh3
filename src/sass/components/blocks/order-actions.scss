@@ -1,0 +1,8 @@
+.order-actions {
+	.button {
+		@include button--big();
+		margin-left: 15px;
+		text-transform: capitalize;
+	}
+	
+}

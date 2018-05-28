@@ -1,0 +1,26 @@
+.nowrap {
+	white-space: nowrap;
+}
+
+.black {
+	color: #000;
+}
+
+.blue {
+	color: $color-brand-3 !important;
+}
+
+.normal {
+	font-weight: $font-normal !important;
+}
+
+.link {
+	transition: all $transition-duration;
+	text-decoration: underline;
+	color: $color-brand-3;
+			
+	&:hover {
+		color: lighten($color-brand-3, 30%);
+		text-decoration: none;
+	}
+}

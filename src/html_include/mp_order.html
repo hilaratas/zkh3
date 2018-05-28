@@ -1,0 +1,258 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-cabinet">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+						<li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Личный кабинет</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Заказы</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+
+				@@include('./menu-select.html')
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+
+						<div class="row">
+
+
+
+							<div class="col-sm-8 col-md-9">
+								<div class="section js-tabs" id="js-scroll--dev-large">
+									<div class="title title--h3">Последние заказы</div>
+
+									<div class="lenta2 lenta2--last-orders" id="js-uslugi-scroll">
+										<div class="lenta2__list lenta2__list--1-sph lenta2__list--2-bph lenta2__list--2-sm lenta2__list--2-md lenta2__list--2-lg lenta2__list--14px">
+											<div class="lenta2__item lenta2__item--flex lenta2__item--pb0 lenta2__item--service js-uslugi-item">
+									            <div class="service-button js-tab__switcher is-active">
+									                <div class="service-button__img-holder">
+									                    <div class="service-button__img">
+									                        @@include('./icon.html', { "class": "icon service__icon service__icon--instruments", "width" : "100", "height" : "100", "name" : "icon-house" })
+									                    </div>
+									                </div>
+									                <div class="service-button__title-holder">
+									                    <div class="service-button__title">
+									                        Страхование
+									                    </div>
+									                </div>
+									            </div>
+									        </div>
+									        <div class="lenta2__item lenta2__item--flex lenta2__item--pb0 lenta2__item--service js-uslugi-item">
+									            <div class="service-button js-tab__switcher">
+									                <div class="service-button__img-holder">
+									                    <div class="service-button__img">
+									                        @@include('./icon.html', { "class": "icon service__icon service__icon--broom", "width" : "100", "height" : "100", "name" : "icon-instruments" })
+									                    </div>
+									                </div>
+									                <div class="service-button__title-holder">
+									                    <div class="service-button__title">
+									                        Бытовые услуги
+									                    </div>
+									                </div>
+									                
+									            </div>
+									        </div>
+										</div>
+									</div>
+									<div id="js-scroll--dev-small"></div>
+
+									<div class="results__main-content">
+										<div class="last-orders js-tab__page is-active">
+											<table class="last-orders__table no-rotate">
+												<thead>
+												    <tr>
+												        <th class="last-orders__th last-orders__number">#</th>
+												        <th class="last-orders__th last-orders__date">Дата</th>
+												        <!-- <th class="last-orders__th">Арт.</th> -->
+												        <th class="last-orders__th">Услуга</th>
+												        <th class="last-orders__th">Адрес</th>
+												        <th class="last-orders__th">Дата начала</th>
+												        <th class="last-orders__th">Дата окончания</th>
+												        <th class="last-orders__th last-orders__th--cost">Стоимость</th>
+												        <th class="last-orders__th last-orders__lc">Лицевой счет</th>
+												        <th class="last-orders__th last-orders__source">Источник</th>
+												        <th class="last-orders__th last-orders__payment-status">Статус<br>оплаты</th>
+												    </tr>
+												</thead>
+												<tbody> 
+											        <tr id="last-orders__row--1234">
+											            <td data-label="#" class="last-orders__number">104</td>
+											            <td data-label="Дата" class="last-orders__date">14.09.2017<br>11:17</td>
+											            <!--<td>1451</td>-->
+											            <td data-label="Услуга">Полис имущество Ренесанс</td>
+											            <td data-label="Адрес">ул. Московская, д. 12, кв. 32</td>
+											            <td data-label="Дата начала" class="last-orders__date">14.09.2017</td>
+											            <td data-label="Дата окончания" class="last-orders__date">14.12.2017</td>
+											            <td data-label="Стоимость" class="last-orders__date">1119 <span class="last-orders__rub">P</span></td>
+											            <td data-label="Лицевой счет" class="last-orders__lc"></td>
+											            <td data-label="Источник">сайт</td>
+											            <td data-label="Статус оплаты">Ожидает оплаты</td>
+											        </tr>
+
+											    
+											        <tr id="last-orders__row--1234">
+											            <td data-label="#" class="last-orders__number">100</td>
+											            <td data-label="Дата" class="last-orders__date">07.09.2017<br>08:56</td>
+											            <!--<td>1451</td>-->
+											            <td data-label="Услуга">Полис имущество Ренесанс</td>
+											            <td data-label="Адрес">ул. 1, д. 1, кв. 1</td>
+											            <td data-label="Дата начала" class="last-orders__date">07.09.2017</td>
+											            <td data-label="Дата окончания" class="last-orders__date">07.12.2017</td>
+											            <td data-label="Стоимость" class="last-orders__date">4470 <span class="last-orders__rub">P</span></td>
+											            <td data-label="Лицевой счет" class="last-orders__lc"></td>
+											            <td data-label="Источник">сайт</td>
+											            <td data-label="Статус оплаты">Ожидает оплаты</td>
+											        </tr>
+												</tbody>
+										    </table>
+										    <div class="last-orders__pagination-holder">
+                                                <div class="pagination pagination--pt0 pagination--pb0">
+												    <ul class="pagination__list">
+												        <li class="pagination__item"><a href="#" class="pagination__link pagination__link--prev">&#8592;</a></li>
+												        <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link pagination__link--next">&#8594;</a></li>
+												    </ul>
+												</div>
+                                            </div>
+										</div>
+
+										<div class="last-orders js-tab__page is-inactive">
+											<table class="last-orders__table no-rotate js-last-orders__table">
+												<thead>
+													<tr>
+										                <th class="last-orders__th last-orders__toggle-holder"><i class="js-last-orders__toggle-all last-orders__toggle-all"></i></th>
+										                <th class="last-orders__th last-orders__number">#</th>
+										                <th class="last-orders__th last-orders__date">Дата</th>
+										                <th class="last-orders__th last-orders__order">Заказ</th>
+										                <th class="last-orders__th last-orders__lc">Лицевой счет</th>
+										                <th class="last-orders__th last-orders__source">Источник</th>
+										                <th class="last-orders__th last-orders__payment-status">Статус оплат</th>
+										                <th class="last-orders__th last-orders__cost">Стоимость</th>
+										                <th class="last-orders__th last-orders__order-status">Статус выполнения</th>
+										            </tr>
+												</thead>
+												<tbody>
+													<tr id="last-orders__row--1234" class="last-orders__tr js-order-block">
+										                <td data-label="" class="last-orders__toggle-holder"><i class="js-last-orders__toggle last-orders__toggle"></i></td>
+										                <td data-label="#" class="last-orders__number">144</td>
+										                <td data-label="Дата" class="last-orders__date">05.10.2017 14:01:29</td>
+										                <td data-label="Заказ" class="last-orders__order">Заказ №144</td>
+										                <td data-label="Лицевой счет" class="last-orders__lc2"></td>
+										                <td data-label="Источник">сайт</td>
+										                <td data-label="Статус оплат">Долг</td>
+										                <td data-label="Стоимость">50 <span class="last-orders__rub">P</span></td>
+										                <td data-label="Статус выполнения"><span class="last-orders__status js-order-status" data-status="closed">Закрыт</span></td>
+										                <!-- js-popup-last-orders-actions -->
+										            </tr>
+										            <tr class="last-orders__toggle-tr js-last-orders__toggle-tr">
+										                <td colspan="10" class="last-orders__p0">
+										                    <table class="order-detail order-detail--light-border order-detail--light-thead no-rotate no-scroll">
+										                        <thead>
+											                        <tr>
+											                            <th class="order-detail__cell order-detail__cell--article2">Арт.</th>
+											                            <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Услуги</th>
+											                            <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Кол-во</th>
+											                            <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Цена</th>
+											                            <th class="order-detail__cell order-detail__cell--small order-detail__cell--cost">Стоимость</th>
+											                            <th class="order-detail__cell order-detail__cell--small order-detail__cell--order-status">Статус</th>
+											                        </tr>
+										                            <tr>
+										                                <td data-label="Арт." class="order-detail__cell--article2">108</td>
+										                                <td data-label="Услуги">Установка однополюсного автоматического выключателя</td>
+										                                <td data-label="Кол-во" class="order-detail__price2">1</td>
+										                                <td data-label="Цена" class="order-detail__price2">50 <span class="order-detail__rub">Р</span></td>
+										                                <td data-label="Стоимость" class="order-detail__price2">50 <span class="order-detail__rub">Р</span></td>
+										                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="in-progress">В обработке</span></td>
+										                            </tr>
+										                        </thead>
+										                    </table>
+										                </td>
+										            </tr>
+												</tbody>
+											</table>
+											<div class="last-orders__pagination-holder">
+                                                <div class="pagination pagination--pt0 pagination--pb0">
+												    <ul class="pagination__list">
+												        <li class="pagination__item"><a href="#" class="pagination__link pagination__link--prev">&#8592;</a></li>
+												        <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+												        <li class="pagination__item"><a href="#" class="pagination__link pagination__link--next">&#8594;</a></li>
+												    </ul>
+												</div>
+                                            </div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<aside class="col-sm-4 col-md-3">
+								<nav class="aside-nav">
+									<ul class="aside-nav__list">
+										<li class="aside-nav__item aside-nav__item--active">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Общая информация</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">История заказов</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Редактирование профиля</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Выход</div>
+											</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="aside-question">
+									<div class="aside-question__title">
+										Возникли вопросы?
+									</div>
+									<div class="aside-question__text">
+										Связитесь с нами через форму обратной связи
+									</div>
+									<a href="#popup-feedback" class="button button--big aside-question__btn  js-popup-inline">
+										Задать вопрос
+									</a>
+								</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

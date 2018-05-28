@@ -1,0 +1,13 @@
+.slider2-elem {
+
+	&__title-holder {
+		margin-right: 33.33%;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		&__title-holder {
+			margin-right: 0;
+		}
+	}
+
+}

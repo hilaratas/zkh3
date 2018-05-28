@@ -1,0 +1,30 @@
+.corp-place {
+	margin: 26px 0 45px 0;
+
+	&__link-holder {
+		text-align: center;
+	}
+
+	&__link {
+		font-size: $font-size-h5;
+		color: $color-brand-1; 
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__link-holder {
+		margin-top: 1rem;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__logo {
+			padding-bottom: 30px;
+		}
+
+		&__link-holder {
+			text-align: left;
+		}
+	}
+}

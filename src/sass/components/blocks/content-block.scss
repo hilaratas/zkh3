@@ -1,0 +1,20 @@
+.content-block {
+	margin-bottom: 70px;
+
+    &--mb40 {
+      margin-bottom: 40px;
+    }
+
+    &__section {
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 50px;
+	}
+	
+}

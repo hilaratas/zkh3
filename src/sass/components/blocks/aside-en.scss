@@ -1,0 +1,92 @@
+.aside-en {
+	position: sticky;
+	top: 15px;
+	z-index: 10;
+	border: $border-width solid $grey-brand-2;
+	box-shadow: 0px 5px 15px 0px $grey-brand-2;
+	padding: 20px;
+	border-radius: $border-radius;
+	background: #f4f4f4;
+	overflow-y: auto;
+	overflow-x: hidden;
+	
+	@media (min-width: $screen-sm-min) {
+		max-height: calc(100vh - 30px);
+	}
+
+	&-holder {
+		@media (max-width: $screen-xs-max) {
+			flex-basis: 100%;
+			flex-grow: 1 !important;
+			padding-top: 30px;
+		}
+	}
+
+	&__header, &__list-holder {
+		position: relative;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: -20px;
+			right: -20px;
+			border-bottom: 1px solid $grey-brand-2;
+		}
+	}
+
+	&__rub {
+		display: inline-block;
+		font-style: normal;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 5%;
+			top: 61%;
+			display: block;
+			border-bottom: 1px solid #000;
+		}
+	}
+
+	&__row {
+		border-bottom: 10px solid transparent;
+
+		&:last-child {
+			border-bottom: 0px solid transparent;
+		}
+	}
+
+	&__name {
+		vertical-align: top;
+		font-size: 14px;
+	}
+
+	&__price {
+		padding-left: 25px;
+		vertical-align: top;
+		font-size: 14px;
+		white-space: nowrap;
+		width: 26px;
+		text-align: right;
+	}
+
+	&__itogo-holder {
+		padding-left: 25px;
+		width: 26px;
+		white-space: nowrap;
+		color: $color-brand-3;
+		font-size: 23px;
+
+		.aside-en__rub {
+			&:before {
+				border-bottom-color: $color-brand-3;
+			}
+		}
+	}
+}

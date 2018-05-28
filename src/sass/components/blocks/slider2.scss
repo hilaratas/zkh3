@@ -1,0 +1,65 @@
+.slider2 {
+
+	&-holder {
+		margin: 20px 0 55px;
+	}
+
+	&__link-holder {
+		margin-right: 80px;
+	}
+
+	&__link {
+		display: inline-block;
+		max-width: 100%;
+		background: $color-brand-4;
+		padding: 15px 22px;
+		color: $color-brand-6;
+		text-transform: uppercase;
+		font-size: $font-size-h5;
+		text-decoration: none;
+	}
+
+	.owl-nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-align: right;
+	}
+
+	.owl-next, .owl-prev {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		margin-left: 5px;
+		background: $color-brand-4;
+		box-shadow: none;
+		line-height: 0;
+		text-align: center;
+		@include vertical-align-middle();
+
+		svg {
+			vertical-align: middle;
+			fill: $color-brand-6;
+			transform: translateX(0);
+			transition: all $transition-duration;
+		}
+	}
+
+	.owl-next {
+		&:hover {
+			svg {
+				transform: translateX(3px);
+			}
+		}
+		
+	}
+
+	.owl-prev {
+		&:hover {
+			svg {
+				transform: translateX(-3px);
+			}
+		}
+	}
+}

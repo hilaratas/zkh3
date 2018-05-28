@@ -1,0 +1,21 @@
+.enter-block {
+	
+	display: inline-block;
+	vertical-align: top;
+
+	&--margin {
+		margin-right: 20px;
+	}
+
+	&__link {
+		color: $color-brand-6;
+		line-height: 23px;
+		margin: 0 0 0 34px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+
+}

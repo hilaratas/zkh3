@@ -1,0 +1,44 @@
+.mobile-table {
+	margin: 1rem 0;
+	font-size: $font-size-h6-sm;
+	line-height: $line-height-base;
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+	
+	&__tr {
+		border-bottom: 1px solid $grey-brand-3;
+
+		&:first-child {
+			border-top: 1px solid $grey-brand-3;
+		}
+
+		&.is-head {
+			background: lighten($grey-brand-3, 13%);
+		}
+
+		@media (min-width:768px) {
+			display: table-row;
+		}
+	}
+
+	&__td {
+		word-break: break-word;
+		text-align: left;
+		padding: 10px 20px;
+
+		@media (min-width: 768px){
+			display: table-cell;
+			vertical-align: middle;
+			width: 50%;
+		}
+
+		@media (max-width: 768px){
+			&:first-child {
+				padding-bottom: 0;
+			}
+		}
+		
+		
+	}
+}

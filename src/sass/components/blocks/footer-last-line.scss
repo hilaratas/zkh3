@@ -1,0 +1,58 @@
+.footer-last-line {
+	padding-top: 10px;
+
+	&__copyholder {
+		width: 20%;
+		display: inline-block;
+		margin-left: 7px;
+
+		@media (max-width: $screen-lg) {
+			margin-left: 0;
+		}
+
+		@media (max-width: $container-desktop) {
+			display: block;
+			text-align: left;
+		}
+
+		.copyright {
+			text-align: right;
+			padding-right: 0;
+
+			&__top {
+				font-size: 10px;
+				font-family: 'Raleway', sans-serif;
+				font-weight: 300;
+				color: white;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__menu {
+		display: inline-block;
+		width: 79%;
+
+		@media (max-width: $container-desktop) {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: $screen-sm-min) {
+
+		&__copyholder {
+			width: 100%;
+			text-align: center;
+
+			.copyright {
+				text-align: center;
+			}
+		}
+
+		&__menu {
+			width: 100%;
+		}
+
+
+	}	
+}

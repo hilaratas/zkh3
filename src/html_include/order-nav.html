@@ -1,0 +1,66 @@
+<div class="select menu-select menu-select--order">
+    <select class="menu-select__nav">
+        <option value="#" @@if (step == 1) {selected=""}>Шаг 1: Корзина</option>
+        <option value="#" @@if (step == 2) {selected=""}>Шаг 2: Контактные данные</option>
+        <option value="#" @@if (step == 3) {selected=""}>Шаг 3: Описание проблемы</option>
+        <option value="#" @@if (step == 4) {selected=""}>Шаг 4: Удобное время</option>
+        <option value="#" @@if (step == 5) {selected=""}>Шаг 5: Оплата</option>
+    </select>
+</div>
+<nav class="order-nav">
+    <ul class="order-nav__list flex menu">
+        <li class="order-nav__item @@if (step == 1) {active} @@if (step > 1) {passed}">
+            <a href="#popup-login" class="order-nav__link js-popup-login">
+                <span class="order-nav__text">Корзина</span>
+            </a>
+        </li>
+        <li class="order-nav__item @@if (step == 2) {active} @@if (step > 2) {passed}">
+            @@if (step < 2) {
+                <div href="#popup-login" class="order-nav__link js-popup-login">
+                    <div class="order-nav__text">Контактные данные</div>
+                </div>
+            }
+            @@if (step >= 2) {
+                <a href="#popup-login" class="order-nav__link js-popup-login">
+                    <div class="order-nav__text">Контактные данные</div>
+                </a>
+            }
+        </li>
+        <li class="order-nav__item @@if (step == 3) {active} @@if (step > 3) {passed}">
+            @@if (step <= 3) {
+                <div class="order-nav__link">
+                    <span class="order-nav__text">Описание проблемы</span>
+                </div>
+            }
+            @@if (step > 3) {
+                <a href="#popup-login" class="order-nav__link js-popup-login">
+                    <span class="order-nav__text">Описание проблемы</span>
+                </a> 
+            }
+        </li>
+        <li class="order-nav__item @@if (step == 4) {active} @@if (step > 4) {passed}">
+            @@if (step <= 4) {
+                <div class="order-nav__link">
+                    <span class="order-nav__text">Удобное время</span>
+                </div>
+            }
+            @@if (step > 4) {
+                <a href="#popup-login" class="order-nav__link js-popup-login">
+                    <span class="order-nav__text">Удобное время</span>
+                </a>
+            }
+        </li>
+        <li class="order-nav__item order-nav__item--last @@if (step == 5) {active} @@if (step > 5) {passed}">
+            @@if (step <= 5) {
+                <div class="order-nav__link">
+                    <div class="order-nav__text">Оплата</div>
+                </div>
+            }
+            @@if (step > 5) {
+                <a href="#popup-login" class="order-nav__link js-popup-login">
+                    <span class="order-nav__text">Оплата</span>
+                </a>
+            }
+        </li>
+    </ul>
+</nav>

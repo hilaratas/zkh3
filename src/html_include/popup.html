@@ -1,0 +1,927 @@
+
+	
+	<div class="popup-feedback" id="popup-feedback">
+		<div class="popup__header-holder">
+            <div class="popup-toggle-menu">
+                <div class="popup-toggle-menu__list">
+                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Обратная связь</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="popup__form-holder">
+        	<div class="popup__response-holder popup__response-holder--feedback" id="feedback-form__response-holder"></div>
+
+			<form class="form js-form-validate" id="feedback-form" action="/ajax/form-ajax-feedback.html" method="GET">
+				<div class="form__row">
+					<label for="name" class="popup-feedback__label">Ваше имя</label>
+					<input type="text" id="name" name="name" class="input required" data-msg-required="Поле не заполнено">
+				</div>
+				<div class="form__row">
+					<label for="email" class="popup-feedback__label">Email</label>
+					<input type="email" id="email" name="email" class="input required" data-msg-required="Поле не заполнено">
+				</div>
+				<div class="form__row">
+					<label for="tel" class="popup-feedback__label">Телефон</label>
+					<input type="tel" id="tel" name="tel" class="input required" data-mask-tel data-msg-required="Поле не заполнено" placeholder="+7 (___) ___-__-__">
+				</div>
+				<div class="form__row">
+					<label for="message" class="popup-feedback__label">Сообщение:</label>
+					<textarea type="text" id="message" name="message" class="textarea required" data-msg-required="Поле не заполнено" placeholder="Введите текст"></textarea>
+				</div>
+				<div class="form__row">
+					<div class="lenta4">
+						<div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+							<div class="lenta4__item lenta4__item--shrink">
+								<label class="checkbox checkbox--vtop">
+	                                <input type="checkbox" id="agree" name="agree" required>
+	                                <span class="checkbox__indicator"></span>
+	                            </label>
+							</div>
+							<div class="lenta4__item lenta4__item--grow">
+								<label for="agree">Настоящим подтверждаю свое согласие с условиями</label><br/>
+								<!-- Если правила указаны на сайте на другой странице, то href="<ссылка на другую страницу>" и из классов убрать "js-popup-inline"  -->
+								<!-- Если правила указаны в другом поп-апе, то href="#popup-agreement" и оставить класс "js-popup-inline" -->
+								<a href="#popup-agreement" class="form__link2 js-popup-inline">Пользовательского соглашения</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__row">
+					<button type="submit" name="some" class="button button--big">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup popup-login" id="popup-login">
+		<div class="js-tabs">
+			<div class="popup__header-holder">
+				<div class="popup-toggle-menu">
+					<div class="popup-toggle-menu__list">
+						<div class="popup-toggle-menu__item"><a href="#" class="popup-toggle-menu__link js-tab__switcher is-active" data-tab="0">Вход</a></div>
+						<div class="popup-toggle-menu__item"><a href="#" class="popup-toggle-menu__link js-tab__switcher" data-tab="1">Регистрация</a></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Таб авторизации -->
+			<div class="popup-login__tab-page js-tab__page is-active">
+				<div class="popup-login__login-holder">
+					<!-- В верстке форм method="GET", на запрограммированном сайте задайте method="POST"-->
+					<form class="form js-form-validate js-form-login" action="/ajax/form-ajax-login.html" method="GET" data-reload-time-delay="3000">
+						<div class="popup__response-holder"></div>
+						<div class="form__row form__row--middle">
+							<label for="auth-tel" class="form__label form__label--mt0">Мобильный телефон:</label>
+							<input type="tel" id="auth-tel" name="tel" class="input required js-mask-tel" placeholder="+7 (___) ___-__-__">
+						</div>
+						<div class="form__row form__row--middle">
+							<label for="password" class="form__label form__label--mt0">Пароль:</label>
+							<input type="password" id="password" name="password" class="input required">
+						</div>
+						<div class="form__row form__row--middle">
+							<div class="row row--flex row--vcenter popup-login__change-order">
+								<div class="col-xs-12 col-sm-5 popup-login__forget-holder">
+									<a href="#popup-password-remind" class="form__link js-popup-inline">Забыли пароль</a>
+								</div>
+								<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup-login__submit-holder">
+									<button type="submit" class="button button--big button--xs-fw">Войти</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="popup-login__soc-holder">
+					<div class="lenta4">
+						<div class="lenta4__list lenta4__list--vcenter">
+							<div class="lenta4__item lenta4__item--grow lenta4__item--xs-100">
+								<div class="popup-login__soc-title">Авторизация через соц. сети:</div>
+							</div>
+							<div class="lenta4__item lenta4__item--shrink">
+								<div class="enter-soc enter-soc--no-top-bottom-indent">
+									<a href="#popup-social-login-fail" class="enter-soc__link enter-soc__link--fb js-popup-inline">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-fb" })</a>
+									<a href="#popup-social-login-fail" class="enter-soc__link enter-soc__link--vk js-popup-inline">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-vk" })</a>
+									<a href="#popup-social-login-fail" class="enter-soc__link enter-soc__link--od js-popup-inline">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-od" })</a>
+									<a href="#popup-social-login-fail" class="enter-soc__link enter-soc__link--hand js-popup-inline">@@include('./icon.html', { "class": "icon icon--soc", "width" : "28", "height" : "28", "name" : "icon-hand" })</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Таб авторизации -->
+
+			<!-- Таб регистрации -->
+			<div class="popup-login__tab-page js-tab__page is-inactive">
+				<div class="popup-login__form-holder">
+					<!-- В верстке форм method="GET", на запрограммированном сайте задайте method="POST"-->
+					<form class="form js-form-validate js-form-registration" action="/ajax/form-ajax-registration.html" method="GET" data-reload-time-delay="3000">
+						<div class="popup-login__vckp-holder">
+							<div class="popup__response-holder"></div>
+							<div class="form__row">
+								<div class="lenta4">
+									<div class="lenta4__list lenta4__list--8px lenta4__list--vtop lenta4__list--nowrap">
+										<div class="lenta4__item lenta4__item--shrink">
+											<label class="checkbox checkbox--vtop">
+		                                        <input type="checkbox" id="reg_in_vckp_checkbox" name="reg_in_vckp">
+		                                        <span class="checkbox__indicator"></span>
+		                                    </label>
+										</div>
+										<div class="lenta4__item lenta4__item--grow">
+											<label for="reg_in_vckp_checkbox">Я зарегистрирован(а) на сайте ВЦКП</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<label class="form__label" for="vckp_number"><span class="popup-login__vckp">Номер лицевого счета на сайте ВЦКП</span></label>
+								<input type="num" class="input js-mask-lk" name="vckp_number" id="vckp_number" disabled required placeholder="_________">
+							</div>
+							<div class="form__row">
+								<div class="popup-login__note">указывая лицевой счет вы сможете оплачивать услуги через «розовый бланк»</div>
+							</div>
+						</div>
+						<div class="popup-login__data-holder">
+							<div class="form__row form__row--middle">
+								<label for="tel" class="form__label form__label--mt0">Имя:</label>
+								<input type="text" id="tel" name="name" class="input required">
+							</div>
+							<div class="form__row form__row--middle">
+								<label for="patronymic" class="form__label form__label--mt0">Отчество:</label>
+								<input type="text" id="patronymic" name="patronymic" class="input">
+							</div>
+							<div class="form__row form__row--middle">
+								<label for="surname" class="form__label form__label--mt0">Фамилия:</label>
+								<input type="text" id="surname" name="surname" class="input required">
+							</div>
+							<div class="form__row form__row--middle">
+								<label for="tel2" class="form__label form__label--mt0">Мобильный телефон:</label>
+								<input type="tel" id="tel2" name="tel" class="input required js-mask-tel" placeholder="+7 (___) ___-__-__">
+							</div>
+							<div class="form__row form__row--middle">
+								<label for="email2" class="form__label form__label--mt0">Email:</label>
+								<input type="email" id="email2" name="email" class="input required">
+							</div>
+							<div class="form__row form__row--middle">
+								<div class="lenta4">
+									<div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+										<div class="lenta4__item lenta4__item--shrink">
+											<label class="checkbox checkbox--vtop">
+		                                        <input type="checkbox" id="soglasie" name="soglasie" required>
+		                                        <span class="checkbox__indicator"></span>
+		                                    </label>
+										</div>
+										<div class="lenta4__item lenta4__item--grow">
+											<label for="soglasie">Настоящим подтверждаю свое согласие с условиями</label><br/>
+											<a href="#popup-agreement" class="form__link2 js-popup-inline">Пользовательского соглашения</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__row form__row--middle">
+								<div class="row row--flex row--vcenter popup-login__change-order">
+									<div class="col-xs-12 col-sm-12 inline-align inline-align--right popup-login__submit-holder">
+										<button type="submit" class="button button--big button--xs-normal button--xs-fw">Зарегистрироваться</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /Таб регистрации -->
+		</div>	
+	</div>
+
+
+
+    <!-- Pop-up Изменения статуса услуги (кроме отмены) -->
+    <div class="popup" id="popup-social-login-fail">
+        <div class="popup__header-holder">
+            <div class="popup-toggle-menu">
+                <div class="popup-toggle-menu__list">
+                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Ошибка входа</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup__text-holder">
+            <div class="form__row form__row--middle">
+                Извините, данный профиль не привязан ни к одному из аккаунтов, зарегистрированных на сайте.<br>
+                Вы можете привязать профиль социальной сети к своему аккаунту в Личном кабинете сайта
+            </div>
+        </div>
+    </div>
+    <!-- /Pop-up Изменения статуса услуги (кроме отмены) -->
+
+	<!-- Pop-up Восстановление пароля -->
+	<div class="popup popup-login" id="popup-password-remind">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Восстановление пароля</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup-login__tab-page js-tab__page is-active">
+			<div class="popup-login__login-holder">
+				<form class="form js-form-validate" id="js-form-password-remind" method="GET" action="/ajax/form-ajax-password-remind.html" data-disabled-time-delay="30000">
+					<div class="popup__response-holder"></div>
+					<div class="form__row form__row--middle">
+						Введите номер своего мобильного телефона, указанного при регистрации, и через несколько минут на Ваш телефон поступит новый пароль
+					</div>
+					<div class="form__row form__row--middle">
+						<label for="tel" class="form__label">Мобильный телефон:</label>
+						<input type="tel" id="tel" name="tel" class="input js-mask-tel js-tel-for-copy required" placeholder="+7 (___) ___-__-__">
+					</div>
+					<div class="form__row form__row--middle">
+						<div class="row row--flex row--vcenter popup-login__change-order">
+							<div class="col-xs-12 col-sm-5 popup-login__forget-holder">
+								<a type="button" href="#popup-login" class="button button--big button--xs-normal button--xs-fw button--no-fill js-form-custom-reset">Отмена</a>
+							</div>
+							<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup-login__submit-holder popup-login__cancel-holder">
+								<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw">Выслать пароль</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<br><br>
+
+				<form class="form js-form-validate" id="js-form-password-confirm" method="GET" action="/ajax/form-ajax-password-confirm.html" data-reload-time-delay="0" data-reload-href="http://zkh2.dev2.msoft.su/personal/profile/edit/">
+					<div class="popup__response-holder"></div>
+					<div class="form__row form__row--middle">
+						<label for="password" class="form__label">Пароль:</label>
+						<input type="hidden" name="tel" class="js-tel-copy">
+						<input type="password" id="password" name="password" class="input required" disabled>
+					</div>
+					<div class="form__row form__row--middle">
+						<div class="row row--flex row--vcenter popup-login__change-order">
+							<!-- <div class="col-xs-12 col-sm-4 popup-login__forget-holder">
+								<a type="button" href="#popup-login" class="button button--big button--xs-normal button--xs-fw button--no-fill js-clear-and-return">Отмена</a>
+							</div> -->
+							<div class="col-xs-12 inline-align inline-align--right popup-login__submit-holder popup-login__cancel-holder">
+								<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw" disabled>Применить пароль</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /Pop-up Восстановление пароля -->
+
+	<!-- Pop-up Подтверждение регистрации -->
+	<div class="popup popup-login" id="popup-registration-confirm">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Подтверждение регистрации</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup-login__tab-page js-tab__page is-active">
+			<div class="popup-login__login-holder">
+				<form class="form js-form-validate js-form-login" data-reload-time-delay="5000" method="GET" action="/ajax/form-ajax-registration-confirm.html">
+					<div class="popup__response-holder"></div>
+					<div class="form__row form__row--middle">
+						Скоро на ваш номер придет проверочный код для регистрации.<br>
+						Введите его в поле ниже:
+					</div>
+					<div class="form__row form__row--middle">
+						<input type="text" name="code" class="input" required>
+					</div>
+					<div class="form__row form__row--middle">
+						<div class="row row--flex row--vcenter popup-login__change-order">
+							<div class="col-xs-12 col-sm-5 popup-login__forget-holder">
+								<a href="#popup-login" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-inline">Отмена</a>
+							</div>
+							<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup-login__submit-holder popup-login__cancel-holder">
+								<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- /Pop-up Подтверждение регистрации -->
+
+	<!-- Pop-up Пользовательское соглашение -->
+	<div class="popup popup-login" id="popup-agreement">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Пользовательское соглашение</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup__text-holder">
+			<div class="text">
+				<p>Настоящим я выражаю своё безусловное согласие на обработку всех моих персональных данных ООО «МКК «Юг — Автозайм», указанных в настоящей анкете, любыми способами, в том числе третьими лицами, включая сбор, систематизацию, накопление, хранение, использование, уточнение (обновление, изменение), воспроизведение, электронное копирование, обезличивание, блокирование, уничтожение, а также вышеуказанную обработку иных моих персональных данных, полученных в результате их обработки, в целях, связанных с возможностью предоставления мне услуг и продуктов ООО «Микрокредитная компания «Юг — Автозайм» и (или) информации о них, а также в целях сбора и обработки статистической информации, проведения маркетинговых исследований и создания информационных систем персональных данных ООО «МКК «Юг-Автозайм». Обработка персональных данных осуществляется следующими способами: обработка персональных данных с использованием средств автоматизации, обработка персональных данных без использования средств автоматизации (неавтоматизированная обработка). Указанное согласие на обработку персональных данных предоставлено мною на 15 лет и будет автоматически пролонгировано в случае, если за 30 календарных дней до окончания срока мною не было предоставлено письменное заявление об его отзыве. Я уведомлен, что согласие на обработку моих персональных данных, а также моих биометрических персональных данных, может быть мною отозвано посредством направления письменного заявления заказным почтовым отправлением с описью вложения по юридическому адресу ООО «МКК «Юг — Автозайм» не менее чем за 30 календарных дней до момента отзыва. Я даю согласие на предоставление ООО «МКК «Юг — Автозайм» всей имеющейся обо мне информации в объёме, в порядке и на условиях, определенных Федеральным законом «О кредитных историях» № 218-ФЗ от 30 декабря 2004 года, во все бюро кредитных историй, включенные в государственный реестр бюро кредитных историй, а также на получение кредитного отчета из выше обозначенных бюро для заключения Договора и в течение срока действия Договора. Я выражаю свое согласие на получение информации об услугах и продуктах ООО «МКК «Юг — Автозайм» любым способом, в том числе посредством SMS-сообщений, электронной почты и т. п. (в соответствии с ФЗ № 38 от 13.03.2006 «О рекламе» и ФЗ № 152 «О персональных данных» от 27.07.2006), а также согласие на получение всей имеющейся обо мне информации в бюро кредитных историй в объеме, порядке и на условиях, определенных ФЗ № 218 от 30.12.2004 «О кредитных историях». Я выражаю свое согласие ООО «МКК «Юг — Автозайм» на передачу всей имеющейся о себе информации третьим лицам. Я уведомлен и соглашаюсь с тем, что ООО «МКК «Юг — Автозайм» не несёт ответственности за возможное нецелевое использование моей персональной информации, произошедшее из-за технических неполадок в программном обеспечении, серверах или компьютерных сетях, находящихся вне контроля ООО «МКК «Юг — Автозайм». Я обязуюсь не нарушать информационную безопасность сайта ООО «МКК «Юг — Автозайм», не размещать на данном сайте заведомо недостоверную информацию, в том числе: не вносить чужие персональные данные (персональные данные третьих лиц, а также вымышленных лиц) и не размещать заведомо недостоверную информацию об адресе регистрации/адресе фактического проживания, номере(ах) телефона(ов) и т.д.</p>
+			</div>
+		</div>
+
+		<div class="popup__back-holder inline-align inline-align--center is-back-holder">
+			<a href="#popup-login" class="button button--big button--xs-normal button--xs-fw js-popup-inline">Назад к регистрации</a>
+		</div>
+
+		<div class="is-back-holder">
+			<a href="#popup-login" class="popup__close js-popup-inline">&times;</a>
+		</div>
+	</div>
+	<!-- /Pop-up Пользовательское соглашение -->
+
+	<!-- Pop-up Назначить мастера на услугу -->
+	<div class="popup" id="popup-assign-master">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Назначить агента / мастера </span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-usluga-assign-master.html" class="form js-form-validate" id="js-form-assign-master" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-id" value="" class="js-product-id">
+
+				<div class="form__row form__row--middle">
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
+					</div>
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
+					</div>
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
+					</div>
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
+					</div>
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
+					</div>
+				</div>
+				
+				<div class="form__row">
+					<div class="form__sticky-buttons-holder">
+						<div class="form__row is-may-be-sticked">
+							<div class="row row--flex row--vcenter popup__change-order">
+								<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+									<a href="#popup-login" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+								</div>
+								<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+									<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Назначить мастера на услугу -->
+
+	<!-- Pop-up Назначить агента на услугу -->
+	<!-- !!! Не копировать форму на сайт. Она нужна только для верстки -->
+	<!-- <div class="popup" id="popup-usluga-assign-agent">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Назначить агента</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-order-assign-agent.html" class="form js-form-validate" id="js-form-usluga-assign-agent" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-id" value="" class="js-product-id">
+
+				<div class="form__row form__row--middle">
+					<div class="form__row2">
+						<label for="master1" class="radio"><input type="radio" class="radio" name="agent[]" value="1" id="agent1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1</label>
+					</div>
+					<div class="form__row2">
+						<label for="master2" class="radio"><input type="radio" class="radio" name="agent[]" value="2" id="agent2" required><span class="radio__indicator"></span></label><label for="agent2">Агент 2</label>
+					</div>
+					<div class="form__row2">
+						<label for="agent3" class="radio"><input type="radio" class="radio" name="agent[]" value="3" id="agent3" required><span class="radio__indicator"></span></label><label for="agent3">Агент 3</label>
+					</div>
+					<div class="form__row2">
+						<label for="agent4" class="radio"><input type="radio" class="radio" name="agent[]" value="4" id="agent4" required><span class="radio__indicator"></span></label><label for="agent4">Агент 4</label>
+					</div>
+					<div class="form__row2">
+						<label for="agent5" class="radio"><input type="radio" class="radio" name="agent[]" value="5" id="agent5" required><span class="radio__indicator"></span></label><label for="agent5">Агент 5</label>
+					</div>
+					<div class="form__row2">
+						<label for="agent6" class="radio"><input type="radio" class="radio" name="agent[]" value="6" id="agent6" required><span class="radio__indicator"></span></label><label for="agent6">Агент 6</label>
+					</div>
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#popup-login" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div> -->
+	<!-- /Pop-up Назначить агента на услугу -->
+
+	<!-- Pop-up Изменения статуса услуги (кроме отмены) -->
+	<div class="popup" id="popup-сhange-status">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Изменение статуса услуги</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-usluga-close.html" class="form js-form-validate js-form-change-status" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-id" value="" class="js-product-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					Вы уверены, что хотите изменить статус услуги?
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Изменения статуса услуги (кроме отмены) -->
+
+	<!-- /Pop-up Изменения статуса услуги (открыть -> в обработке) -->
+	<!-- !!! Не копировать форму на сайт. Она нужна только для верстки -->
+	<div class="popup" id="popup-сhange-status-to-open">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Изменение статуса услуги на открыть</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-usluga-open.html" class="form js-form-validate js-form-change-status" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-id" value="" class="js-product-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					Вы уверены, что хотите изменить статус услуги?
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Изменения статуса услуги (открыть -> в обработке) -->
+
+	<!-- Pop-up Смена мобильного номера -->
+	<div class="popup" id="popup-mobile-change">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Изменить номер телефона</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup-login__login-holder">
+			<form class="form js-form-validate" id="js-form-mobile-change" method="GET" action="/ajax/form-ajax-mobile-change.html" data-disabled-time-delay="50000">
+				<div class="popup__response-holder"></div>
+				<div class="form__row form__row--middle">
+					Введите новый номер своего мобильного телефона и через несколько минут на Ваш телефон поступит новый пароль.
+				</div>
+				<div class="form__row form__row--middle">
+					<label for="tel" class="form__label">Мобильный телефон:</label>
+					<input type="tel" id="tel" name="tel" class="input js-mask-tel js-tel-for-copy" required placeholder="+7 (___) ___-__-__">
+				</div>
+				<div class="form__row form__row--middle">
+					<div class="row row--flex row--vcenter popup-login__change-order">
+						<div class="col-xs-12 col-sm-5 popup-login__forget-holder">
+							<button type="button" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</button>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup-login__submit-holder popup-login__cancel-holder">
+							<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw">Выслать пароль</button>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<br><br>
+
+			<form class="form js-form-validate" id="js-form-mobile-confirm" method="GET" action="/ajax/form-ajax-mobile-confirm.html" data-popup-close-time-delay="3000">
+				<div class="popup__response-holder"></div>
+				<div class="form__row form__row--middle">
+					<label for="password" class="form__label">Пароль:</label>
+					<input type="hidden" name="tel" class="js-tel-copy">
+					<input type="password" id="password" name="password" class="input required" disabled>
+				</div>
+				<div class="form__row form__row--middle">
+					<div class="row row--flex row--vcenter popup-login__change-order">
+						<div class="col-xs-12 col-sm-4 popup-login__forget-holder">
+							<button type="button" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</button>
+						</div>
+						<div class="col-xs-12 col-sm-8 inline-align inline-align--right popup-login__submit-holder popup-login__cancel-holder">
+							<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw" disabled>Применить пароль</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Смена мобильного номера -->
+	
+
+	<!-- Pop-up Изменения статуса заказа (кроме отмены) -->
+	<div class="popup" id="popup-order-сhange-status">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Изменение статуса заказа</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-order-close.html" class="form js-form-validate js-form-order-change-status" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					Вы уверены, что хотите изменить статус заказа?
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Изменения статуса заказа (кроме отмены) -->
+
+	<!-- Pop-up Добавления мастера -->
+	<div class="popup" id="popup-add-master">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Добавить мастера</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form class="form js-form-validate js-form-add-member" method="GET" action="/ajax/form-ajax-add-master.html" data-reload-time-delay="3000">
+				<div class="popup__response-holder"></div>
+				<div class="form__row form__row--middle">
+					<label for="surname" class="popup-feedback__label">Фамилия</label>
+					<input type="text" id="surname" name="surname" class="input" required>
+				</div>
+				<div class="form__row form__row--middle">
+					<label for="name" class="popup-feedback__label">Имя</label>
+					<input type="text" id="name" name="name" class="input" required>
+				</div>
+				<div class="form__row form__row--middle">
+					<label for="patronymic" class="popup-feedback__label">Отчество</label>
+					<input type="text" id="patronymic" name="patronymic" class="input">
+				</div>
+				<div class="form__row form__row--middle">
+					<label for="m-tel" class="popup-feedback__label">Телефон</label>
+					<input type="tel" id="m-tel" name="tel" class="input js-mask-tel" required placeholder="+7 (___) ___-__-__">
+				</div>
+				<div class="form__row form__row--middle">
+					<label for="profession" class="popup-feedback__label">Специальность</label>
+					<input type="text" id="profession" name="profession" class="input" required>
+				</div>
+				<div class="form__row form__row--middle inline-align inline-align--right">
+					<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw">Добавить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Добавления мастера -->
+
+	<!-- Pop-up Добавления агента -->
+	<div class="popup" id="popup-add-agent">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Добавить агента</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form class="form js-form-validate js-form-add-member" method="GET" action="/ajax/form-ajax-add-agent.html" data-reload-time-delay="3000">
+				<div class="popup__response-holder"></div>
+				<div class="form__row form__row--middle">
+					<label class="popup-feedback__label">Наименование</label>
+					<input type="text" name="name" class="input" required>
+				</div>
+				<div class="form__row form__row--middle">
+					<label class="popup-feedback__label">Адрес</label>
+					<input type="text" name="address" class="input" required>
+				</div>
+				<div class="form__row form__row--big">
+					<label class="popup-feedback__label">Телефон</label>
+					<input type="tel" name="tel" class="input js-mask-tel" required placeholder="+7 (___) ___-__-__">
+				</div>
+				<div class="form__row form__row--middle" id="js-geo-placeholder" data-next="1">
+					<div class="form__row">
+						<label class="popup-feedback__label">География обслуживания</label>
+					</div>
+					<div class="form__row form__row--big js-geo-elem">
+						<div class="lenta4">
+							<div class="lenta4__list lenta4__list--8px">
+								<div class="lenta4__item lenta4__item--grow">
+									<div class="form__row form__row--middle">
+										<input type="text" name="geo[0][district]" class="input" required placeholder="Район">
+									</div>
+									<div class="form__row form__row--middle">
+										<input type="text" name="geo[0][street]" class="input" required placeholder="Улица">
+									</div>
+									<div class="form__row form__row--middle">
+										<input type="text" name="geo[0][house]" class="input" required placeholder="Дом">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__row form__row--middle">
+					<div class="form__row form__row--middle inline-align inline-align--right">
+						<button type="button" class="button button--no-fill js-geo-add" id="js-geo-add">Добавить новый адрес обслуживания</button>
+					</div>
+				</div>
+				<div class="form__row form__row--middle inline-align inline-align--right">
+					<button type="submit" name="name" class="button button--xs-normal button--big button--fw">Сохранить</button>
+				</div>
+
+				<script>
+					var agentNewGeo =  '<div class="form__row form__row--big js-geo-elem"><div class="lenta4"><div class="lenta4__list lenta4__list--8px"><div class="lenta4__item lenta4__item--grow"><div class="form__row form__row--middle"><input name="geo[%next%][district]" class="input" required placeholder="Район"></div><div class="form__row form__row--middle"><input name="geo[%next%][street]" class="input" required placeholder="Улица"></div><div class="form__row form__row--middle"><input name="geo[%next%][house]" class="input" required placeholder="Дом"></div></div><div class="lenta4__item lenta4__item--no-grow"><button type="button" class="button button--no-fill js-geo-remove">-</button></div></div></div></div>';
+				</script>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Добавления агента -->
+
+	<!-- Pop-up Отменить услугу -->
+	<div class="popup" id="popup-cancell">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Отменить услугу</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-usluga-cancell.html" class="form js-form-validate js-form-change-status" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-id" value="" class="js-product-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					<div class="form__label">Причина отмены услуги:</div>
+					<textarea name="comment" class="textarea" required></textarea>
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Отменить услугу -->
+
+	<!-- Pop-up Отменить заказ -->
+	<div class="popup" id="popup-order-cancell">
+
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Отменить заказ</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-order-cancell.html" class="form js-form-validate js-form-order-change-status" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-ids" value="" class="js-product-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					<div class="form__label">Причина отмены заказа:</div>
+					<textarea name="comment" class="textarea" required></textarea>
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Отменить заказ -->
+
+	<!-- Pop-up Отменить заказ в списке заказов рабочего кабинета оператора -->
+	<div class="popup" id="popup-order-cancell-in-list">
+
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Отменить заказ</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="popup__form-holder">
+			<form action="/ajax/form-ajax-order-cancell.html" class="form js-form-validate js-form-order-change-status-in-list" method="GET">
+				<div class="popup__response-holder"></div>
+
+				<input type="hidden" name="order-id" value="" class="js-order-id">
+				<input type="hidden" name="product-ids" value="" class="js-product-id">
+				<input type="hidden" name="old-status" value="" class="js-old-status">
+
+				<div class="form__row form__row--middle">
+					<div class="form__label">Причина отмены заказа:</div>
+					<textarea name="comment" class="textarea" required></textarea>
+				</div>
+				
+				<div class="form__row">
+					<div class="row row--flex row--vcenter popup__change-order">
+						<div class="col-xs-12 col-sm-5 popup__cancel-holder">
+							<a href="#" class="button button--big button--xs-normal button--xs-fw button--no-fill js-popup-close">Отмена</a>
+						</div>
+						<div class="col-xs-12 col-sm-7 inline-align inline-align--right popup__submit-holder">
+							<button type="submit" class="button button--xs-normal button--big button--xs-fw">Подтвердить</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- /Pop-up Отменить заказ в списке заказов рабочего кабинета оператора -->
+
+	<!-- Pop-up Удалить ЛС -->
+	<div class="popup" id="popup-delete-lc">
+		<div class="popup__header-holder">
+			<div class="popup-toggle-menu">
+				<div class="popup-toggle-menu__list">
+					<div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Удалить лицевой счет?</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup__form-holder">
+			<div class="form">
+				<div class="form__row form__row--middle">
+					<div class="text">
+						<p>Вы уверены, что хотите открепить лицевой счет от профиля?</p>
+					</div>
+				</div>
+				<div class="form__row form__row--middle">
+		            <div class="row row--flex row--vcenter">
+		                <div class="col-xs-12 col-sm-6 popup-login__cancel-holder  inline-align inline-align--right">
+		                    <button type="button" class="button button--big button--xs-normal button--xs-fw js-popup-close button--no-fill" id="popup-delete-lc__no">Нет</button>
+		                </div>
+		                <div class="col-xs-12 col-sm-6 popup-login__forget-holder1">
+		                    <button type="button" class="button button--big button--xs-normal button--xs-fw js-popup-close" id="popup-delete-lc__yes">Да</button>
+		                </div>
+		            </div>
+		        </div>
+			</div>
+		</div>
+	</div>
+	<!-- /Pop-up Удалить ЛС -->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('./html_include/head.html', { "title" : "Мунипальное страхование" })
+</head>
+<body class="page">
+
+    <div class="page__header">
+    	@@include('./html_include/header.html')
+        @@include('./html_include/fullscreen-menu.html')
+    </div>
+
+    <div class="page__middle">
+        @@include('./html_include/mp_str.html')
+    </div>
+    
+    <div class="page__footer">
+        <div class="footer-free"></div>
+        @@include('./html_include/footer.html', {"showQuestionLine" : "true"})
+        <div class="popup">
+            @@include('./html_include/popup.html')
+        </div>
+    </div>
+
+    @@include('./html_include/widget.html')
+
+    @@include('./html_include/scripts.html')
+</body>
+</html>

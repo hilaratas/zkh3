@@ -1,0 +1,174 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-cabinet">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Список агентов</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Список агентов</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+
+				<div class="select menu-select">
+					<select class="menu-select__nav">
+						<option value="#">Профиль оператора</option>
+						<option value="#">Список заказов - бытовые услуги</option>
+						<option value="#">Список заказов - страхование</option>
+						<option value="#">Список агентов</option>
+						<option value="#">Выход</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+
+						<div class="row">
+
+							<div class="col-sm-8 col-md-9">
+								<div class="cabinet">
+									<div class="last-orders">
+										<table class="last-orders__table no-rotate">
+											<thead>
+												<tr>
+													<th>Наименование</th>
+													<th>Адрес</th>
+													<th class="last-orders__tel">Телефон</th>
+													<th>География обслуживания</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Название компании 1</td>
+													<td>Улица кораблестроителей, дом 13, офис 14</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-91</td>
+													<td>
+														Выборгский район, улица Ленина, 1<br>
+														Кронштадтский район, улица Сталина, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 1</td>
+													<td>Специальность 1</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-92</td>
+													<td>Фрунзенский район, улица 1905года, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 3</td>
+													<td>Улица кораблестроителей, дом 13, офис 13</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-93</td>
+													<td>Выборгский район, улица Ленина, 1<br>Кронштадтский район, улица Сталина, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 1</td>
+													<td>Улица кораблестроителей, дом 13, офис 11</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-91</td>
+													<td>Фрунзенский район, улица 1905года, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 2</td>
+													<td>Специальность 1</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-92</td>
+													<td>Выборгский район, улица Ленина, 1<br>Кронштадтский район, улица Сталина, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 3</td>
+													<td>Улица кораблестроителей, дом 13, офис 13</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-93</td>
+													<td>Фрунзенский район, улица 1905года, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 1</td>
+													<td>Улица кораблестроителей, дом 13, офис 11</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-91</td>
+													<td>Выборгский район, улица Ленина, 1<br>Кронштадтский район, улица Сталина, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 2</td>
+													<td>Улица кораблестроителей, дом 13, офис 11</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-92</td>
+													<td>Фрунзенский район, улица 1905года, 2</td>
+												</tr>
+												<tr>
+													<td>Название компании 3</td>
+													<td>Улица кораблестроителей, дом 13, офис 13</td>
+													<td class="last-orders__tel">+7 (0123) 456-78-93</td>
+													<td>Выборгский район, улица Ленина, 1<br>Кронштадтский район, улица Сталина, 2</td>
+												</tr>
+
+											</tbody>
+										</table>
+										<div class="last-orders__footer inline-align inline-align--right">
+											<a href="#popup-add-agent" class="button button button--big js-popup-form-ajax">Добавить агента</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<aside class="col-sm-4 col-md-3">
+								<nav class="aside-nav">
+									<ul class="aside-nav__list">
+										<li class="aside-nav__item aside-nav__item--active">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Профиль оператора</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список заказов - <br/> страхование</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список заказов - <br/> бытовые услуги</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список агентов</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Выход</div>
+											</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="aside-question">
+									<div class="aside-question__title">
+										Возникли вопросы?
+									</div>
+									<div class="aside-question__text">
+										Связитесь с нами через форму обратной связи
+									</div>
+									<a href="#popup-feedback" class="button button--big aside-question__btn  js-popup-inline">
+										Задать вопрос
+									</a>
+								</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

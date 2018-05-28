@@ -1,0 +1,273 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="section__header section__header-news">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+                        <li class="breadcrumbs__item"><span class="breadcrumbs__last">Страхование</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Мунипальное страхование</h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                    
+                        <!-- Контентная часть -->
+
+                        <div class="row row--flex">
+                            <div class="col-sm-8 col-md-9">
+                                <div class="content-block">
+                                    <div class="text">
+                                        <p>Квартира — значительное и долгожданное приобретение для каждого. Неприятности с квартирой могут вылиться в значительные убытки и хлопоты.</p>
+                                        <p>Застраховать квартиру — намного дешевле, чем потратиться на новый ремонт или возместить ущерб соседям.</p>
+                                    </div>
+                                </div>
+
+                                <main class="main-content" role="main">
+                                    <h2 class="title title--h2">Рассчет страхового полиса</h2>
+                                    <!-- На запрограммированном сайте поменять метод на POST -->
+                                    <form class="order order--mb0 en js-en form js-form-validate" method="GET" action="/ajax/form-ajax-en.html" data-action="mp_service_step2.html">
+                                        <div class="order__middle order__middle--en-indent">
+                                            <h3 class="order__title-h3 order__title-h3--bottom-indent">Что страхуем</h3>
+                                            <div class="form__row">
+                                                <div class="lenta2 lenta2--no-bottom-indent">
+                                                    <div class="lenta2__list lenta2__list--1-xs lenta2__list--1-sm lenta2__list--1-md lenta2__list--1-lg lenta2__list--items-en">
+                                                        <div class="lenta2__item">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 col-md-4">
+                                                                    <div class="lenta4">
+                                                                        <div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+                                                                            <div class="lenta4__item lenta4__item--shrink">
+                                                                                <label class="checkbox checkbox--vtop">
+                                                                                    <input type="checkbox" id="en_entity_20" name="en_entity[]" value="20" data-role="what" required checked data-name="Внутренняя отделка и инженерное оборудование">
+                                                                                    <span class="checkbox__indicator"></span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="lenta4__item lenta4__item--grow">
+                                                                               <label for="en_entity_20">Внутренняя отделка и инженерное оборудование</label> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <div class="col-sm-6 col-md-8">
+                                                                    <div class="js-toddler toddler toddler--top-indent js-en__toddler" id="js-en__toddler-20">
+                                                                       <div class="js-toddler__slider toddler__slider js-en__toddler-slider" data-min="350000" data-max="750000" data-step="50" id="js-en__toddler-slider-20"></div>
+                                                                       <input type="hidden" name="sum[20]" class="js-toddler__value js-en__toddler-value" id="js-en__toddler-value-20" value="350000" data-role="sum">
+                                                                       <div class="toddler__min">350 000 руб.</div>
+                                                                       <div class="toddler__max">750 000 руб.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="lenta2__item">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 col-md-4">
+                                                                    <div class="lenta4">
+                                                                        <div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+                                                                            <div class="lenta4__item lenta4__item--shrink">
+                                                                                <label class="checkbox checkbox--vtop">
+                                                                                    <input type="checkbox" id="en_entity_30" name="en_entity[]" value="30" data-role="what" required checked class="js-form-validate__not-together" data-name="Движимое имущество">
+                                                                                    <span class="checkbox__indicator" ></span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="lenta4__item lenta4__item--grow">
+                                                                               <label for="en_entity_30">Движимое имущество</label> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                </div>
+                                                                <div class="col-sm-6 col-md-8">
+                                                                    <div class="js-toddler toddler toddler--top-indent js-en__toddler" id="js-en__toddler-30">
+                                                                       <div class="js-toddler__slider toddler__slider js-en__toddler-slider" data-min="350000" data-max="750000" data-step="50" id="js-en__toddler-slider-30"></div>
+                                                                       <input type="hidden" name="sum[30]" class="js-toddler__value js-en__toddler-value" id="js-en__toddler-value-30" value="350000" data-role="sum">
+                                                                       <div class="toddler__min">350 000 руб.</div>
+                                                                       <div class="toddler__max">750 000 руб.</div>
+                                                                    </div>
+                                                                </div>
+                                                           </div>
+                                                        </div>
+                                                        <div class="lenta2__item">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 col-md-4">
+                                                                    <div class="lenta4">
+                                                                        <div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+                                                                            <div class="lenta4__item lenta4__item--shrink">
+                                                                                <label class="checkbox checkbox--vtop">
+                                                                                    <input type="checkbox" id="en_entity_40" name="en_entity[]" value="40" class="js-form-validate__not-together" data-role="what" required data-name="Гражданская ответственность">
+                                                                                    <span class="checkbox__indicator" ></span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="lenta4__item lenta4__item--grow">
+                                                                               <label for="en_entity_40">Гражданская ответственность</label> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6 col-md-8">
+                                                                    <div class="js-toddler toddler toddler--top-indent js-en__toddler" id="js-en__toddler-40">
+                                                                       <div class="js-toddler__slider toddler__slider js-en__toddler-slider" disabled="true" data-min="350000" data-max="750000" data-step="50" id="js-en__toddler-slider-40"></div>
+                                                                       <input type="hidden" name="sum[40]" class="js-toddler__value js-en__toddler-value" id="js-en__toddler-value-40" value="350000" data-role="sum">
+                                                                       <div class="toddler__min">350 000 руб.</div>
+                                                                       <div class="toddler__max">750 000 руб.</div>
+                                                                    </div>
+                                                                </div>
+                                                           </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="order__middle order__middle--en-indent">
+                                            <h3 class="order__title-h3 order__title-h3--bottom-indent2">От чего страхуем</h3>
+                                            <div class="form__row">
+                                                <div class="lenta5">
+                                                    <div class="lenta5__list">
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--fire", "width" : "68", "height" : "68", "name" : "icon-from-what__fire" })
+                                                                    <span class="from-what__title">Пожар</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--fill", "width" : "68", "height" : "68", "name" : "icon-from-what__fill" })
+                                                                    <span class="from-what__title">Залив</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--arson", "width" : "68", "height" : "68", "name" : "icon-from-what__arson" })
+                                                                    <span class="from-what__title">Поджог</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--disaster", "width" : "68", "height" : "68", "name" : "icon-from-what__disaster" })
+                                                                    <span class="from-what__title">Стихийное бедствие</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--bomb", "width" : "68", "height" : "68", "name" : "icon-from-what__bomb" })
+                                                                    <span class="from-what__title">Взрыв</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta5__item">
+                                                            <label class="from-what">
+                                                                <input type="checkbox" name="from_what[]" class="from-what__checkbox" value="1" required checked disabled data-role="from_what">
+                                                                <span class="from-what__indicator">
+                                                                    @@include('./icon.html', { "class": "icon from-what__icon from-what__icon--criminals", "width" : "68", "height" : "68", "name" : "icon-from-what__criminals" })
+                                                                    <span class="from-what__title">Противоправные действия третьих лиц</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+
+                                        <div class="order__middle order__middle--en-indent">
+                                            <h3 class="order__title-h3 order__title-h3--bottom-indent2">На какой срок страхуем</h3>
+                                            <div class="form__row">
+                                                <div class="lenta2 lenta2--no-bottom-indent">
+                                                    <div class="lenta2__list lenta2__list--1-sph lenta2__list--3-bph lenta2__list--3-sm lenta2__list--3-md lenta2__list--3-lg lenta2__list--items-mt15px">
+                                                        <div class="lenta2__item lenta2__item--pb0">
+                                                            <label class="time">
+                                                                <input type="radio" name="time[]" class="time__checkbox" value="3" required data-role="time">
+                                                                <span class="time__indicator">
+                                                                    3 месяца
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta2__item lenta2__item--pb0">
+                                                            <label class="time">
+                                                                <input type="radio" name="time[]" class="time__checkbox" value="6" required data-role="time">
+                                                                <span class="time__indicator">
+                                                                    6 месяца
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="lenta2__item lenta2__item--pb0">
+                                                            <label class="time">
+                                                                <input type="radio" name="time[]" class="time__checkbox" value="12" required data-role="time" checked >
+                                                                <span class="time__indicator">
+                                                                    12 месяцев
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="order__middle order__middle--en-indent">
+                                            <div class="form__row">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="UF_AGREEMENT" name="UF_AGREEMENT" required class="valid"><span class="checkbox__indicator"></span>
+                                                </label>
+                                                <label for="UF_AGREEMENT">
+                                                    Подтверждаю, что объект страхования не является ветхим или аварийным жильем, объектом незавершенного строительства, общежитием.
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="order__middle">
+                                            <div class="order__bottom">
+                                                <div class="order__itogo-holder">Стоимость полиса: <span class="en__itogo-holder"><span class="en__itogo" id="js-en__itogo">1 000</span>  руб.</span></div>
+                                                <div class="order__button-holder"><button type="submit" class="button button--big button--xs-fw">Оформить</button></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </main>
+                            </div>
+
+                            <aside class="col-sm-4 col-md-3 aside-en-holder">
+                                @@include('./aside-en.html')
+                            </aside>
+                        </div>
+
+                        <!-- /Контентная часть -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+
+</section>

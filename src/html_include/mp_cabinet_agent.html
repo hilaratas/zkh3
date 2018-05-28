@@ -1,0 +1,133 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-cabinet">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+						<li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Профиль агента</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Профиль агента</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+
+				<div class="select menu-select">
+					<select class="menu-select__nav">
+						<option value="#">Профиль агента</option>
+						<option value="#">Список заказов</option>
+						<option value="#">Список мастеров</option>
+						<option value="#">Выход</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+
+						<div class="row">
+							<div class="col-sm-8 col-md-9">
+								<div class="cabinet">
+									<div class="cabinet-left">
+										<div class="cabinet-left__avatar">
+											<img src="./img/administration-no-foto.png" class="cabinet-left__img">
+										</div>
+									</div>
+									<div class="cabinet-right">
+										<div class="title title--h3 cabinet-right__title">
+											СПБСпецСтрой
+										</div>
+										<ul class="table cabinet-right__list">
+											<li class="cabinet-right__item">
+												<div class="cabinet-right__label">Адрес:</div>
+												<div class="cabinet-right__input">
+													Санкт-Петербург, Ленинский проспект, дом 50;
+												</div>
+											</li>
+											<li class="cabinet-right__item">
+												<div class="cabinet-right__label">Телефон:</div>
+												<div class="cabinet-right__input">
+													+7(916)987-65-43
+												</div>
+											</li>
+											<li class="cabinet-right__item">
+												<div class="cabinet-right__label">География обслуживания:</div>
+												<div class="cabinet-right__input">
+													Адмиралтейский район, Ленинский проспект, дом 26;<br>
+													Адмиралтейский район, Ленинский проспект, дом 28;<br>
+													Калининский район, Ленинский проспект, дом 30</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+
+							<aside class="col-sm-4 col-md-3">
+								<nav class="aside-nav">
+									<ul class="aside-nav__list">
+										<li class="aside-nav__item aside-nav__item--active">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Профиль агента</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список заказов</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список мастеров</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Выход</div>
+											</a>
+										</li>
+									</ul>
+								</nav>
+
+								<div class="aside-question">
+									<div class="aside-question__title">
+										Возникли вопросы?
+									</div>
+									<div class="aside-question__text">
+										Cвяжитесь с нами через форму обратной связи
+									</div>
+									<a href="#popup-feedback" class="button button--big aside-question__btn  js-popup-inline">
+										Задать вопрос
+									</a>
+								</div>
+
+								@@include('./aside-calc.html')
+								
+							</aside>
+
+						</div>
+
+						<!-- /Контентная часть -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		
+

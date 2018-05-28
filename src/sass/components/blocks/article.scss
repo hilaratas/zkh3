@@ -1,0 +1,97 @@
+.article {
+
+	margin-bottom: 30px;
+
+	&__info {
+		margin: 15px 0;
+	}
+
+	&__date {
+		font-size: 14px;
+		color: $grey-brand-3;
+	}
+
+	&__text {
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+		width: 100%;
+		float: right;
+	}
+
+	&__main-img-holder {
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+		width: 33.33%;
+		float: right;
+		min-height: 1px;
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+		}
+	}
+
+	&__main-img-holder + &__text {
+		width: 66.66%;
+		float: right;
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+		}
+	}
+
+	&__main-img {
+		display: block;
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			max-width: 50%;
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__row {
+		padding: 15px 0;
+		border-bottom: 1px solid $grey-brand-1;
+
+		&:first-child {
+			padding: 0;
+		}
+
+		&--no-border {
+			border: none;
+		}
+	}
+
+	&__source {
+		font-weight: $font-normal;
+		color: $grey-brand-4; 
+	}
+
+	&__source-link {
+		color: $color-brand-3;
+		transition: all $transition-duration;
+
+		&:hover {
+			color: $color-brand-3;
+			text-decoration: none;
+		}
+	}
+
+	
+
+	&__date {
+		color: $grey-brand-1;
+	}
+
+	.ya-share2 {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		padding-right: 0;
+	}
+}

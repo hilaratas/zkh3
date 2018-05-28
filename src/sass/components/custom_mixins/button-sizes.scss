@@ -1,0 +1,20 @@
+@mixin button--normal () {
+	font-size: $form-el-font-size;
+    line-height: $form-el-line-height;
+    padding: $form-el-padding-vert $form-el-padding-hor;
+    height: $form-el-height;
+}
+
+@mixin button--small () {
+	font-size: $form-el-small-font-size;
+    line-height: $form-el-small-line-height;
+    padding: $form-el-small-padding-vert $form-el-small-padding-hor;
+    height: $form-el-small-height;
+}
+
+@mixin button--big () {
+	font-size: $form-el-big-font-size;
+    line-height: $form-el-big-line-height;
+    padding: $form-el-big-padding-vert $form-el-big-padding-hor;
+    height: $form-el-big-height;
+}

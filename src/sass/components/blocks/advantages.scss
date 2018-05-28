@@ -1,0 +1,14 @@
+.advantages {
+	width: 100%;
+	margin: 2*$padding-base 0;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		padding: $padding-base 0;
+	}
+
+}

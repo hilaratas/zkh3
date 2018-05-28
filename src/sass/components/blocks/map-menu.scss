@@ -1,0 +1,67 @@
+.map-menu {
+
+	&__list {
+		display: inline-block;
+		font-size: 0px;
+		white-space: nowrap;
+	}
+
+	&__item {
+		display: inline-block;
+		font-size: 1rem;
+		margin-left: 36px;
+		color: $grey-brand-1;
+	}
+
+	&__link {
+		color: $grey-brand-1;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__icon-holder {
+		margin-right: 10px;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 0;
+		@include vertical-align-middle();
+
+		&--bg1 {
+			background: 
+
+$color-brand-5;
+		}
+
+		&--bg2 {
+			background: 
+
+$color-brand-5;
+		}
+
+		&--bg3 {
+			background: 
+
+$color-brand-5;
+		}
+
+	}
+
+	&__icon {
+		vertical-align: middle;
+		fill: $color-brand-6;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__item {
+			margin-left: 0;
+			margin-right: 36px;
+		}
+	}
+
+}

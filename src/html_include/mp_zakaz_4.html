@@ -1,0 +1,84 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-order">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+						<li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Оформить заявку</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Заказ услуги</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+						
+						<div class="row">
+							<div class="col-sm-8 col-md-9">
+                                @@include('./order-nav.html', { "step" : 4 })
+								<div class="order order-time">
+									<div class="order__title">
+										Выберете удобную дату и время
+									</div>
+									<form class="form__row order-form">
+										<div class="order-form__text">
+											Заполните поля для оформления заявки:
+										</div>
+										<ul class="order-form__list">
+											<li class="order-time__item">
+												<label class="order-time__label">Дата</label>
+                                                <div class="form__date-holder order-time__select">
+                                                    <input type="tel" name="date" class="input input--date js-datepicker" placeholder="дд.мм.гггг" id="dp1503385619832">
+                                                </div>
+											</li>
+											<li class="order-time__item">
+												<label class="label order-time__label">Время</label>
+												<div class="select select--fill order-time__select">
+													<select name="time" class="">
+														<option selected>11:00-14:00</option>
+														<option>09:00-11:00</option>
+														<option>14:00-16:00</option>
+														<option>16:00-18:00</option>
+														<option>18:00-20:00</option>
+													</select>
+												</div>
+											</li>
+										</ul>
+										<div class="order-form__text">
+											Нажимая кнопку я подтверждаю свое согласие с условиями “Пользовательского соглашения”
+										</div>
+									</form>
+									<div class="order__btn row">
+										<a href="#" class="order__link">Назад</a>
+										<button type="submit" class="button button--big">Отправить заявку</button>
+									</div>
+								</div>
+							</div>
+							
+							<aside class="col-sm-4 col-md-3">
+								<div class="order-basket__banner">Баннер</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

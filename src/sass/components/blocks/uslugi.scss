@@ -1,0 +1,17 @@
+.uslugi {
+
+	&__title-holder {
+		margin-top: 15px;
+	}
+
+	&__item {
+		margin-top: 13px;
+		border: 1px solid $grey-brand-3;
+		border-radius: $border-radius;
+		box-shadow: 0px 5px 15px 0px rgba(188, 188, 188, 0.7);
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+}

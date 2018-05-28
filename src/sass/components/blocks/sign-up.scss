@@ -1,0 +1,154 @@
+.sign-up {
+
+	&__button {
+		display: inline-block;
+		padding: 15px 85px 15px 20px;
+		border: 1px solid $color-brand-3;
+		position: relative;
+		text-decoration: none;
+		color: $color-brand-1;
+		transform: scale(1);
+
+		&:hover {
+			background: $color-brand-3;
+			color: $color-brand-6;
+		}
+
+		&.hidden-button {
+			opacity: 0;
+		}
+	}
+
+	&__icon-holder {
+		position: absolute;
+		top: 50%;
+		right: 27px;
+		transform: translateY(-50%);
+	}
+
+	&__icon {
+		fill: $color-brand-3;
+		transition: all $transition-duration;
+
+		.sign-up__button:hover & {
+			fill: $color-brand-6;
+		}
+	}
+
+	&__required {
+		color: 
+
+$color-brand-100;
+		padding-left: 5px;
+		font-weight: $font-bold;
+	}
+
+	&__form-holder {
+		border-radius: $border-radius;
+		border: $border-width solid transparent;
+		max-height: 0;
+		overflow: hidden;
+		transition: all $transition-duration*2;
+
+		&--border1{
+			@media (min-width:768px){
+				border-left: $border-width solid transparent !important;
+				border-right: $border-width solid transparent !important;	
+			}	
+		}		
+		&--border2{
+			@media (min-width:768px){
+				border-left: $border-width solid transparent !important;
+				border-bottom: $border-width solid transparent !important;
+				border-right: $border-width solid transparent !important;
+			}
+		}
+
+		
+		.open & {
+			border: $border-width solid 
+
+$input-color-border;
+			max-height: 800px;
+		}
+		
+	}
+	&.open{
+		.sign-up__form-holder {
+			margin-top: -50px;
+			
+			&--top0{
+				margin-top: 0;
+			}
+		}
+	}
+		
+	&__form { 
+		position: relative;
+		padding: $padding-base;
+		
+		@media (min-width:768px){
+			padding: $padding-base*2 $padding-base;	
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60px;
+		height: 60px;
+		line-height: 0;
+		color: $color-brand-3;
+		font-size: 40px;
+		font-weight: 300;
+		text-align: center;
+		cursor: pointer;
+
+		@include vertical-align-middle();
+
+		&-inner {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+	}
+
+	&__response {
+		padding: 15px;
+		display: none;
+		opacity: 0;
+		transition: all $transition-duration;
+
+
+		&.error, &.success, &.warning {
+			border-color: $red-brand-1;
+			display: block;
+			animation-name: fade;
+			animation-duration: $transition-duration;
+			animation-fill-mode: forwards;
+		}
+
+		&.error {
+			background: rgba( red($red-brand-1), green($red-brand-1), blue($red-brand-1), 0.4);
+		}
+
+		&.success {
+			background: rgba( red($green-brand-1), green($green-brand-1), blue($green-brand-1), 0.4);
+		}
+
+		&.warning {
+			background: rgba( red(#ffff00), green(#ffff00), blue(#ffff00), 0.4);
+		}
+	}
+	
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

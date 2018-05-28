@@ -1,0 +1,41 @@
+.map {
+
+	position: relative;
+	min-height: 120px;
+	
+
+	&--indent-bottom {
+		margin-bottom: 60px;
+	}
+
+	&__bottom {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+	}
+
+	&__map-holder {
+		height: 600px;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		&__bottom {
+			position: static;
+		}
+
+		&__map-holder {
+			height: 450px;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&--indent-bottom {
+			margin-bottom: 30px;
+		}
+
+		&__map-holder {
+			height: 300px;
+		}
+	}
+}

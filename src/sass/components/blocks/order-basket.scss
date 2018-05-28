@@ -1,0 +1,200 @@
+.order-basket {
+
+  table {
+    margin: 0 25px 25px;
+    width: calc(100% - 50px);
+
+    @media  (max-width: $screen-sm-max) {
+      margin: 0 0 25px;
+      display: block;
+      width: 100%;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        display: block;
+        width: 100%;
+      }
+
+      td {
+        display: flex;
+        width: 100%;
+        padding-right: 25px;
+        font-size: 0.9rem;
+        @include clearfix();
+
+        &:first-child {
+          background: #f7f7f7;
+        }
+
+        &:before {
+          content: attr(data-label);
+          display: block;
+          min-width: 40%;
+          max-width: 40%;
+          padding-right: 30px;
+          padding-left: 25px;
+        }
+
+        .hint-text {
+          flex-basis: 50%;
+          flex-grow: 1;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      td {
+        display: block;
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+        
+        &:before {
+          width: 100%;
+          min-width: 0;
+          max-width: none;
+          float: left;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 7px;
+        }
+
+        .hint-text {
+          flex-basis: 100%;
+          flex-grow: 1;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  td, th {
+    padding: 10px 0;
+    padding-right: 38px;
+    border-bottom: $border-gray;
+    font-weight: 400;
+
+    &:last-child {
+      padding-right: 10px;
+    }
+  }
+
+  &__input {
+    width: 40px;
+    line-height: 17.5px;
+    height: calc(17.5px + 2px + 4px);
+    padding: 2px 5px;
+    text-align: center;
+  }
+
+  &__delete {
+    cursor: pointer;
+    fill: $red-brand-2;
+  }
+
+  &__total {
+    border-bottom: $border-gray;
+    text-align: right;
+    padding: 0 25px 25px;
+    font-size: $font-size-h3-sm;
+
+    &--top-indent {
+      padding-top: 25px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+    }
+  }
+
+  &__total-text {
+    display: inline-block;
+    margin-right: 40px;
+
+    @media (max-width: $screen-xs-max) {
+      //margin-bottom: 10px;
+    }
+  }
+
+  &__total-text + span {
+    white-space: nowrap;
+  }
+
+  &__sale {
+    padding: 20px 25px;
+  }
+
+  &__promocode {
+    display: block;
+    margin-bottom: 20px;
+
+    label {
+      display: inline-block;
+      margin-right: 15px;
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 7px;
+      }
+    }
+
+    input {
+      width: 145px;
+      text-transform: uppercase;
+      margin-right: 15px;
+    }
+
+    .button {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    //display: inline-block;
+    //float: right;
+    text-align: right;
+
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+    }
+  }
+
+  &__banner {
+    border: $border-gray;
+    height: 455px;
+    text-align: center;
+    padding-top: 70%;
+    font-weight: 700;
+
+    @media (max-width: $screen-xs-max) {
+      height: auto;
+      padding: 30px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__promocode {
+      input {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__total-text {
+      margin-right: 0;
+
+    }
+
+    &__total-price {
+      display: block;
+    }
+  }
+
+}

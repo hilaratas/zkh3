@@ -1,0 +1,19 @@
+.subscribe2 {
+
+	&__form {
+		border: $border-width solid $grey-brand-1;
+		border-radius: $border-radius;
+	}
+
+	&__input {
+		width: 115px !important;
+		border: none !important;
+		border-radius: 0px !important;
+		//background: $grey-brand-1 !important;
+	}
+
+	&__submit {
+		border: none !important;
+		border-radius: 0px !important;
+	}
+}

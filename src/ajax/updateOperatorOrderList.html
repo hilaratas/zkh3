@@ -1,0 +1,304 @@
+<div class="results">
+    <div class="results__top">
+        <div class="row row--flex row--vcenter">
+            <div class="col-sm-4">
+                Показано <span class="results__count">15</span> из <span class="results__count">65</span> заказов
+            </div>
+            <div class="col-sm-4 inline-align inline-align--center">
+                Выводить по 
+                <div class="pagination pagination--results">
+                    <div class="pagination__list pagination__list--inline-block">
+                        <div class="pagination__item"><a href="#" class="pagination__link">15</a></div>
+                        <div class="pagination__item"><a href="#" class="pagination__link">50</a></div>
+                        <div class="pagination__item"><a href="#" class="pagination__link">100</a></div>
+                    </div>
+                </div> записей
+            </div>
+            <div class="col-sm-4 inline-align inline-align--right">
+                Выгрузить отчет в&nbsp;&nbsp;
+                <div class="select select--aw select--baseline">
+                    <select name="" id="" class="js-select-open-new-tab">
+                        <option value="0" disabled selected>формате</option>
+                        <option value="http://zkh2.dev2.msoft.su/download?format=xls">XLS</option>
+                        <option value="http://zkh2.dev2.msoft.su/download?format=csv">CSV</option>
+                        <option value="http://zkh2.dev2.msoft.su/download?format=xml">XML</option>
+                    </select> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="results__main-content">
+        <div class="last-orders">
+            <div class="table-responsive-wrap">
+                <div class="table-responsive">
+                    <table class="last-orders__table no-rotate no-scroll js-last-orders__table">
+                        <thead>
+                            <tr>
+                                <th class="last-orders__th last-orders__toggle-holder"><i class="js-last-orders__toggle-all last-orders__toggle-all"></i></th>
+                                <th class="last-orders__th last-orders__number">#</th>
+                                <th class="last-orders__th last-orders__date">Дата</th>
+                                <th class="last-orders__th last-orders__order">Заказ</th>
+                                <th class="last-orders__th last-orders__lc">Лицевой счет</th>
+                                <th class="last-orders__th last-orders__source">Источник</th>
+                                <th class="last-orders__th last-orders__payment-status">Статус оплат</th>
+                                <th class="last-orders__th last-orders__cost">Стоимость</th>
+                                <th class="last-orders__th last-orders__order-status">Статус выполнения</th>
+                                <th class="last-orders__th last-orders__actions">Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="last-orders__row--1234" class="last-orders__tr js-order-block">
+                                <td data-label="" class="last-orders__toggle-holder"><i class="js-last-orders__toggle last-orders__toggle"></i></td>
+                                <td data-label="#" class="last-orders__number"><a href="#" class="last-orders__link2">1234</a></td>
+                                <td data-label="Дата" class="last-orders__date">04.02.2017 16:43</td>
+                                <td data-label="Заказ" class="last-orders__order"><a href="#" class="last-orders__link2">Заказ №1234</a></td>
+                                <td data-label="Лицевой счет" class="last-orders__lc2">1574463422</td>
+                                <td data-label="Источник">сайт</td>
+                                <td data-label="Статус оплат">оплачен</td>
+                                <td data-label="Стоимость">14000 <span class="last-orders__rub">P</span></td>
+                                <td data-label="Статус выполнения"><span class="last-orders__status js-order-status" data-status="in-progress">в обработке</span></td>
+                                <td data-label="Действия" class="last-orders__actions">
+                                    <div class="js-order-actions-holder">
+                                        <a href="#popup-order-cancell-in-list" class="button button--no-fill button--small js-popup-form-ajax" data-order-id="1234" data-product-id="8000, 90000">отменить</a> 
+                                    </div>
+                                    
+                                </td>
+                                <!-- js-popup-last-orders-actions -->
+                            </tr>
+                            <tr class="last-orders__toggle-tr js-last-orders__toggle-tr">
+                                <td colspan="10" class="last-orders__p0">
+                                    <table class="order-detail order-detail--light-border order-detail--light-thead no-rotate no-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="order-detail__cell order-detail__cell--article2">Арт.</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Услуги</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Кол-во</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Цена</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--cost">Стоимость</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--order-status">Статус</th>
+                                                <th class="order-detail__cell order-detail__cell--actions">Действия</th>
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">8000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка врезного замка в металлическую дверь</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">2</td>
+                                                <td data-label="Цена" class="order-detail__price2">1000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">2000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="in-progress">в обработке</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a href="#popup-assign-master" class="button button--no-fill js-popup-form-ajax is-sticky-buttons" data-order-id="1234" data-product-id="8000">назначить</a>
+                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="8000">отменить</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">9000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка квадратного зеркала</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">3</td>
+                                                <td data-label="Цена" class="order-detail__price2">4000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">12000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="in-progress">в обработке</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a href="#popup-assign-master" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="9000">назначить</a>
+                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="9000">отменить</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr id="last-orders__row--1235" class="last-orders__tr js-order-block">
+                                <td data-label=""  class="last-orders__toggle-holder"><i class="js-last-orders__toggle last-orders__toggle"></i></td>
+                                <td data-label="#"  class="last-orders__number"><a href="#" class="last-orders__link2">1235</a></td>
+                                <td data-label="Дата"  class="last-orders__date">04.02.2017 16:43</td>
+                                <td data-label="Заказ"  class="last-orders__order"><a href="#" class="last-orders__link2">Заказ №1235</a></td>
+                                <td data-label="Лицевой счет"  class="last-orders__lc2">1574463422</td>
+                                <td data-label="Источник" >сайт</td>
+                                <td data-label="Статус оплат" >оплачен</td>
+                                <td data-label="Стоимость" >14000 <span class="last-orders__rub">P</span></td>
+                                <td data-label="Статус выполнения" ><span class="last-orders__status js-order-status" data-status="new">новый</span></td>
+                                <td data-label="Действия" class="last-orders__actions">
+                                    <div class="js-order-actions-holder">
+                                        <a href="#popup-order-cancell-in-list" class="button button--no-fill button--small js-popup-form-ajax" data-order-id="1235" data-product-id="8000, 90000">отменить</a> 
+                                    </div>
+                                    
+                                </td>
+                                <!-- js-popup-last-orders-actions -->
+                            </tr>
+                            <tr class="last-orders__toggle-tr js-last-orders__toggle-tr">
+                                <td colspan="10" class="last-orders__p0">
+                                    <table class="order-detail order-detail--light-border order-detail--light-thead no-rotate no-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="order-detail__cell order-detail__cell--article2">Арт.</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Услуги</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Кол-во</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Цена</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--cost">Стоимость</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--order-status">Статус</th>
+                                                <th class="order-detail__cell order-detail__cell--actions">Действия</th>
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">8000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка врезного замка в металлическую дверь</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">2</td>
+                                                <td data-label="Цена" class="order-detail__price2">1000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">2000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="new">новый</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="8000">отменить</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">9000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка квадратного зеркала</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">3</td>
+                                                <td data-label="Цена" class="order-detail__price2">4000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">12000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="new">новый</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="9000">отменить</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr data-label="" id="last-orders__row--1236" class="last-orders__tr js-order-block">
+                                <td data-label=""  class="last-orders__toggle-holder"><i class="js-last-orders__toggle last-orders__toggle"></i></td>
+                                <td data-label="#"  class="last-orders__number"><a href="#" class="last-orders__link2">1236</a></td>
+                                <td data-label="Дата"  class="last-orders__date">04.02.2017 16:43</td>
+                                <td data-label="Заказ"  class="last-orders__order"><a href="#" class="last-orders__link2">Заказ №1236</a></td>
+                                <td data-label="Лицевой счет"  class="last-orders__lc2">1574463422</td>
+                                <td data-label="Источник" >сайт</td>
+                                <td data-label="Статус оплат" >оплачен</td>
+                                <td data-label="Стоимость" >14000 <span class="last-orders__rub">P</span></td>
+                                <td data-label="Статус выполнения" ><span class="last-orders__status js-order-status" data-status="appointed">назначен</span></td>
+                                <td data-label="Действия"  class="last-orders__actions">
+                                    <div class="js-order-actions-holder">
+                                        <a href="#popup-order-cancell-in-list" class="button button--no-fill button--small js-popup-form-ajax" data-order-id="1236" data-product-id="8000, 90000">отменить</a> 
+                                    </div>
+                                </td>
+                                <!-- js-popup-last-orders-actions -->
+                            </tr>
+                            <tr class="last-orders__toggle-tr js-last-orders__toggle-tr">
+                                <td colspan="10" class="last-orders__p0">
+                                    <table class="order-detail order-detail--light-border order-detail--light-thead no-rotate no-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="order-detail__cell order-detail__cell--article2">Арт.</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Услуги</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Кол-во</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Цена</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--cost">Стоимость</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--order-status">Статус</th>
+                                                <th class="order-detail__cell order-detail__cell--actions">Действия</th>
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">8000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка врезного замка в металлическую дверь</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">2</td>
+                                                <td data-label="Цена" class="order-detail__price2">1000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">2000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="new">новый</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1236" data-product-id="8000">отменить</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">9000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка квадратного зеркала</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">3</td>
+                                                <td data-label="Цена" class="order-detail__price2">4000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">12000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="canceled">отменен</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <!-- На запрограммированном сайте должен быть href="#popup-сhange-status" -->
+                                                        <a href="#popup-сhange-status-to-open" class="button button--no-fill js-popup-form-ajax" data-order-id="1236" data-product-id="9000">открыть</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr data-label="" id="last-orders__row--1237" class="last-orders__tr js-order-block">
+                                <td data-label=""  class="last-orders__toggle-holder"><i class="js-last-orders__toggle last-orders__toggle"></i></td>
+                                <td data-label="#"  class="last-orders__number"><a href="#" class="last-orders__link2">1237</a></td>
+                                <td data-label="Дата"  class="last-orders__date">04.02.2017 16:43</td>
+                                <td data-label="Заказ"  class="last-orders__order"><a href="#" class="last-orders__link2">Заказ №1237</a></td>
+                                <td data-label="Лицевой счет"  class="last-orders__lc2">1574463422</td>
+                                <td data-label="Источник" >сайт</td>
+                                <td data-label="Статус оплат" >оплачен</td>
+                                <td data-label="Стоимость" >14000 <span class="last-orders__rub">P</span></td>
+                                <td data-label="Статус выполнения" ><span class="last-orders__status js-order-status" data-status="canceled">отменен</span></td>
+                                <td data-label="Действия"  class="last-orders__actions">
+                                    <div class="js-order-actions-holder">
+                                        <a href="#popup-order-сhange-status" class="button button--no-fill button--small js-popup-form-ajax" data-order-id="1237" data-product-id="8000, 9000">открыть</a> 
+                                    </div>
+                                </td>
+                                <!-- js-popup-last-orders-actions -->
+                            </tr>
+                            <tr class="last-orders__toggle-tr js-last-orders__toggle-tr">
+                                <td colspan="10" class="last-orders__p0">
+                                    <table class="order-detail order-detail--light-border order-detail--light-thead no-rotate no-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="order-detail__cell order-detail__cell--article2">Арт.</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Услуги</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Кол-во</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--date">Цена</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--cost">Стоимость</th>
+                                                <th class="order-detail__cell order-detail__cell--small order-detail__cell--order-status">Статус</th>
+                                                <th class="order-detail__cell order-detail__cell--actions">Действия</th>
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">8000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка врезного замка в металлическую дверь</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">2</td>
+                                                <td data-label="Цена" class="order-detail__price2">1000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">2000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="canceled">отменен</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <!-- На запрограммированном сайте должен быть href="#popup-сhange-status" -->
+                                                        <a href="#popup-сhange-status-to-open" class="button button--no-fill js-popup-form-ajax" data-order-id="1237" data-product-id="8000">открыть</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                              <td data-label="Арт." class="order-detail__cell--article2"><a href="#" class="last-orders__link2">9000</a></td>
+                                                <td data-label="Услуги"><a href="#" class="last-orders__link2">Установка квадратного зеркала</a></td>
+                                                <td data-label="Кол-во" class="order-detail__price2">3</td>
+                                                <td data-label="Цена" class="order-detail__price2">4000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Стоимость" class="order-detail__price2">12000 <span class="order-detail__rub">Р</span></td>
+                                                <td data-label="Статус"><span class="order-detail__status js-order-status" data-status="canceled">отменен</span></td>
+                                                <td data-label="Действия" class="order-detail__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <!-- На запрограммированном сайте должен быть href="#popup-сhange-status" -->
+                                                        <a href="#popup-сhange-status-to-open" class="button button--no-fill js-popup-form-ajax" data-order-id="1237" data-product-id="9000">открыть</a>
+                                                    </div>
+                                                </td>  
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

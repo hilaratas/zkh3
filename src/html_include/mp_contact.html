@@ -1,0 +1,132 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="section__header section__header-news">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Гражданам</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Контакты</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Контакты</h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <div class="select menu-select">
+                    <select class="menu-select__nav">
+                        <option value="#">О проекте</option>
+                        <option value="#" selected="">Часто задаваемые вопросы</option>
+                        <option value="#" selected="">Контакты</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                    
+                        <!-- Контентная часть -->
+
+                        <div class="row">
+                            <div class="col-sm-8 col-md-9">
+                                <div class="content-block content-block--mb40">
+                                    <article class="text">
+                                        <div class="content-block__section">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                                        </div>
+                                        <div class="content-block__section">
+                                            <a href="tel:+7 812 865-4536" class="phone">+7 812 865-4536</a>
+                                        </div>
+                                        <div class="content-block__section">
+                                            <p>Пн-Пт: 10:00 - 18:00<br>
+                                               Сб: 10:00 - 16:00</p>
+                                        </div>
+                                        <div class="content-block__section">
+                                            <a href="mailto:help@jkh.ru">help@jkh.ru</a>
+                                            <div id="feedback-form"></div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- Форма обратной связи -->
+                                <form action="#" method="GET" class="form feedback-form js-form-validate">
+                                    <div class="shadow-block shadow-block--radius shadow-block--mb0 shadow-block--pt0">
+                                        <div class="shadow-block__top">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <h3 class="shadow-block__title">Обратная связь</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form__row form__row--middle form__row--not-last">
+                                                            <div for="" class="form__label form__label--mt0">Ваше имя</div>
+                                                            <input type="text" name="name" class="input" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form__row form__row--middle form__row--not-last">
+                                                            <div for="" class="form__label form__label--mt0">Email</div>
+                                                            <input type="email" name="email" class="input" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form__row form__row--middle form__row--not-last">
+                                                            <div for="" class="form__label form__label--mt0">Телефон</div>
+                                                            <input type="tel" name="tel" class="input js-mask-tel" placeholder="+7 (___) ___-__-__" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form__row form__row--middle form__row--not-last">
+                                                    <div for="" class="form__label form__label--mt0">Ваше сообщение</div>
+                                                    <textarea type="textarea" name="message" class="textarea feedback-form__textarea" required></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="shadow-block__bottom">
+                                            <div class="row">
+                                                <div class="col-sm-12 inline-align inline-align--right">
+                                                    <button class="button button--big" type="submit">Отправить</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- /Форма обратной связи -->
+                            </div>
+
+                            <div class="col-sm-4 col-md-3">
+                                @@include('./aside-nav-about.html', { "page" : "contacts" })
+                            </div>
+                        </div>
+
+                        <!-- /Контентная часть -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+
+</section>

@@ -1,0 +1,52 @@
+.logo-item {
+	
+	display: block;
+	text-decoration: none;
+	
+	&__img-wrapper {
+		display: table-cell;
+		width: 140px;
+		height: 110px;
+		border: 1px solid $color-brand-2;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	&__img {
+		max-width: 120px;
+		max-height: 90px;
+	}
+
+	&__title {
+		display: block;
+		padding-top: 12px;
+		text-transform: uppercase;
+		font-size: $font-size-extra-small;
+		line-height: 1.1;
+		color: $color-brand-1;
+		text-decoration: none;
+	}
+
+	&--link {
+
+		.logo-item__img-wrapper {
+			box-shadow: none;
+			transition: box-shadow $transition-duration;
+		}
+
+		.logo-item__title {
+			transition: all $transition-duration;
+		}
+
+		&:hover {
+			.logo-item__img-wrapper {
+				box-shadow: inset 0px 0px 15px 0px rgba(red($color-brand-2), green($color-brand-2), blue($color-brand-2), 1);
+			}
+
+			.logo-item__title {
+				color: $color-brand-2;
+			}
+		}
+	}
+
+}

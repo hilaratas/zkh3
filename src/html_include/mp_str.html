@@ -1,0 +1,195 @@
+<section class="section">
+
+    <div class="section__header">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Гражданам</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Личный кабинет</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Мунипальное страхование</h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                            <!-- Контентная часть -->
+                            
+                            <div class="row">
+                                <div class="col-sm-8 col-md-9 content-block">
+
+                                    <h2 class="title title--h3">Страхование собственного или арендованного жилья позволяет быстро получить адекватную страховую выплату и компенсировать расходы на ремонт помещения, восстановление отделочных покрытий и инженерного оборудования. </h2>
+                                    <article class="text">
+                                        <p>Страховой полис станет Вашей подушкой безопасности, в случае если квартиру зальют соседи сверху, лопнет канализационная труба во время Вашего отсутствия, возникнет пожар или в жилье проникнут воры. Страхование само по себе не является гарантом неприкосновенности имущества, но позволяет свести риск потерь к минимуму.</p>
+                                    </article>
+
+                                </div>
+
+                                <div class="col-sm-4 col-md-3 content-block">
+                                    @@include('./aside-calc.html')
+                                </div>
+
+                            </div>
+
+                            <!-- /Контентная часть -->
+
+                    </div>   
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8 col-md-9 content-block">
+                        <h2 class="title title--h2">Выберите услуги:</h2>
+                        <main class="main-content" role="main">
+
+                            <div class="uslugi js-accordion">
+                                <ul class="uslugi__list">
+                                    <li class="uslugi__item">
+                                        <article class="usluga js-accordion__item">
+                                            <div class="usluga__header usluga__header--pointer js-accordion__click "> 
+                                                <h2 class="usluga__title title title--h3 title--bottom-no">Пакет “Минимальный”</h2>
+                                                <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                            </div>
+                                            <div class="usluga__text js-accordion__toogle">
+
+                                                <!-- Контент таба -->
+                                                <div class="psevdo-table-wrap">
+                                                    <div class="psevdo-table">
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1001" data-elem-price="1000">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Жилое помещение (квартира, комната), включая его конструктивные элементы
+                                                                <input type="hidden" name="service[id]" value="1001" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1000 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div> 
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1002" data-elem-price="1500">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Объекты общего имущества собственников помещений в многоквартирных домах
+                                                                <input type="hidden" name="service[id]" value="1002" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1500 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div> 
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1003" data-elem-price="2000">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Конструктивные элементы
+                                                                <input type="hidden" name="service[id]" value="1003" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2000 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div> 
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="1004" data-elem-price="2500">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Полный пакет
+                                                                <input type="hidden" name="service[id]" value="1004" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2500 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div> 
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!-- /Контент таба -->
+
+                                            </div>
+
+                                        </article>
+                                    </li>
+
+                                    <li class="uslugi__item">
+                                        <article class="usluga js-accordion__item">
+                                            <div class="usluga__header usluga__header--pointer js-accordion__click "> 
+                                                <h2 class="usluga__title title title--h3 title--bottom-no">Пакет "Эконом"</h2>
+                                                <div class="usluga__icon-holder"><i class="usluga__icon-wrapper">@@include('./icon.html', { "class": "icon", "width" : "20", "height" : "20", "name" : "icon-arrow" })</i></div>
+                                            </div>
+                                            <div class="usluga__text js-accordion__toogle">
+
+                                                <!-- Контент таба -->
+                                                <!-- Контент таба -->
+                                                <div class="psevdo-table-wrap">
+                                                    <div class="psevdo-table">
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="2001" data-elem-price="1000">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Установка новых дверей
+                                                                <input type="hidden" name="service[id]" value="2001" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1000 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="2002" data-elem-price="1500">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Удаление старых дверей
+                                                                <input type="hidden" name="service[id]" value="2002" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">1500 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="2003" data-elem-price="2000">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Настил нового паркета
+                                                                <input type="hidden" name="service[id]" value="2003" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2000 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                        </form>
+                                                        <form class="psevdo-table__tr" data-block='add-to-basket' data-elem-id="2004" data-elem-price="2500">
+                                                            <div class="psevdo-table__td psevdo-table__td--name" data-role="name">
+                                                                Настил нового паркета
+                                                                <input type="hidden" name="service[id]" value="2004" />
+                                                            </div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix1 psevdo-table__td--no-grow psevdo-table__td--no-shrink">2500 Рублей</div>
+                                                            <div class="psevdo-table__td psevdo-table__td--fix2 psevdo-table__td--no-grow psevdo-table__td--no-shrink"><button  class="button button--big button--no-fill button--fw" data-role="add-to-basket__add">Заказать</button></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <!-- /Контент таба -->
+                                                <!-- Контент таба -->
+
+                                            </div>
+                                        </article>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </main>
+
+                        <!-- Дополнительный блок -->
+                        <div class="under-main-content under-main-content--top-indent">
+                            <article>
+                                <h2 class="title title--h2 title--underlined">Документы</h2>
+                                <ul class="list">
+                                    <li class="list__item">
+                                        <a href="#" class="list-link">
+                                            <span class="list-link__text">Правила № 170 добровольного страхования имущественных рисков физических лиц</span>
+                                            <span class="list-link__info">PDF 436,17 кб</span>
+                                        </a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list-link">
+                                            <span class="list-link__text">Правила № 51 Добровольного страхования гражданской ответственности владельцев жилых помещений</span>
+                                            <span class="list-link__info">PDF 436,17 кб</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                        <!-- / Дополнительный блок -->
+
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        @@include('./aside-basket.html')   
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+    
+</section>

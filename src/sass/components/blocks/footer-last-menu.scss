@@ -1,0 +1,44 @@
+.footer-last-menu {
+	padding: 10px 0; 
+
+	&__list {
+		text-align: left;
+	}
+
+	&__item {
+		display: inline-block;
+		margin: 5px 0;
+		margin-right: 40px;
+	}
+
+	&__link {
+		font-size: 15px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 300;
+		color: white;
+		text-decoration: none;
+
+		&:hover, &.active {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width: $screen-sm-min) {
+		
+		padding: 0;
+
+		&__item {
+			width: 100%;
+			margin: 0 auto;
+			margin-bottom: 10px;
+		}
+
+		&__list{
+			text-align: center;
+		}
+
+
+
+
+	}
+}

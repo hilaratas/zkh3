@@ -1,0 +1,76 @@
+.login-block {
+
+	&:first-child {
+		padding-right: 30px; 
+	}
+
+	&:last-child {
+		padding-left: 30px; 
+	}
+
+	&__logo-holder {
+		width: 173px;
+		margin-right: 40px;
+		float: left;
+	}
+
+	&__title {
+		font-size: 22px;
+		line-height: 1;
+		margin: 0;
+		overflow: hidden;
+		word-break: break-word;
+		white-space: pre-wrap;
+	}
+
+	&__small-info {
+		font-size: $font-size-small;
+		text-align: justify;
+	}
+
+	&__line {
+		margin-bottom: 20px;
+	}
+
+	&__form-holder {
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 35px;
+	}
+
+	&__link-holder {
+		position: absolute;
+		bottom: 0;
+		right:  0;
+	}
+
+	&__link {
+		display: block;
+		color: $grey-brand-1;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 16px;
+
+			&:hover {
+				text-decoration: underline;
+				color: $color-brand-3;
+			}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		& {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		&__small-info {
+			text-align: left;
+		}
+
+		&__link-holder {
+			max-width: 65px;
+		}
+
+	}
+
+}

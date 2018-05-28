@@ -1,0 +1,100 @@
+.administration {
+
+	&__item {
+		margin-left: -$padding-base;
+		margin-right: -$padding-base;
+		margin-bottom: 40px;
+		@include clearfix();
+		position: relative;
+
+		.administration--underline--no-last & {
+
+			padding-bottom: 40px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: $padding-base;
+				right: $padding-base;
+				bottom: 0;
+				height: $border-width;
+				background: $grey-brand-1;
+				display: block;
+			}
+
+			&:last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+			
+		}
+	}
+
+	&__img-holder { 
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+		width: 200px + 2*$padding-base;
+		float: left;
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&__cont-holder {
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+		float: left;
+	}
+
+	&__cont-inner {
+		padding-top: 25px;
+	}
+
+	&__name {
+		@include h5();
+		font-weight: $font-normal;
+		margin-bottom: 5px;
+	}
+
+	&__line  {
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__key {
+		color: $grey-brand-1;
+		display: inline-block;
+		vertical-align: top;
+		width: 75px;
+	}
+
+	&__value {
+		color: $color-brand-1;
+		display: inline-block;
+		vertical-align: top;
+
+		a {
+			color: $color-brand-1;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__cont-holder {
+			width: 100%;
+		}
+	}
+
+}

@@ -1,0 +1,155 @@
+.order-contacts {
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &.is-hide {
+      display: none;
+    }
+  }
+
+  &__label {
+    display: block;
+    max-width: 20%;
+    flex-basis: 20%;
+    padding-right: 30px; 
+    margin-bottom: 20px;
+
+    &--small {
+      width: 67%;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    &--house {
+      max-width: 40%;
+      flex-basis: 40%;
+    }
+
+    &--case {
+      white-space: nowrap;
+      max-width: none !important;
+      flex-basis: auto !important;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      max-width: 33%;
+      flex-basis: 33%;
+
+      &--house {
+        max-width: 60%;
+        flex-basis: 60%;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-bottom: 10px;
+
+      &--case {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  &__select {
+    margin-bottom: 20px;
+  }
+
+  &__input-holder {
+    flex-basis: 80%;
+    max-width: 80%;
+    margin-bottom: 20px;
+
+    &--house {
+      flex-basis: 60%;
+      max-width: 60%;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      &--house {
+        flex-basis: 40%;
+        max-width: 40%;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .form__date-holder {
+      &:after {
+        bottom: 21px;
+      }
+    }
+
+  }
+
+  &__address-holder {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    &__item {
+      display: block;
+
+      &.take-work-person {
+        margin-left: 50px;
+      }
+    }
+
+    .order-contacts__label--small {
+       width: 40%;
+     }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    &__inner {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__label {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    .order-contacts__label--small {
+      width: 100%;
+    }
+
+    .order-contacts__input--house {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__item {
+      &.take-work-person {
+        margin-left: 20px;
+      }
+    }
+  }
+}

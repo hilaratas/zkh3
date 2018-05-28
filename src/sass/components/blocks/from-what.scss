@@ -1,0 +1,50 @@
+.from-what {
+	position: relative;
+
+	&__checkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+
+	&__indicator {
+		display: inline-block;
+		text-align: center;
+	}
+	
+	&__icon {
+		stroke: #d9d9d9;
+	}
+
+	&__title {
+		display: block;
+		margin-top: 15px;
+	}
+
+	// &__checkbox:checked + &__indicator {
+	// 	.from-what__icon--fire {
+	// 		stroke: red;
+	// 	}
+
+	// 	.from-what__icon--fill {
+	// 		stroke: $color-brand-3;
+	// 	}
+
+	// 	.from-what__icon--arson {
+	// 		stroke: red;
+	// 	}
+
+	// 	.from-what__icon--disaster {
+	// 		stroke: $color-brand-3;
+	// 	}
+
+	// 	.from-what__icon--bomb {
+	// 		stroke: red;
+	// 	}
+
+	// 	.from-what__icon--criminals {
+	// 		stroke: black;
+	// 	}
+	// }
+}

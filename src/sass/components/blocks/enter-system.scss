@@ -1,0 +1,16 @@
+.enter-system {
+	
+	margin: 2rem 0;
+	padding: 40px 20px;
+	text-align: center;
+	background: $color-brand-3 url('../img/enter-system-bg.png') bottom right no-repeat;
+
+	&__text-holder {
+		margin: 0 0 1.1rem;
+	}
+
+	&__text {
+		color: $color-brand-6;
+		font-size: $font-size-h5;
+	}
+}

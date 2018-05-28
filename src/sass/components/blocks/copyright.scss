@@ -1,0 +1,33 @@
+.copyright {
+
+	display: block;
+	padding-right: 30px;
+	text-align: center;
+			
+	&__top {
+		display: block;
+		font-size: 10px;
+		line-height: 13px;
+		color: #5c5c5c;
+		white-space: nowrap;
+		text-transform: uppercase;
+		padding: 0 0 5px; 
+	}
+
+	&__bottom {
+		display: block;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #060606;
+		white-space: nowrap;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		text-align: left;
+
+		&__top {
+			padding: 0;
+		}
+	}
+
+}

@@ -1,0 +1,159 @@
+/**
+ * @package   PickMeUp
+ * @author    Nazar Mokrynskyi <nazar@mokrynskyi.com>
+ * @author    Stefan Petre <www.eyecon.ro>
+ * @copyright Copyright (c) 2013-2016, Nazar Mokrynskyi
+ * @copyright Copyright (c) 2008-2009, Stefan Petre
+ * @license   MIT License, see license.txt
+ */
+$border-radius                    : .4em !default;
+$background                       : transparent !default;
+$color                            : #000 !default;
+$background-hover                 : transparent !default;
+$color-hover                      : #88c5eb !default;
+$nav-color                        : $color !default;
+$nav-color-hover                  : $color-hover !default;
+$not-in-month                     : $grey-brand-1;
+$not-in-month-hover               : #999 !default;
+$disabled                         : #333 !default;
+$selected                         : $color !default;
+$selected-background              : $grey-brand-1;
+$not-in-month-selected-background : #17384d !default;
+$day-of-week                      : $not-in-month-hover !default;
+$today-background                 : $color-brand-3;
+$today-color                      : $color-brand-6;
+$font-size						  : $font-size-extra-small;
+$elem-width                       : 24px;
+$elem-height                      : $elem-width;
+
+.pickmeup {
+	background      : $background;
+	border-radius   : $border-radius;
+	-moz-box-sizing : content-box;
+	box-sizing      : content-box;
+	display         : inline-block;
+	position        : absolute;
+	touch-action    : manipulation;
+	font-size       : $font-size; 
+
+	* {
+		-moz-box-sizing : border-box;
+		box-sizing      : border-box;
+	}
+
+	&.pmu-flat {
+		position : relative;
+	}
+
+	&.pmu-hidden {
+		display : none;
+	}
+
+	.pmu-instance {
+		display: inline-block; padding: 0; text-align: center; width: 100%;
+
+		.pmu-button {
+			color: $color; cursor: pointer; outline: none; text-decoration: none; @include vertical-align-middle();
+		}
+
+		.pmu-today { color: $today-color; }
+
+		.pmu-button:hover {
+			background: $background-hover;
+		}
+
+		.pmu-not-in-month {
+			color : $not-in-month;
+		}
+
+		.pmu-disabled, .pmu-disabled:hover { color: $disabled; cursor: default; }
+
+		.pmu-selected { color: $selected; 
+			&:before { background: $selected-background; }
+		}
+
+		.pmu-not-in-month.pmu-selected { }
+
+		nav { color: $nav-color; display: flex; line-height: 40px; 
+			*:first-child :hover {
+				color : $nav-color-hover;
+			}
+
+			.pmu-prev, .pmu-next { display : none; height  : 40px; width   : 60px; position: absolute; top: 0; }
+			.pmu-prev { left: 0; }
+			.pmu-next {	right: 0;}
+
+			.pmu-month { width : 14em; }
+		}
+
+		.pmu-years, .pmu-months {
+			* { display: inline-block; line-height: 3.6em; width: 3.5em; }
+		}
+
+		.pmu-day-of-week {
+			color: $day-of-week; cursor: default;
+			* { line-height : 1.8em;}
+		}
+
+		.pmu-day-of-week, .pmu-days {
+			* { display : inline-block; height: $elem-height; width: 14.28%; line-height: $elem-height; margin: 2px 0; position: relative; }
+		}
+
+		.pmu-days {
+			* {
+				&:before { content: ''; width: $elem-width; height: $elem-height; border-radius: 50%; position: absolute; 
+					top: 50%; left: 50%; z-index: -1; margin-left: -($elem-width/2); margin-top: -($elem-height/2); transform: scale(1) ; background: transparent; box-shadow: none; transition: all $transition-duration linear;
+				}
+
+				&.pmu-selected {
+					&:before {
+						background: $selected-background;
+					}
+				}
+
+				&.pmu-today {
+					color: $color-brand-6;
+					&:before {
+						background: $today-background;
+					}
+				}
+
+				&:hover, &:focus {
+					&:before {
+						background: $selected-background;
+						//box-shadow: 0px 0px 0px 3px $selected-background; 
+						transform: scale(1.2);
+					}
+				}
+			}
+
+		}
+	}
+
+	.pmu-instance:first-child .pmu-prev,
+	.pmu-instance:last-child .pmu-next {
+		display : block;
+	}
+
+	.pmu-instance:first-child,
+	.pmu-instance:last-child {
+		.pmu-month {
+			width : 13em;
+		}
+	}
+
+	.pmu-instance:first-child:last-child .pmu-month {
+		width : 100%;
+		padding: 0 60px;
+		font-size: 18px;
+		border-bottom: 1px solid $grey-brand-1;
+		margin: 0 0 8px; 
+	}
+
+	&:not(.pmu-view-days) .pmu-days,
+	&:not(.pmu-view-days) .pmu-day-of-week,
+	&:not(.pmu-view-months) .pmu-months,
+	&:not(.pmu-view-years) .pmu-years {
+		display : none;
+	}
+}

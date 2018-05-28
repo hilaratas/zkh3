@@ -1,0 +1,36 @@
+.pay-system{
+    display: inline-block;
+    vertical-align: text-bottom;
+    
+    &__ttl{
+	    color: $grey-brand-1;
+	    line-height: calc( 2rem + 2px );
+	    font-size:  calc( 1rem - 2px );
+
+	    @media (min-width:1025px){
+			display: inline-block;
+		    vertical-align: top;
+		    margin-right: 0.5rem;		    
+	    }
+    }
+	&__item{
+	    display: inline-block;
+	    vertical-align: top;
+	    width: calc( 2rem + 2px );
+	    height: calc( 2rem + 2px );
+	    margin-right: 0.5rem;
+	    position: relative;
+	    
+	    &--left{
+		    margin-left: 1.6666rem;
+	    }
+	}
+	&__icon{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top:0;
+		bottom: 0;
+		margin: auto;
+	}
+}

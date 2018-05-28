@@ -1,0 +1,50 @@
+<script src="./js/vendor/jquery-2.2.0.min.js"></script>
+<script src="./js/vendor/owl.carousel.min.js"></script>
+<script src="./js/vendor/slick.min.js"></script>
+<script src="./js/vendor/jquery.magnific-popup.min.js"></script>
+<script src="./js/vendor/jquery.maskedinput.js"></script>
+<script src="./js/vendor/jquery.validate.min.js"></script>
+<script src="./js/vendor/additional-methods.min.js"></script>
+<script src="./js/vendor/flexmenu.min.js"></script>
+<script src="./js/vendor/jquery.form.js"></script>
+<script src="./js/vendor/jquery-ui.min.js"></script>
+<script src="./js/vendor/svg4everybody.min.js"></script>
+<script src="./js/vendor/js.cookie.js"></script>
+<script src="./js/vendor/nouislider.min.js"></script>
+<script src="./js/vendor/stickyfill.min.js"></script>
+<script src="./js/vendor/jquery.kladr.js"></script>
+
+<script src="./js/plugins/classList-polyfil.js"></script>
+<script src="./js/plugins/closest-polyfil.js"></script>
+<script src="./js/plugins/matches-polyfil.js"></script>
+
+<script src="./js/plugins/table.js"></script>
+<script src="./js/plugins/tabs.js"></script>
+
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+
+<script src="./js/main.js"></script>
+
+<!-- Не копировать на сайт -->
+<script>
+	$(document).ready(function() {
+	   $('button[type="submit"]').on('click', function() {
+	        $('.order-form').submit();
+	   });
+
+	   var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+	   $('.js-file-btn').on('click', function(e) {
+	   		e.stopPropagation();
+	   });
+
+	   $('.js-file-input').on('change', function(e) {
+	   		var $this = $(this),
+	   			fileCount =  $this[0].files.length,
+	   			fileName = $(this).val().replace( "C:\\fakepath\\", '' ),
+	   			fileTxt = $('.js-file-name');
+	   		(fileCount > 1) ? fileTxt.text('Число файлов: ' + fileCount) : fileTxt.text(fileName);
+	   });
+	});
+</script>
+<!-- Не копировать на сайт -->

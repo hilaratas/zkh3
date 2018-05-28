@@ -1,0 +1,17 @@
+.interactive{
+
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 2*$padding-base;
+	padding-right: 2*$padding-base;
+
+	&--indents {
+		margin-top: 30px;
+		margin-bottom: 45px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+	}
+}

@@ -1,0 +1,6 @@
+.basket-container { 
+	@media (max-width: $screen-xs-max) {
+		flex-grow: 1 !important;
+    	padding-top: 30px;
+	}
+}

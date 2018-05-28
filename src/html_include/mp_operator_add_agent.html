@@ -1,0 +1,315 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-cabinet">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Список агентов</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Список агентов</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+
+				<div class="select menu-select">
+					<select class="menu-select__nav">
+						<option value="#">Профиль оператора</option>
+						<option value="#">Список заказов - бытовые услуги</option>
+						<option value="#">Список заказов - страхование</option>
+						<option value="#">Список агентов</option>
+						<option value="#">Выход</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+
+						<div class="row">
+
+							<div class="col-sm-8 col-md-9">
+								<div class="cabinet">
+
+									<form class="form js-form-validate cabinet-edit-form" method="post" action="" novalidate="novalidate">
+										<div class="cabinet-edit-form__list">
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="reserve_agent" class="cabinet-edit-form__label">Резервный агент</label>
+													<label class="checkbox">
+														<input type="checkbox" id="reserve_agent" name="reserve_agent"> <span class="checkbox__indicator"></span> </label>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="serving_whole_city" class="cabinet-edit-form__label">Обслуживает весь город</label>
+													<label class="checkbox">
+														<input type="checkbox" id="serving_whole_city" name="serving_whole_city"> <span class="checkbox__indicator"></span> </label>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="short_name" class="cabinet-edit-form__label">Сокращённое наименование</label>
+													<div class="input--wrapper">
+														<input type="text" id="short_name" name="short_name" class="input input--fill required js-form-validate__cyrillic" value="" placeholder=""> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="full_name" class="cabinet-edit-form__label">Полное наименование</label>
+													<div class="input--wrapper">
+														<input type="text" id="full_name" name="full_name" class="input input--fill js-form-validate__cyrillic required" value="" placeholder=""> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="inn" class="cabinet-edit-form__label">ИНН</label>
+													<div class="input--wrapper">
+														<input type="tel" id="inn" name="inn" step="1" class="input input--fill required js-mask-digits js-form-validate__inn" value="" placeholder="" > </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="kpp" class="cabinet-edit-form__label">КПП</label>
+													<div class="input--wrapper">
+														<input type="number" id="kpp" name="kpp" class="input input--fill js-form-validate__kpp" value="" placeholder="" > </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="okpo" class="cabinet-edit-form__label">ОКПО</label>
+													<div class="input--wrapper">
+														<input type="number" id="okpo" name="okpo" class="input input--fill js-form-validate__okpo" value="" placeholder=""> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="oktmo" class="cabinet-edit-form__label">ОКТМО</label>
+													<div class="input--wrapper">
+														<input type="number" id="oktmo" name="oktmo" class="input input--fill js-form-validate__oktmo" value="" placeholder="" > </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="ogrn" class="cabinet-edit-form__label">ОГРН</label>
+													<div class="input--wrapper">
+														<input type="tel" id="ogrn" name="ogrn" class="input input--fill js-form-validate__ogrn" value="" placeholder="" data-msg-required="Поле не заполнено"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="okved" class="cabinet-edit-form__label">ОКВЭД</label>
+													<div class="input--wrapper">
+														<input type="tel" id="okved" name="okved" class="input input--fill js-form-validate__okved" value="" placeholder="">
+													</div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="post_address" class="cabinet-edit-form__label">Почтовый адрес</label>
+													<div class="input--wrapper">
+														<input type="text" id="post_address" name="post_address" class="input input--fill required" value="" placeholder="" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="legal_address" class="cabinet-edit-form__label">Юридический адрес</label>
+													<div class="input--wrapper">
+														<input type="text" id="legal_address" name="legal_address" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="checking_account" class="cabinet-edit-form__label">Расчётный счёт</label>
+													<div class="input--wrapper">
+														<input type="number" id="checking_account" name="checking_account" class="input input--fill required js-form-validate__rc" value="" placeholder="" > </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="executor_bank" class="cabinet-edit-form__label">Банк исполнителя</label>
+													<div class="input--wrapper">
+														<input type="text" id="executor_bank" name="executor_bank" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="correspondent_account" class="cabinet-edit-form__label">Корр. счёт</label>
+													<div class="input--wrapper">
+														<input type="number" id="correspondent_account" name="correspondent_account" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="bik" class="cabinet-edit-form__label">БИК</label>
+													<div class="input--wrapper">
+														<input type="number" id="bik" name="bik" class="input input--fill required js-form-validate__kpp" value="" placeholder="" > </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="founder" class="cabinet-edit-form__label">Учредитель</label>
+													<div class="input--wrapper">
+														<input type="text" id="founder" name="founder" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="general_manager" class="cabinet-edit-form__label">Генеральный директор</label>
+													<div class="input--wrapper">
+														<input type="text" id="general_manager" name="general_manager" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="founding" class="cabinet-edit-form__label">Основание</label>
+													<div class="input--wrapper">
+														<input type="text" id="founding" name="founding" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="email" class="cabinet-edit-form__label">Электронная почта</label>
+													<div class="input--wrapper">
+														<input type="email" id="email" name="email" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="phone" class="cabinet-edit-form__label">Стационарный телефон</label>
+													<div class="input--wrapper">
+														<input type="tel" id="phone" name="phone" class="input input--fill js-mask-tel" value="" placeholder="+7 (___) ___-__-__" data-msg-required="Поле не заполнено"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="mobile_phone" class="cabinet-edit-form__label">Мобильный телефон</label>
+													<div class="input--wrapper">
+														<input type="tel" id="mobile_phone" name="mobile_phone" class="input input--fill js-mask-tel required" value="" placeholder="+7 (___) ___-__-__" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="city" class="cabinet-edit-form__label">Город</label>
+													<div class="input--wrapper">
+														<input type="text" id="city" name="city" class="input input--fill required" value="" placeholder="" data-msg-required="Поле не заполнено" aria-required="true"> </div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="nds" class="cabinet-edit-form__label">НДС</label>
+													<label class="checkbox">
+														<input type="checkbox" id="nds" name="nds" value="1"> <span class="checkbox__indicator"></span> </label>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item">
+												<div class="form__row">
+													<label for="uk_services" class="cabinet-edit-form__label">Услуги, оказываемые компанией</label>
+													<div class="input--wrapper">
+														<div class="select select--multiply">
+															<select id="uk_services" name="uk_services[]" class="select__native select-multiply select-filter is-active js-subcategory-filter" multiple="">
+																<option disabled="">Бытовые и сервисные услуги</option>
+																<option value="24">Электромонтажные работы</option>
+																<option value="25">Сантехнические работы</option>
+																<option value="26">Мелкий бытовой ремонт</option>
+																<option value="27">Клининговые услуги</option>
+																<option disabled="">Установка и обслуживание приборов учета</option>
+																<option value="22">Установка счетчиков воды</option>
+																<option value="23">Поверка счетчиков воды</option>
+																<option disabled="">Безопасность для семьи и дома</option>
+																<option value="20">Сигнализация</option>
+																<option value="21">Видеонаблюдение</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cabinet-edit-form__item agent-address__list" style="display: block;">
+												<div class="form__row">
+													<label class="cabinet-edit-form__label">География обслуживания</label>
+													<div class="input--wrapper load-geo">
+														<button id="get_addresses" class="button" type="button">Загрузить адреса</button>
+													</div>
+													<div class="input--wrapper geo-list" style="display: none;">
+														<div class="form__row address_list"> </div>
+														<div class="form__row--middle" id="js-geo-placeholder" data-next="0"> </div>
+														<div class="form__row form__row--middle">
+															<div class="form__row form__row--middle inline-align inline-align--right">
+																<button type="button" class="button button--no-fill js-geo-add" id="js-geo-add">Добавить новый адрес обслуживания</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__row cabinet-edit__btn">
+											<input type="submit" name="save" value="Сохранить" class="button button--big"> <a href="/operator/agents/" class="button button--big button--no-fill">Отмена</a> </div>
+									</form>
+								</div>
+							</div>
+
+							<aside class="col-sm-4 col-md-3">
+								<nav class="aside-nav">
+									<ul class="aside-nav__list">
+										<li class="aside-nav__item aside-nav__item--active">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Профиль оператора</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список заказов - <br/> страхование</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список заказов - <br/> бытовые услуги</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Список агентов</div>
+											</a>
+										</li>
+										<li class="aside-nav__item">
+											<a class="aside-nav__link" href="#">
+												<div class="aside-nav__text">Выход</div>
+											</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="aside-question">
+									<div class="aside-question__title">
+										Возникли вопросы?
+									</div>
+									<div class="aside-question__text">
+										Связитесь с нами через форму обратной связи
+									</div>
+									<a href="#popup-feedback" class="button button--big aside-question__btn  js-popup-inline">
+										Задать вопрос
+									</a>
+								</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

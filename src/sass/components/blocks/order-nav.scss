@@ -1,0 +1,142 @@
+.order-nav {
+  margin-bottom: 18px;
+
+  &--middle-bottom {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing:-1px;
+    box-shadow: $box-shadow;
+    display: flex;
+    border-radius: 3px;
+  }
+
+  &__item {
+    display: inline-block;
+    flex-grow: 1;
+    vertical-align: middle;
+    line-height: normal;
+    letter-spacing: normal;
+    max-height: 60px;
+    border-right: $border-gray;
+    padding: 0;
+    font-size: 1.3rem;
+    text-align: center;
+
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-radius: 0 3px 3px 0;
+    }
+
+    &--small {
+      width: 20%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    padding: 11px 11px;
+  }
+
+  a.order-nav__link { 
+    cursor: pointer;
+  }
+
+  .active {
+    color: white;
+    background: $color-brand-3;
+    border-right: 1px solid #354e72;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    .order-nav__link {
+      color: #fff;
+    }
+  }
+
+  .passed {
+    color: white;
+    background: #123568;
+    border-right: 1px solid #354e72;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    .order-nav__link {
+      color: #fff;
+    }
+  }
+
+  .flexMenu-viewMore {
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+  }
+
+  .flexMenu-viewMore>a {
+    width: 20px;
+    height: $menu-level1-font-size;
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 10px;
+      background: $grey-brand-1;
+      border-radius: 1.5px;
+      top: 50%;
+      left: 50%;
+      margin-top: -5px;
+      transition: background $transition-duration;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+      transform-origin: right bottom 0;
+    }
+
+    &:after {
+      transform: rotate(45deg);
+      transform-origin: left bottom 0;
+    }
+  }
+
+  .flexMenu-popup {
+    top: 24px;
+    left: -127px;
+    color: black;
+    z-index: 1000;
+
+    .order-nav__item {
+      width: 230px;
+      background: white;
+      border-bottom: $border-gray;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      &:hover {
+        background: $grey-brand-3;
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+}

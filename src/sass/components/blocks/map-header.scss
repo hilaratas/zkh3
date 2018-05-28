@@ -1,0 +1,37 @@
+.map-header {
+	display: flex;
+	margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+
+
+	&__title-holder {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+		flex-grow: 1;
+		white-space: nowrap;
+	}
+
+	&__filter-holder {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+		flex-grow: 100;
+		align-self: flex-end;
+		text-align: right;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__title-holder {
+			width: 100%;
+			flex-grow: 100;
+		}
+
+		&__filter-holder {
+			width: 100%;
+			flex-grow: 100;
+			text-align: left;
+		}
+	}
+}

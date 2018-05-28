@@ -1,0 +1,286 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    @@include('./banner-slider.html')
+</section>
+
+
+<section class="section">
+  <div class="section__inner">
+    <div class="container-fluid">
+	    <div class="services__title--wrapper">
+		    <h2 class="title title--h2">Каталог услуг</h2>
+		    <!--<h2 class="title title&#45;&#45;h2 services__title">Каталог услуг</h2>-->
+		    <form class="services-search">
+			    <input class="input services-search__input" name="search" placeholder="Найти услугу">
+			    <button type="submit" class="services-search__btn">
+				    @@include('./icon.html', { "class": "icon services-search__icon", "width" : "25", "height" : "20", "name" : "icon-search" })
+			    </button>
+		    </form>
+	    </div>
+      
+      	<div class="services">
+			<ul class="services__list">
+
+				<li class="services__item">
+					<a href="#" class="services__link">
+						<div class="services__img">
+							@@include('./icon.html', { "class": "icon services__icon services__icon--house", "width" : "96", "height" : "94", "name" : "icon-house" })
+						</div>
+					    <div class="services__text">
+					        Страхование имущества и недвижимости
+					    </div>
+					</a>
+				</li>
+
+				<li class="services__item">
+					<a href="#" class="services__link">
+						<div class="services__img">
+							@@include('./icon.html', { "class": "icon services__icon services__icon--lock", "width" : "96", "height" : "94", "name" : "icon-lock" })
+						</div>
+						<div class="services__text">
+							Безопасность для семьи и дома
+						</div>
+					</a>
+				</li>
+
+				<li class="services__item">
+					<a href="#" class="services__link">
+						<div class="services__img">
+							@@include('./icon.html', { "class": "icon services__icon services__icon--speed", "width" : "96", "height" : "94", "name" : "icon-speed" })
+						</div>
+						<div class="services__text">
+							Установка и обслуживание приборов учета
+						</div>
+					</a>
+				</li>
+
+				<li class="services__item">
+					<a href="#" class="services__link">
+						<div class="services__img">
+							@@include('./icon.html', { "class": "icon services__icon services__icon--instruments", "width" : "96", "height" : "94", "name" : "icon-instruments" })
+						</div>
+						<div class="services__text">
+							Бытовые и сервисные услуги
+						</div>
+					</a>
+				</li>
+			</ul>
+      	</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+
+				<h2 class="title title--h2">Популярные услуги</h2>
+			    <div class="popular-services2">
+                    <div class="popular-services2__inner">
+                        <div class="popular-services2__slider js-slider__services2">
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Страхование имущества</div>
+                                        <div class="popular-services2__text">
+                                        Установка наружного выключателя/наружной розетки
+                                        </div>
+                                        <div class="popular-services2__price">
+                                        от 22000 руб.
+                                        </div>
+                                    </a>
+                                </div> 
+                            </div>
+                            
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Сервисные услуги</div>
+                                        <div class="popular-services2__text">
+                                            Установка <br> смесителя
+                                        </div>
+                                        <div class="popular-services2__price">
+                                            от 2400 руб.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Обслуживание</div>
+                                        <div class="popular-services2__text">
+                                            Установка и подключение отдельно стоящей стиральной машины
+                                        </div>
+                                        <div class="popular-services2__price">
+                                            от 1800 руб.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Безопасность</div>
+                                        <div class="popular-services2__text">
+                                            Установка врезного замка в металлическую дверь
+                                        </div>
+                                        <div class="popular-services2__price">
+                                            от 2800 руб.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Обслуживание</div>
+                                        <div class="popular-services2__text">
+                                            Установка и подключение отдельно стоящей стиральной машины
+                                        </div>
+                                        <div class="popular-services2__price">
+                                            от 1800 руб.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="popular-services2__item-wrap">
+                                <div class="popular-services2__item">
+                                    <a href="#" class="popular-services2__link">
+                                        <div class="popular-services2__text--top">Обслуживание</div>
+                                        <div class="popular-services2__text">
+                                            Установка и подключение отдельно стоящей стиральной машины
+                                        </div>
+                                        <div class="popular-services2__price">
+                                            от 1800 руб.
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			<h2 class="title title--h2">Оплата счета за ЖКУ</h2>
+			@@include('./oplata.html')
+		</div>
+	</div>
+</section>
+
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+
+			<section class="section">
+				<h2 class="title title--h2 lenta2__title">Новости</h2>
+				<div class="lenta2">
+					<div class="lenta2__list lenta2__list--1-xs lenta2__list--2-sm lenta2__list--2-md lenta2__list--4-lg lenta2__list--items-mt25px">
+						
+						<div class="lenta2__item lenta2__item">
+							<div class="item2">
+								<div class="item2__right">
+									<div class="item2__date">15.02.2017</div>
+									<a href="#" class="item2__title">График отключения горячей воды июль</a>
+									<div class="item2__announce">
+										В июле продолжится постепенное отключение горячего водоснабжения.
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<a href="#" class="item2__small-link">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="lenta2__item">
+							<div class="item2">
+								<div class="item2__right">
+									<div class="item2__date">23.02.2017</div>
+									<a href="#" class="item2__title">Изменение тарифов</a>
+									<div class="item2__announce">
+										В России не ожидается резких скачков в стоимости жилищно- коммунальных услуг. Грядущее повышение тарифов будет...
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<a href="#" class="item2__small-link">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="lenta2__item">
+							<div class="item2">
+								<div class="item2__right">
+									<div class="item2__date">15.02.2017</div>
+									<a href="#" class="item2__title">График отключения горячей воды июль</a>
+									<div class="item2__announce">
+										В июле продолжится постепенное отключение горячего водоснабжения.
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<a href="#" class="item2__small-link">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="lenta2__item">
+							<div class="item2">
+								<div class="item2__right">
+									<div class="item2__date">15.02.2017</div>
+									<a href="#" class="item2__title">График отключения горячей воды июль</a>
+									<div class="item2__announce">
+										В июле продолжится постепенное отключение горячего водоснабжения.
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<a href="#" class="item2__small-link">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+		</div>
+    </div>
+</section>
+
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./banner-small.html')
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./questions.html')
+		</div>
+	</div>
+</section>

@@ -1,0 +1,53 @@
+.detail {
+
+	margin-top: 2rem;
+	border: $border-width solid $grey-brand-1;
+	padding: 30px;
+
+	&__row {
+		position: relative;
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__line-holder {
+		position: static;
+	}
+
+	&__line {
+		position: absolute;
+		width: inherit;
+		height: 100%;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: $padding-base;
+			right: $padding-base*2;
+			border-bottom: $border-width solid $grey-brand-1;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&__line-holder {
+			height: $line-height-base;
+			width: 100%;
+			position: relative;
+		}
+		&__line {
+			position: absolute;
+			width: auto;
+			left: 0;
+			right: 0;
+
+			&:after {
+				right: $padding-base;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,257 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-order">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+						<li class="breadcrumbs__item"><span class="breadcrumbs__last">Оформить заявку</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Заказ услуги</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">	
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+						
+						<div class="row">
+							<div class="col-sm-8 col-md-9">
+                                @@include('./order-nav.html', { "step" : 2 })
+								<div class="order order-contacts">
+									<div class="order__title">
+										Введите контактные данные
+									</div>
+									<form class="form order-form js-form-validate" action="#" method="GET">
+										<div class="order-form__text">
+											Заполните поля для оформления заявки:
+										</div>
+
+										<ul class="order-form__list">
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Введите телефон пользователя</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="tel" name="phone" class="input input--fill order-contacts__input js-mask-tel" required  placeholder="+7 (___) ___-__-__">
+												</div>
+											</li>
+											<li class="order-contacts__item">
+							                    <label class="order-contacts__label hidden-xs">&nbsp;</label>
+							                    <div class="form__row form__row--middle form__row--not-last order-contacts__input-holder">
+							                        <label class="checkbox">
+							                            <input type="checkbox" id="takes_work_personally" name="takes_work_personally" value="Y">
+							                            <span class="checkbox__indicator"></span>
+							                        </label>
+							                        <label for="takes_work_personally">Я буду принимать работы лично</label>
+							                    </div>
+							                </li>
+											<li class="order-contacts__item take-work-person is-show">
+							                    <label class="order-contacts__label">Информация о лице, которое будет принимать работы</label>
+							                    <div class="form__row form__row--middle form__row--not-last order-contacts__input-holder">
+							                        <div class="cabinet-edit-form__list js-lc-data__context">
+							                            <div class="cabinet-edit-form__item">
+							                                <div class="form__row">
+							                                    <label for="take-work-last-name" class="cabinet-edit-form__label">Фамилия:</label>
+							                                    <div class="input--wrapper">
+							                                        <div class="lenta4">
+							                                            <div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+							                                                <div class="lenta4__item lenta4__item--grow">
+							                                                    <input type="text" name="take_work_person[last_name]" class="input input--fill" required id="take-work-last-name" value="">
+							                                                </div>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                            <div class="cabinet-edit-form__item">
+							                                <div class="form__row">
+							                                    <label for="take-work-name" class="cabinet-edit-form__label">Имя:</label>
+							                                    <div class="input--wrapper">
+							                                        <div class="lenta4">
+							                                            <div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+							                                                <div class="lenta4__item lenta4__item--grow">
+							                                                    <input type="text" name="take_work_person[name]" class="input input--fill" required="" id="take-work-name" value="">
+							                                                </div>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                            <div class="cabinet-edit-form__item">
+							                                <div class="form__row">
+							                                    <label for="take-work-second-name" class="cabinet-edit-form__label">Отчество:</label>
+							                                    <div class="input--wrapper">
+							                                        <div class="lenta4">
+							                                            <div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+							                                                <div class="lenta4__item lenta4__item--grow">
+							                                                    <input type="text" name="take_work_person[second_name]" class="input input--fill" id="take-work-second-name" value="">
+							                                                </div>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                            <div class="cabinet-edit-form__item">
+							                                <div class="form__row">
+							                                    <label for="take-work-passport" class="cabinet-edit-form__label">Серия и номер паспорта:</label>
+							                                    <div class="input--wrapper">
+							                                        <div class="lenta4">
+							                                            <div class="lenta4__list lenta4__list--nowrap lenta4__list--8px">
+							                                                <div class="lenta4__item lenta4__item--grow">
+							                                                    <input type="text" name="take_work_person[passport]" class="input input--fill js-mask-passport" required="" id="take-work-passport" value="" placeholder="__ __ ______">
+							                                                </div>
+							                                            </div>
+							                                        </div>
+							                                    </div>
+							                                </div>
+							                            </div>
+							                        </div>
+							                    </div>
+							                </li>
+							                <li class="order-contacts__item">
+							                    <label id="surname" class="order-contacts__label">Фамилия</label>
+							                    <div class="form__row order-contacts__input-holder">
+							                        <input type="text" name="surname" class="input input--fill order-contacts__input" required value="Сайта">
+							                    </div>
+							                </li>
+							                <li class="order-contacts__item">
+							                    <label class="label order-contacts__label">Имя</label>
+							                    <div class="form__row order-contacts__input-holder">
+							                        <input type="text" name="name" class="input input--fill order-contacts__input" required value="Администратор">
+							                    </div>
+							                </li>
+							                <li class="order-contacts__item">
+							                    <label class="order-contacts__label">Отчество</label>
+							                    <div class="form__row order-contacts__input-holder">
+							                        <input type="text" name="patronymic" class="input input--fill order-contacts__input" value="Александрович">
+							                    </div>
+							                </li>
+							                <li class="order-contacts__item">
+							                    <div class="lenta4 form__row form__row--middle is-agree-row">
+							                        <div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+							                            <div class="lenta4__item lenta4__item--shrink">
+							                                <label class="checkbox checkbox--vtop">
+							                                    <input type="checkbox" id="agreement" name="agreement" required="" aria-required="true" checked="">
+							                                    <span class="checkbox__indicator"></span>
+							                                </label>
+							                            </div>
+							                            <div class="lenta4__item lenta4__item--grow">
+							                                <label for="agreement">Настоящим подтверждаю свое согласие с условиями</label><br>
+							                                <a href="/about/publicoffer/" class="form__link2" target="_blank">Пользовательского соглашения</a>
+							                            </div>
+							                        </div>
+							                    </div>
+							                </li>
+							            </ul>
+
+
+										<!-- <ul class="order-form__list">
+											<li class="order-contacts__item">
+												<label id="surname" class="order-contacts__label">Фамилия</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="text" name="surname" class="input input--fill order-contacts__input" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<label class="label order-contacts__label">Имя</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="text" name="name" class="input input--fill order-contacts__input" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Отчество</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="text" name="patronymic" class="input input--fill order-contacts__input" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Домашний телефон</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="tel" name="phone" class="input input--fill order-contacts__input js-mask-tel" placeholder="+7 (___) ___-__-__">
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Мобильный телефон</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="tel" name="mobile" class="input input--fill order-contacts__input js-mask-tel" placeholder="+7 (___) ___-__-__" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Город</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="text" name="city" class="input input--fill order-contacts__input" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<div class="order-contacts__inner">
+													<label class="order-contacts__label order-contacts__label--house">Дом</label>
+													<div class="order-contacts__input-holder order-contacts__input-holder--house form__row form__row--error-pos">
+														<input type="number" name="house" class="input input--fill order-contacts__input order-contacts__input--house" required>
+													</div>
+												</div>
+													
+												<div class="order-contacts__inner">
+													<label class="order-contacts__label order-contacts__label--case">Стр./корпус</label>
+													<div class="order-contacts__input-holder form__row form__row--error-pos">
+														<input type="number" name="build" class="input input--fill order-contacts__input order-contacts__input--house">
+													</div>
+												</div>
+												
+											</li>
+											<li class="order-contacts__item">
+												<label class="order-contacts__label">Квартира</label>
+												<div class="form__row order-contacts__input-holder">
+													<input type="number" name="flat" class="input input--fill order-contacts__input" required>
+												</div>
+											</li>
+											<li class="order-contacts__item">
+												<div class="lenta4 form__row form__row--middle is-agree-row">
+							                        <div class="lenta4__list lenta4__list--8px lenta4__list--nowrap">
+							                            <div class="lenta4__item lenta4__item--shrink">
+							                                <label class="checkbox checkbox--vtop">
+							                                    <input type="checkbox" id="agreement" name="agreement" required="" aria-required="true">
+							                                    <span class="checkbox__indicator"></span>
+							                                </label>
+							                            </div>
+							                            <div class="lenta4__item lenta4__item--grow">
+							                                <label for="agreement">Настоящим подтверждаю свое согласие с условиями</label><br>
+
+							                                <a href="#popup-agreement" class="form__link2 js-popup-inline">Пользовательского соглашения</a>
+							                            </div>
+							                        </div>
+							                    </div>
+											</li>
+										</ul> -->
+									</form>
+									<div class="order__btn row">
+										<a href="#" class="order__link">Назад</a>
+										<button type="submit" class="button button--big">Оформить заказ</button>
+									</div>
+								</div>
+							</div>
+							
+							<aside class="col-sm-4 col-md-3">
+								<div class="order-basket__banner">Баннер</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

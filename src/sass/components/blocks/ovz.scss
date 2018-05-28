@@ -1,0 +1,26 @@
+.ovz {
+
+	display: inline-block;
+	vertical-align: top;
+
+	&__link {
+		display: inline-block;
+		font-size: $font-size-base;
+		color: $color-brand-6;
+		text-decoration: none;
+		line-height: 23px;
+		margin: 0 0 0 8px;
+	}
+
+	&__icon {
+		fill: $color-brand-6;
+		opacity: 0.35;
+		position: relative;
+		top: 3px;
+		transition: opacity $transition-duration;
+
+		&:hover{
+			opacity: 1;
+		}
+	} 
+}

@@ -1,0 +1,24 @@
+.subscribe {
+
+	&__form {
+		background: $color-brand-3;
+		padding: 20px;
+	}
+
+	&__header {
+		color: $color-brand-6;	
+	}
+
+	&__text-holder {
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		color: $color-brand-6;
+		line-height: $line-height-base;
+	}
+
+	&-holder {
+		background: $color-brand-3;
+	}
+}

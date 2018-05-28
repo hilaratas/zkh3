@@ -1,0 +1,30 @@
+.header-menu {
+
+	&__list {
+		display: table;
+	}
+
+	&__item {
+		display: table-cell;
+
+		&.active {
+			.header-menu__link {
+				color: #92c2f5;
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: $font-bold;
+		color: $color-brand-6;
+		text-decoration: none;
+		margin: 0 17px 13px;
+		line-height: 1;
+
+		&:hover {
+			color: #92c2f5;
+		}
+	}
+}

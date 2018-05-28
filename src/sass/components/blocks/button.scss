@@ -1,0 +1,201 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    height: $form-el-height;
+    margin: 0;
+    padding: $form-el-padding-vert $form-el-padding-hor;
+    border: $form-el-border solid $button-bg;
+    border-radius: $border-radius;
+    font-weight: $font-normal;
+    font-size: $form-el-font-size;
+    line-height: $form-el-line-height;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    background: $button-bg;
+    color: $color-brand-6;
+    box-shadow: none;
+    outline: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include no-appearance();
+    user-select: none;
+    transition: $transition-duration;
+	text-decoration: none;
+    position: relative;
+
+    &:not(span) {
+        cursor: pointer;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        background-color: rgba(red($button-bg), green($button-bg), blue($button-bg), 0.7);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: $form-el-line-height * 0.9;
+        height: $form-el-line-height * 0.9;
+        top: 50%;
+        left: 50%;
+        margin-top: - $form-el-line-height * 0.45;
+        margin-left: - $form-el-line-height * 0.45;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        display: none;
+        
+    }
+
+    &:disabled {
+        background-color: #9c9c9c;
+        border-color: #9c9c9c;
+    }
+
+    &:not(span):hover {
+        text-decoration: none;
+        color: #fff;
+        background: $button-bg-hover;
+        border-color: $button-border-hover;
+
+        &:disabled {
+            background-color: #9c9c9c;
+            border-color: #9c9c9c;
+        }
+    }
+
+    
+
+    &--xs-normal {
+        @media (max-width: $screen-xs-max) {
+            @include button--normal();
+        }
+    }
+	
+    
+
+    &--no-fill {
+        background: transparent;
+        color: $color-brand-4;
+        border-color: $input-color-border;
+
+        &:not(span):hover {
+            background: lighten($grey-brand-2, 20%);
+            border-color: $input-color-border;
+            color: $color-brand-4;
+        }
+
+    }
+
+    &--transparent {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        color: $color-brand-4;
+        background-color: transparent;
+        border-color: transparent;
+
+        &:not(span):hover, &:not(span):focus, &:not(span):active {
+            color: $color-brand-4;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+
+    &--red{
+	    background: $button-bg2;
+	    border-color: $button-bg2;
+	    
+	    &:not(span):hover {
+            background: $button-bg2-hover;
+            border-color: $button-bg2-hover;
+        }
+
+    }
+
+    &--gray {
+        text-transform: uppercase;
+        color: #505050;
+        background: #d9d9d9;
+        border: none;
+        width: 130px;
+
+        &:not(span):hover {
+            background: lighten($grey-brand-2, 20%);
+            border-color: $grey-brand-2;
+            color: $color-brand-4;
+        }
+    }
+	
+    &--small {
+        @include button--small();
+    }
+
+    &--xs-small {
+        @media (max-width: $screen-xs-max) { 
+            @include button--small();
+        }
+    }
+	
+    &--big {
+        @include button--big();
+    }
+
+    &--sm-big {
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            @include button--big();
+        }
+    }
+
+    &--fw{
+	    width: 100%;
+    }
+
+    &--xs-fw {
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+        }
+    }
+    
+    &__icon {
+		margin-bottom: -1px;
+	    margin-right: 8px;
+    }
+}
+
+button[type='submit'].button {
+    .is-submitted & {
+        &:before {
+            display: block;
+        }
+
+        &:after {
+            display: block;
+            animation: button-loading;
+            animation-duration:1s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+        }
+    }
+}
+
+
+
+@keyframes button-loading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}

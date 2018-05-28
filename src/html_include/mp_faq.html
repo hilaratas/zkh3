@@ -1,0 +1,103 @@
+<section class="section">
+    <div class="section__inner">
+        <div class="container-fluid">
+            @@include('./main-menu.html', {"position": "top"})
+        </div>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="section__header section__header-news">
+        <div class="section__inner">
+            <div class="container-fluid">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">О проекте</a></li>
+                        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Технический дизайн</span></li>
+                    </ul>
+                </nav>
+                <h1 class="title title--h1 title--main">Часто задаваемые вопросы</h1>
+            </div>
+        </div> 
+    </div>
+
+    <div class="section__main-content">
+        <div class="section__inner">
+            <div class="container-fluid">
+
+                <div class="select menu-select">
+                    <select class="menu-select__nav">
+                        <option value="#">О проекте</option>
+                        <option value="#" selected="">Часто задаваемые вопросы</option>
+                        <option value="#" selected="">Контакты</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                    
+                        <!-- Контентная часть -->
+                       
+                        <div class="row">
+                            <div class="col-sm-8 col-md-9">
+
+                                <div class="faq-button">
+                                    <div class="faq-button__holder">
+                                        <a href="/mp_contact.html#feedback-form" class="button button--xs-fw faq-button__button">Задать вопрос</a>
+                                    </div>
+                                </div>
+
+                                <!-- faq -->
+                                <div class="faq">
+                                    <ul class="faq__list js-accordion">
+                                        <li class="faq__item2 js-accordion__item">
+                                            <div class="faq__q2 js-accordion__click">
+                                                    Имеет ли право на субсидию женщина, зарегистрированная по месту жительства одна в жилом помещении, которое она ранее по договору дарения передала своему сыну в собственность, проживающему по другому адресу?
+
+                                                    <div class="faq__icon-holder">
+                                                        <i class="faq__icon"></i>
+                                                    </div>
+                                            </div>
+                                            <div class="faq__a2">
+                                                <div class="faq__a2-header">Ответ</div>
+                                                <div class="faq__a2-text">
+                                                    Если основанием пользования женщиной жилым помещением является договор безвозмездного пользования этим помещением, то она не имеет права на субсидию. Если основанием пользования женщиной жилым помещением является договор найма, заключенный с сыном – собственником жилья, то женщина соответствует условию предоставления субсидии в зависимости от основания пользования жилым помещением, как наниматель помещения.
+                                               </div>
+                                            </div> 
+                                        </li>
+                                        <li class="faq__item2 js-accordion__item">
+                                            <div class="faq__q2 js-accordion__click">
+                                                    Имеет ли право на субсидию женщина, зарегистрированная по месту жительства одна в жилом помещении, которое она ранее по договору дарения передала своему сыну в собственность, проживающему по другому адресу?
+
+                                                    <div class="faq__icon-holder">
+                                                        <i class="faq__icon"></i>
+                                                    </div>
+                                            </div>
+                                            <div class="faq__a2">
+                                                <div class="faq__a2-header">Ответ</div>
+                                                <div class="faq__a2-text">
+                                                    Если основанием пользования женщиной жилым помещением является договор безвозмездного пользования этим помещением, то она не имеет права на субсидию. Если основанием пользования женщиной жилым помещением является договор найма, заключенный с сыном – собственником жилья, то женщина соответствует условию предоставления субсидии в зависимости от основания пользования жилым помещением, как наниматель помещения.
+                                               </div>
+                                            </div> 
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /faq -->
+                            </div>
+
+                            <div class="col-sm-4 col-md-3">
+                                @@include('./aside-nav-about.html', { "page" : "faq" })
+                            </div>
+                        </div>
+                        <!-- /Контентная часть -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- / .section__main-content -->
+
+</section>

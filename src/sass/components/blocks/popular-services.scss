@@ -1,0 +1,115 @@
+.popular-services__slider {
+	position: relative;
+	margin-bottom: 120px;
+	display: flex;
+	align-items: top;
+}
+.popular-services__item {
+	border: 1px solid #d3d3d3;
+	border-radius: 3px;
+	&:hover {
+		box-shadow: 0px 0px 7px 0px rgba(135, 135, 135, 0.55);
+	}
+}
+.popular-services__link {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.popular-services__text--top {
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 11px;
+	display: block;
+	margin-bottom: 20px;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.popular-services__text {
+	color: black;
+	min-height: 150px;
+	font-size: 19px;
+}
+.popular-services__price {
+	font-size: 37px;
+	color: #556787;
+	line-height: 1.2;
+}
+.owl-item {
+	text-align: center;
+}
+.popular-services__arrow {
+	position: absolute;
+	background: white;
+	height: 50px;
+	width: 50px;
+	top: 37%;
+	border-radius: 50%;
+	border: 1px solid #d3d3d3;
+	box-shadow: 0px 0px 9px 2px #ececec;
+	@media (max-width: 1300px) {
+		top: 105%;
+	}
+	&:hover {
+		.popular-services__icon-left, .popular-services__icon-right {
+			fill: #29529d;
+		}
+	}
+}
+.popular-services__arrow--left {
+	left:  -65px;
+	@media (max-width: 1300px) {
+		left: 45%;
+	}
+	@media (max-width: $screen-lg) {
+		left: 40%;
+	}
+	@media (max-width: $screen-sm) {
+		left: 35%;
+	}
+	@media (max-width: $screen-xs) {
+		left: 30%;
+	}
+}
+.popular-services__arrow--right {
+	right: -65px;
+	@media (max-width: 1300px) {
+		right: 45%;
+	}
+	@media (max-width: $screen-lg) {
+		right: 40%;
+	}
+	@media (max-width: $screen-sm) {
+		right: 35%;
+	}
+	@media (max-width: $screen-xs) {
+		right: 30%;
+	}
+}
+.popular-services__icon-left{
+	left: 12px;
+	top: 12px;
+	position: absolute;
+	fill: #cbcbcb;
+}
+.popular-services__icon-right {
+	top: 12px;
+	position: absolute;
+	right: 13px;
+	fill: #cbcbcb;
+}
+@media screen and (max-width: 320px) {
+	.popular-services__arrow--right {
+		right: 30%;
+	}
+	.popular-services__arrow--left {
+		left: 30%;
+	}
+}

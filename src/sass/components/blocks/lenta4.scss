@@ -1,0 +1,68 @@
+.lenta4 {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -$padding-base;
+		margin-left: -$padding-base;
+
+		&--nowrap {
+			flex-wrap: nowrap;
+		}
+
+		&--vcenter {
+			align-items: center;
+		}
+
+		&--vtop {
+			align-items: flex-start;
+		}
+
+		&--vbottom {
+			align-items: flex-end;
+		}
+
+		&--8px {
+			margin-right: -4px;
+			margin-left: -4px;
+		}
+	}
+
+	&__item {
+		padding-left: $padding-base;
+		padding-right: $padding-base;
+
+		&--shrink {
+			flex-shrink: 1;
+		}
+
+		&--grow {
+			flex-grow: 1;
+		}
+
+		&--xs-100 {
+			@media (max-width: $screen-xs-max) {
+				max-width: 100%;
+				flex-basis: 100%;
+			}
+		}
+
+		&--shrink-grow {
+			flex-shrink: 1;
+			flex-grow: 1;
+		}
+
+		&--minus {
+			margin-right: 50px;
+
+			@media (max-width: ($screen-xs-min - 1)) {
+				margin-right: 0; 
+			}
+		}
+
+		.lenta4__list--8px & {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+}

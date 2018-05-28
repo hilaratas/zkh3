@@ -1,0 +1,89 @@
+<section class="section">
+	<div class="section__inner">
+		<div class="container-fluid">
+			@@include('./main-menu.html', {"position": "top"})
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="section__header section__header-order">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Все услуги</a></li>
+						<li class="breadcrumbs__item"><span href="#" class="breadcrumbs__last">Оформить заявку</span></li>
+					</ul>
+				</nav>
+				<h1 class="title title--h1 title--main">Заказ услуги</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section__main-content">
+		<div class="section__inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+
+						<!-- Контентная часть -->
+						
+						<div class="row">
+							<div class="col-sm-8 col-md-9">
+                                @@include('./order-nav.html', { "step" : 5 })
+                                <div class="order">
+                                    <div class="order__title">Выберите удобный способ оплаты</div>
+
+                                    <form class="order-form order__middle">
+                                        <div class="card-radio">
+                                            <input type="radio" name="payment-method" id="" value="blank" data-name="blank">
+                                            <input type="radio" name="payment-method" id="" value="card" data-name="card">
+                                            <input type="radio" name="payment-method" id="" value="cash" data-name="cash">
+                                        </div>
+                                        <div class="shadow-cards-row js-card-radio-btns">
+                                            <div class="shadow-card payment-method">
+                                                <div class="shadow-card__content payment-method__content" data-radio="blank">
+                                                    <div class="payment-method__img-wrap">
+                                                        <img src="img/pay-meth-blank.png" alt="" class="payment-method__img">
+                                                    </div>
+                                                    <div class="payment-method__caption">Оплата через<br>«розовый бланк»</div>
+                                                </div>
+                                            </div>
+                                            <div class="shadow-card payment-method">
+                                                <div class="shadow-card__content payment-method__content" data-radio="card">
+                                                    <div class="payment-method__img-wrap">
+                                                        <img src="img/pay-meth-card.png" alt="" class="payment-method__img">
+                                                    </div>
+                                                    <div class="payment-method__caption">Оплата банковской<br>картой</div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="shadow-card payment-method">
+                                                <div class="shadow-card__content payment-method__content" data-radio="cash">
+                                                    <div class="payment-method__img-wrap">
+                                                        <img src="img/pay-meth-cash.png" alt="" class="payment-method__img">
+                                                    </div>
+                                                    <div class="payment-method__caption">Оплата наличными</div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </form>
+
+                                    <div class="order__btn row">
+                                        <a href="#" class="order__link">Назад</a>
+                                        <button type="submit" class="button button--big">Отправить заявку</button>
+                                    </div>
+                                </div>
+							</div>
+							
+							<aside class="col-sm-4 col-md-3">
+								<div class="order-basket__banner">Баннер</div>
+							</aside>
+						</div>
+
+						<!-- /Контентная часть -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,33 @@
+<div class="main-menu__wrapper">
+	<nav class="main-menu main-menu--@@position">
+		<ul class="main-menu__list">
+			<li class="main-menu__item">
+				<a href="#" class="main-menu__link">О проекте</a>
+			</li>
+			<li class="main-menu__item">
+				<a href="#" class="main-menu__link">Услуги</a>
+			</li>
+            @@if( position === 'top') {
+			<li class="main-menu__item">
+				<a href="#" class="main-menu__link">Тарифы</a>
+			</li>
+            }
+			<li class="main-menu__item">
+				<a href="#" class="main-menu__link">Новости</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="main-menu-soc">
+		<div class="main-menu--login">
+			<a href="#popup-login" class="js-popup-login" data-tab="1">Регистрация</a> / <a href="#popup-login" class="js-popup-login" data-tab="0">Вход</a>
+		</div>
+		<div class="enter-soc">
+			<a href="#" class="enter-soc__link enter-soc__link--hand">@@include('./icon.html', { "class": "icon icon--hand", "width" : "28", "height" : "28", "name" : "icon-hand" })</a>
+			<a href="#" class="enter-soc__link enter-soc__link--fb">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-fb" })</a>
+			<a href="#" class="enter-soc__link enter-soc__link--vk">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-vk" })</a>
+			<a href="#" class="enter-soc__link enter-soc__link--od">@@include('./icon.html', { "class": "icon icon--soc", "width" : "12", "height" : "12", "name" : "icon-od" })</a>
+			<!-- <a href="#" class="enter-soc__link enter-soc__link--hand">@@include('./icon.html', { "class": "icon icon--soc", "width" : "16", "height" : "16", "name" : "icon-hand" })</a> -->
+		</div>
+	</div>
+	
+</div>
