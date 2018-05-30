@@ -15,19 +15,19 @@
 			<form class="form js-form-validate" id="feedback-form" action="/ajax/form-ajax-feedback.html" method="GET">
 				<div class="form__row">
 					<label for="name" class="popup-feedback__label">Ваше имя</label>
-					<input type="text" id="name" name="name" class="input required" data-msg-required="Поле не заполнено">
+					<input type="text" id="name" name="name" class="input required">
 				</div>
 				<div class="form__row">
 					<label for="email" class="popup-feedback__label">Email</label>
-					<input type="email" id="email" name="email" class="input required" data-msg-required="Поле не заполнено">
+					<input type="email" id="email" name="email" class="input required" >
 				</div>
 				<div class="form__row">
-					<label for="tel" class="popup-feedback__label">Телефон</label>
-					<input type="tel" id="tel" name="tel" class="input required" data-mask-tel data-msg-required="Поле не заполнено" placeholder="+7 (___) ___-__-__">
+					<label for="fb-tel" class="popup-feedback__label">Телефон</label>
+					<input type="tel" id="fb-tel" name="tel" class="input required" data-mask-tel placeholder="+7 (___) ___-__-__">
 				</div>
 				<div class="form__row">
 					<label for="message" class="popup-feedback__label">Сообщение:</label>
-					<textarea type="text" id="message" name="message" class="textarea required" data-msg-required="Поле не заполнено" placeholder="Введите текст"></textarea>
+					<textarea type="text" id="message" name="message" class="textarea required" placeholder="Введите текст"></textarea>
 				</div>
 				<div class="form__row">
 					<div class="lenta4">
@@ -143,8 +143,8 @@
 						</div>
 						<div class="popup-login__data-holder">
 							<div class="form__row form__row--middle">
-								<label for="tel" class="form__label form__label--mt0">Имя:</label>
-								<input type="text" id="tel" name="name" class="input required">
+								<label for="login-tel" class="form__label form__label--mt0">Имя:</label>
+								<input type="text" id="login-tel" name="name" class="input required">
 							</div>
 							<div class="form__row form__row--middle">
 								<label for="patronymic" class="form__label form__label--mt0">Отчество:</label>
@@ -230,8 +230,8 @@
 						Введите номер своего мобильного телефона, указанного при регистрации, и через несколько минут на Ваш телефон поступит новый пароль
 					</div>
 					<div class="form__row form__row--middle">
-						<label for="tel" class="form__label">Мобильный телефон:</label>
-						<input type="tel" id="tel" name="tel" class="input js-mask-tel js-tel-for-copy required" placeholder="+7 (___) ___-__-__">
+						<label for="your-tel" class="form__label">Мобильный телефон:</label>
+						<input type="tel" id="your-tel" name="tel" class="input js-mask-tel js-tel-for-copy required" placeholder="+7 (___) ___-__-__">
 					</div>
 					<div class="form__row form__row--middle">
 						<div class="row row--flex row--vcenter popup-login__change-order">
@@ -250,9 +250,9 @@
 				<form class="form js-form-validate" id="js-form-password-confirm" method="GET" action="/ajax/form-ajax-password-confirm.html" data-reload-time-delay="0" data-reload-href="http://zkh2.dev2.msoft.su/personal/profile/edit/">
 					<div class="popup__response-holder"></div>
 					<div class="form__row form__row--middle">
-						<label for="password" class="form__label">Пароль:</label>
+						<label for="new-password" class="form__label">Пароль:</label>
 						<input type="hidden" name="tel" class="js-tel-copy">
-						<input type="password" id="password" name="password" class="input required" disabled>
+						<input type="password" id="new-password" name="password" class="input required" disabled>
 					</div>
 					<div class="form__row form__row--middle">
 						<div class="row row--flex row--vcenter popup-login__change-order">
@@ -349,78 +349,6 @@
 				<input type="hidden" name="product-id" value="" class="js-product-id">
 
 				<div class="form__row form__row--middle">
-					<div class="form__row2">
-						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
-					</div>
-					<div class="form__row2">
-						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
-					</div>
-					<div class="form__row2">
-						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
-					</div>
-					<div class="form__row2">
-						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
-					</div>
-					<div class="form__row2">
-						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
-					</div>
-					<div class="form__row2">
-						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
-					</div>
-					<div class="form__row2">
-						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
-					</div>
-					<div class="form__row2">
-						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
-					</div>
-					<div class="form__row2">
-						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
-					</div>
-					<div class="form__row2">
-						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
-					</div>
-					<div class="form__row2">
-						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
-					</div>
-					<div class="form__row2">
-						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
-					</div>
-					<div class="form__row2">
-						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
-					</div>
-					<div class="form__row2">
-						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
-					</div>
-					<div class="form__row2">
-						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
-					</div>
-					<div class="form__row2">
-						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
-					</div>
-					<div class="form__row2">
-						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
-					</div>
-					<div class="form__row2">
-						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
-					</div>
-					<div class="form__row2">
-						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
-					</div>
-					<div class="form__row2">
-						<label for="master2" class="radio"><input type="radio" class="radio" name="master[]" value="2" id="master2" required><span class="radio__indicator"></span></label><label for="master2">Агент 2 / Имя Фамилия мастера 2</label>
-					</div>
-					<div class="form__row2">
-						<label for="master3" class="radio"><input type="radio" class="radio" name="master[]" value="3" id="master3" required><span class="radio__indicator"></span></label><label for="master3">Агент 3 / Имя Фамилия мастера 3</label>
-					</div>
-					<div class="form__row2">
-						<label for="master4" class="radio"><input type="radio" class="radio" name="master[]" value="4" id="master4" required><span class="radio__indicator"></span></label><label for="master4">Агент 4 / Имя Фамилия мастера 4</label>
-					</div>
-					<div class="form__row2">
-						<label for="master5" class="radio"><input type="radio" class="radio" name="master[]" value="5" id="master5" required><span class="radio__indicator"></span></label><label for="master5">Агент 5 / Имя Фамилия мастера 5</label>
-					</div>
-					<div class="form__row2">
-						<label for="master6" class="radio"><input type="radio" class="radio" name="master[]" value="6" id="master6" required><span class="radio__indicator"></span></label><label for="master6">Агент 6 / Имя Фамилия мастера 6</label>
-					</div>
 					<div class="form__row2">
 						<label for="master1" class="radio"><input type="radio" class="radio" name="master[]" value="1" id="master1" required><span class="radio__indicator"></span></label><label for="master1">Агент 1 / Имя Фамилия мастера 1 </label>
 					</div>
@@ -623,9 +551,9 @@
 			<form class="form js-form-validate" id="js-form-mobile-confirm" method="GET" action="/ajax/form-ajax-mobile-confirm.html" data-popup-close-time-delay="3000">
 				<div class="popup__response-holder"></div>
 				<div class="form__row form__row--middle">
-					<label for="password" class="form__label">Пароль:</label>
+					<label for="sms-password" class="form__label">Пароль:</label>
 					<input type="hidden" name="tel" class="js-tel-copy">
-					<input type="password" id="password" name="password" class="input required" disabled>
+					<input type="password" id="sms-password" name="password" class="input required" disabled>
 				</div>
 				<div class="form__row form__row--middle">
 					<div class="row row--flex row--vcenter popup-login__change-order">
@@ -691,27 +619,27 @@
 			<form class="form js-form-validate js-form-add-member" method="GET" action="/ajax/form-ajax-add-master.html" data-reload-time-delay="3000">
 				<div class="popup__response-holder"></div>
 				<div class="form__row form__row--middle">
-					<label for="surname" class="popup-feedback__label">Фамилия</label>
-					<input type="text" id="surname" name="surname" class="input" required>
+					<label for="m-surname" class="popup-feedback__label">Фамилия</label>
+					<input type="text" id="master_surname" name="surname" class="input" required>
 				</div>
 				<div class="form__row form__row--middle">
-					<label for="name" class="popup-feedback__label">Имя</label>
-					<input type="text" id="name" name="name" class="input" required>
+					<label for="m-name" class="popup-feedback__label">Имя</label>
+					<input type="text" id="m-name" name="name" class="input" required>
 				</div>
 				<div class="form__row form__row--middle">
-					<label for="patronymic" class="popup-feedback__label">Отчество</label>
-					<input type="text" id="patronymic" name="patronymic" class="input">
+					<label for="m-patronymic" class="popup-feedback__label">Отчество</label>
+					<input type="text" id="m-patronymic" name="patronymic" class="input">
 				</div>
 				<div class="form__row form__row--middle">
 					<label for="m-tel" class="popup-feedback__label">Телефон</label>
 					<input type="tel" id="m-tel" name="tel" class="input js-mask-tel" required placeholder="+7 (___) ___-__-__">
 				</div>
 				<div class="form__row form__row--middle">
-					<label for="profession" class="popup-feedback__label">Специальность</label>
-					<input type="text" id="profession" name="profession" class="input" required>
+					<label for="m-profession" class="popup-feedback__label">Специальность</label>
+					<input type="text" id="m-profession" name="profession" class="input" required>
 				</div>
 				<div class="form__row form__row--middle inline-align inline-align--right">
-					<button type="submit" name="name" class="button button--xs-normal button--big button--xs-fw">Добавить</button>
+					<button type="submit" name="submit" class="button button--xs-normal button--big button--xs-fw">Добавить</button>
 				</div>
 			</form>
 		</div>
