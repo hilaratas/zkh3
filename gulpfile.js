@@ -103,6 +103,7 @@ gulp.task('scripts', function() {
 		.bundle()
 		.on('error', function(err) { console.error(err); this.emit('end'); })
 		.pipe(source('main.js'))
+		.pipe(plumber())
 		.pipe(buffer())
 		.pipe(uglify())
 		.pipe(webpack(webpackConfig))
@@ -328,7 +329,7 @@ gulp.task('watch', function(){
 		gulp.start('ajax');
 	});
 	
-	watch(['./src/js/main.js', './src/js/components/**/*.js', './src/js/utils/**/*.js'], function() {
+	watch(['./src/js/main.js', './src/js/components/**/*.js', './src/js/utils/**/*.js', './src/js/database/**/*.js'], function() {
 		gulp.start('scripts');
 	});
 	
