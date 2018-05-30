@@ -30,8 +30,29 @@
                     
                         <!-- Контентная часть -->
 
-                        <form action="" method="POST" id="filter-form" >
-                            <div class="shadow-block shadow-block--radius shadow-block--mb0">
+                        <script>   
+                            window.filterParams = {
+                                lc: 123456789,
+                                start_date: '04.02.2017',
+                                end_date: '05.02.2017'
+                            };
+                        </script>
+
+                        
+                        <div class="shadow-block shadow-block--radius shadow-block--mb0">
+
+                            <div class="form" id="v-filter-mode">
+                                <div class="form__row form__row--not-last">
+                                    <span for="useVueFilter" v-on:click='changeFilterMode(true)' v-bind:class="{'label-selected': useVue}">Использовать поиск по загруженной странице</span>
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="useVueFilter" name="useVue" v-model="useVue">
+                                        <span class="checkbox__indicator"></span>
+                                    </label>
+                                    <span for="useVueFilter" v-on:click='changeFilterMode(false)' v-bind:class="{'label-selected': !useVue}">Использовать поиск по базе данных</span>
+                                </div>
+                            </div>
+
+                            <form action="" method="POST" id="v-filter-form" v-on:submit='submitHdl' >
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="row">
@@ -157,7 +178,7 @@
                                             <div class="col-sm-6">
                                                 <div class="form__row form__row--middle form__row--not-last">
                                                     <div for="" class="form__label form__label--mt0">Лицевой счет:</div>
-                                                    <input type="tel" class="input" name="account" value=""> </div>
+                                                    <input type="tel" class="input" name="lc" v-model="filterParams.lc"> </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form__row form__row--middle form__row--not-last">
@@ -165,11 +186,11 @@
                                                     <div class="row row--10px">
                                                         <div class="col-xs-6">
                                                             <div class="form__date-holder">
-                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="start_date" value="" id="dp1509555460624"> </div>
+                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="start_date" value="" id="dp1509555460624" v-model="filterParams.start_date"> </div>
                                                         </div>
                                                         <div class="col-xs-6">
                                                             <div class="form__date-holder">
-                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="end_date" value="" id="dp1509555460625"> </div>
+                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="end_date" value="" id="dp1509555460625" v-model="filterParams.start_date"> </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -200,8 +221,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+
+                            </form>
+                        </div>
+                        
 
                         <script>
                             window.type = "agent";

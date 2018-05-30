@@ -13,6 +13,18 @@ export default function () {
 		return;
 	}
 
+	var vFM = new Vue({
+		el: '#v-filter-mode',
+		data: {
+			useVue: false
+		},
+		methods: {
+			changeFilterMode: function (val) {
+				this.useVue = val;
+			}
+		}
+	});
+
 	Vue.component('results-rows', {
 		template: "#results-rows-template",
 		data: function() {
@@ -42,7 +54,22 @@ export default function () {
 		}
 	});
 
-	var vm = new Vue({
+	var vFilter = new Vue({
+		el: '#v-filter-form',
+		data: {
+			filterParams: window.filterParams,
+			useVue: vFM.useVue || false
+		},
+		methods: {
+			submitHdl: function(event) {
+				if ( vFM.useVue ) {
+					event.preventDefault();
+				}
+			}
+		}
+	});
+
+	var vR = new Vue({
 		el: '#v-results',
 		data: {
 			load: false
@@ -52,5 +79,7 @@ export default function () {
 		}
 
 	});
+
+
 
 }
