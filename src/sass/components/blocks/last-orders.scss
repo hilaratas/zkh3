@@ -152,4 +152,10 @@ $lo-lh-ratio: 1.4;
 			td { height: auto; overflow: hidden;}
 		}
 	}
+
+	&__loading {
+		position: relative;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }

@@ -1,0 +1,25 @@
+.loading {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	margin: 0 auto;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -75px;
+		margin-top: -75px;
+		width: 150px;
+		height: 150px;
+		content: "";
+		border: 2px solid $color-brand-3;
+		border-radius: 50%;
+		border-left-color: transparent;
+		border-bottom-color: transparent;
+		animation: en-loading;
+		animation-duration:1s;
+		animation-timing-function:linear;
+ 		animation-iteration-count:infinite;   
+	}
+}

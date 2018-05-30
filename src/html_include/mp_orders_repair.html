@@ -205,7 +205,7 @@
 
                         <script>
                             window.type = "agent";
-                            window.resrows = [
+                            window.oresrows = [
                                 { id: '1234', date: '04.02.2017', time: '16:43', lc: '123456789', source: 'сайт', costStatus: 'оплачен', implStatus: 'new', count: 1,  price: 1400, cost: 14000,
                                     productId: 1451, serviceName: 'Установка врезного замка в металлическую дверь', serviceLink: '#',
                                     actions: [
@@ -228,32 +228,56 @@
                             ];
                         </script>
 
-                        <template id="results-rows-template">
-                            <tr v-bind:id="'last-orders__row--' + resrow.id + '-' + resrow.productId">
-                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrow.id}}</a></td>
-                                <td class="last-orders__date">{{resrow.date}}<br>{{resrow.time}}</td>
-                                <td colspan="5">
-                                    <table class="order-detail no-rotate">
-                                        <tr>
-                                            <td class="order-detail__cell order-detail__cell--article">{{resrow.article}}</td>
-                                            <td class="order-detail__cell"><a v-bind:href="resrow.serviceLink" class="order-detail__link">{{resrow.serviceName}}</a></td>
-                                            <td class="order-detail__cell order-detail__cell--count">{{resrow.count}}</td>
-                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                        </tr> 
+                        <template id="results-rows-template" v-bind:resrow="resrow">
+                            <div class="table-responsive-wrap">
+                                <div class="table-responsive">
+                                    <table class="last-orders__table no-rotate no-scroll">
+                                        <thead>
+                                            <tr>
+                                                <th class="last-orders__th last-orders__number">#</th>
+                                                <th class="last-orders__th last-orders__date">Дата</th>
+                                                <th class="last-orders__th last-orders__article">Арт.</th>
+                                                <th class="last-orders__th">Услуга</th>
+                                                <th class="last-orders__th last-orders__th--count">Кол-<br>во</th>
+                                                <th class="last-orders__th last-orders__th--price">Цена</th>
+                                                <th class="last-orders__th last-orders__th--cost">Стоимость</th>
+                                                <th class="last-orders__th last-orders__lc">Лицевой счет</th>
+                                                <th class="last-orders__th last-orders__source">Источник</th>
+                                                <th class="last-orders__th last-orders__payment-status">Статус<br>оплаты</th>
+                                                <th class="last-orders__th last-orders__order-status">Статус<br>выполнения</th>
+                                                <th class="last-orders__th last-orders__actions">Действия</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="resrow in resrows" v-bind:id="'last-orders__row--' + resrow.id + '-' + resrow.productId">
+                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrow.id}}</a></td>
+                                                <td class="last-orders__date">{{resrow.date}}<br>{{resrow.time}}</td>
+                                                <td colspan="5">
+                                                    <table class="order-detail no-rotate">
+                                                        <tr>
+                                                            <td class="order-detail__cell order-detail__cell--article">{{resrow.article}}</td>
+                                                            <td class="order-detail__cell"><a v-bind:href="resrow.serviceLink" class="order-detail__link">{{resrow.serviceName}}</a></td>
+                                                            <td class="order-detail__cell order-detail__cell--count">{{resrow.count}}</td>
+                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
+                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
+                                                        </tr> 
+                                                    </table>
+                                                </td>
+                                                <td class="last-orders__lc">{{resrow.lc}}</td>
+                                                <td>{{resrow.source}}</td>
+                                                <td>{{resrow.costStatus}}</td>
+                                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrow.implStatus">{{resrow.implStatusName}}</span></td>
+                                                <td class="last-orders__actions">
+                                                    <div class="js-order-actions-holder">
+                                                        <a v-for="btn in resrow.actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrow.orderId" v-bind:data-product-id="resrow.productId">{{btn.name}}</a>
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
-                                </td>
-                                <td class="last-orders__lc">{{resrow.lc}}</td>
-                                <td>{{resrow.source}}</td>
-                                <td>{{resrow.costStatus}}</td>
-                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrow.implStatus">{{resrow.implStatusName}}</span></td>
-                                <td class="last-orders__actions">
-                                    <div class="js-order-actions-holder">
-                                        <a v-for="btn in resrow.actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrow.orderId" v-bind:data-product-id="resrow.productId">{{btn.name}}</a>
-                                        
-                                    </div>
-                                </td>
-                            </tr>
+                                </div>
+                            </div>
                         </template>
 
 
@@ -291,32 +315,17 @@
                                     </div>
                                     <div class="results__main-content">
                                         <div class="last-orders">
-                                            <div class="table-responsive-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="last-orders__table no-rotate no-scroll">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="last-orders__th last-orders__number">#</th>
-                                                                <th class="last-orders__th last-orders__date">Дата</th>
-                                                                <th class="last-orders__th last-orders__article">Арт.</th>
-                                                                <th class="last-orders__th">Услуга</th>
-                                                                <th class="last-orders__th last-orders__th--count">Кол-<br>во</th>
-                                                                <th class="last-orders__th last-orders__th--price">Цена</th>
-                                                                <th class="last-orders__th last-orders__th--cost">Стоимость</th>
-                                                                <th class="last-orders__th last-orders__lc">Лицевой счет</th>
-                                                                <th class="last-orders__th last-orders__source">Источник</th>
-                                                                <th class="last-orders__th last-orders__payment-status">Статус<br>оплаты</th>
-                                                                <th class="last-orders__th last-orders__order-status">Статус<br>выполнения</th>
-                                                                <th class="last-orders__th last-orders__actions">Действия</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr is="results-rows" v-for="resrow in resrows" v-bind:resrow="resrow"></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                            
+                                            <div v-show='!load' class="last-orders__loading">
+                                                <div class="loading"></div>
+                                            </div>
+                                            <div v-show='load'>
+                                                <component is="results-rows"></component>
                                             </div>
                                             
+
+                                            
+                                
                                         </div>
                                     </div>
                                     <div class="results__bottom">

@@ -9,19 +9,12 @@ export default function () {
 
 	Vue.component('results-rows', {
 		template: "#results-rows-template",
-		props: ["resrow"]
-	});
-
-	var vm = new Vue({
-		el: '#v-results',
-		data: {
-			oresrows : window.resrows
-		},
-		methods: {
+		data: function() {
+			return { load: false }
 		},
 		computed: {
 			resrows: function() {
-				var tmpResrows = this.oresrows;
+				var tmpResrows = window.oresrows;
 				var statuses = {
 					'new': 'новый',
 					'in-progress': 'в процессе',
@@ -45,8 +38,6 @@ export default function () {
 					'open' : '#popup-change-status'
 				}
 
-				console.log(this.oresrows);
-
 				tmpResrows.forEach( function (elem, index) {
 					if (tmpResrows[index].implStatus) {
 						tmpResrows[index].implStatusName = statuses[tmpResrows[index].implStatus];
@@ -61,9 +52,21 @@ export default function () {
 						});
 					}
 				});
+
 				return tmpResrows;
 			}
 		}
+	});
+
+	var vm = new Vue({
+		el: '#v-results',
+		data: {
+			load: false
+		},
+		mounted: function() {
+			this.load = true;
+		}
+
 	});
 
 }
