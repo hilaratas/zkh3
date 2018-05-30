@@ -14,3 +14,7 @@ export const devider = (number) => {
 export const isTouch = () => {
 	return !!('ontouchstart' in window) || !!('onmsgesturechange' in window);
 }
+
+export const getNameByStatus = (statusNames, status) => {
+	return statusNames[status];
+}

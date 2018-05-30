@@ -1,6 +1,9 @@
+$sizeNormal : 100px; 
+$sizeSmall : 50px; 
+
 .loading {
-	width: 150px;
-	height: 150px;
+	width: $sizeNormal;
+	height: $sizeNormal;
 	position: relative;
 	margin: 0 auto;
 
@@ -8,10 +11,10 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		margin-left: -75px;
-		margin-top: -75px;
-		width: 150px;
-		height: 150px;
+		margin-left: -($sizeNormal / 2);
+		margin-top: -($sizeNormal / 2);
+		width: $sizeNormal;
+		height: $sizeNormal;
 		content: "";
 		border: 2px solid $color-brand-3;
 		border-radius: 50%;
@@ -22,4 +25,18 @@
 		animation-timing-function:linear;
  		animation-iteration-count:infinite;   
 	}
+
+	&--small {
+		width: $sizeSmall;
+		height: $sizeSmall;
+
+		&:before {
+			margin-left: -($sizeSmall / 2);
+			margin-top: -($sizeSmall / 2);
+			width: $sizeSmall;
+			height: $sizeSmall;
+		}
+	}
+
+
 }
