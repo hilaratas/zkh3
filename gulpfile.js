@@ -88,6 +88,8 @@ var path = {
     outputDir: './build' //исходная корневая директория для запуска минисервера
 };
 
+console.error('\nПосле запуска сборки надо запустить в соседней консоли "node ws"\n');
+
 var runTimestamp = Math.round(Date.now()/1000);
 var customfontName = 'Iconfont';
 
