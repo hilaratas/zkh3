@@ -91,7 +91,7 @@
                                                 <div class="form__row form__row--middle form__row--not-last">
                                                     <div for="" class="form__label form__label--mt0">Источник:</div>
                                                     <div class="select">
-                                                        <select name="source" id="" class="select__native">
+                                                        <select name="source" class="select__native">
                                                             <option value="">Любой</option>
                                                             <option value="site">Сайт</option>
                                                             <option value="app">Приложение</option>
@@ -103,7 +103,7 @@
                                                 <div class="form__row form__row--middle form__row--not-last">
                                                     <div for="" class="form__label form__label--mt0">Статус заказа</div>
                                                     <div class="select">
-                                                        <select name="status" id="" class="select__native">
+                                                        <select name="status" class="select__native">
                                                             <option value="">Любой</option>
                                                             <option value="G">Не обслуживается</option>
                                                             <option value="N">В обработке</option>
@@ -128,7 +128,7 @@
                                                 <div class="form__row form__row--middle form__row--not-last">
                                                     <div for="" class="form__label form__label--mt0">Статус оплаты</div>
                                                     <div class="select">
-                                                        <select name="payed" id="" class="select__native">
+                                                        <select name="payed" class="select__native">
                                                             <option value="">Любой</option>
                                                             <option value="Y">Оплачен</option>
                                                             <option value="N">Ожидает оплаты</option>
@@ -141,7 +141,7 @@
                                                 <div class="form__row form__row--middle form__row--not-last">
                                                     <div for="" class="form__label form__label--mt0">Способ оплаты:</div>
                                                     <div class="select">
-                                                        <select name="pay_system" id="" class="select__native">
+                                                        <select name="pay_system" class="select__native">
                                                             <option value="">Любой</option>
                                                             <option value="1">Наличный расчет</option>
                                                             <option value="9">Банковская карта</option>
@@ -205,10 +205,61 @@
 
                         <script>
                             window.type = "agent";
+                            window.resrows = [
+                                { id: '1234', date: '04.02.2017', time: '16:43', lc: '123456789', source: 'сайт', costStatus: 'оплачен', implStatus: 'new', count: 1,  price: 1400, cost: 14000,
+                                    productId: 1451, serviceName: 'Установка врезного замка в металлическую дверь', serviceLink: '#',
+                                    actions: [
+                                       { status: 'appoint' },
+                                       { status: 'cancel' }
+                                    ]
+                                },
+                                { id: '1235', date: '04.02.2017', time: '16:43', lc: '2725050650', source: 'сайт', costStatus: 'оплачен', implStatus: 'in-progress', count: 1,  price: 1000, cost: 1000,
+                                    productId: 1452, serviceName: 'Повесить зеркало квадратное', serviceLink: '#',
+                                    actions: [
+                                       { status: 'cancel' }
+                                    ]
+                                },
+                                { id: '1236', date: '04.02.2017', time: '16:43', lc: '2725050650', source: 'сайт', costStatus: 'оплачен', implStatus: 'appointed', count: 10,  price: 800, cost: 8000,
+                                    productId: 1453, serviceName: 'Поклеить обои', serviceLink: '#',
+                                    actions: [
+                                       { status: 'cancel' }
+                                    ]
+                                }
+                            ];
                         </script>
 
-                        <div id="js-results-block">
-                            <div class="orders-wrap" id="js-results-holder" style="margin-top: 30px;">
+                        <template id="results-rows-template">
+                            <tr v-bind:id="'last-orders__row--' + resrow.id + '-' + resrow.productId">
+                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrow.id}}</a></td>
+                                <td class="last-orders__date">{{resrow.date}}<br>{{resrow.time}}</td>
+                                <td colspan="5">
+                                    <table class="order-detail no-rotate">
+                                        <tr>
+                                            <td class="order-detail__cell order-detail__cell--article">{{resrow.article}}</td>
+                                            <td class="order-detail__cell"><a v-bind:href="resrow.serviceLink" class="order-detail__link">{{resrow.serviceName}}</a></td>
+                                            <td class="order-detail__cell order-detail__cell--count">{{resrow.count}}</td>
+                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
+                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
+                                        </tr> 
+                                    </table>
+                                </td>
+                                <td class="last-orders__lc">{{resrow.lc}}</td>
+                                <td>{{resrow.source}}</td>
+                                <td>{{resrow.costStatus}}</td>
+                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrow.implStatus">{{resrow.implStatusName}}</span></td>
+                                <td class="last-orders__actions">
+                                    <div class="js-order-actions-holder">
+                                        <a v-for="btn in resrow.actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrow.orderId" v-bind:data-product-id="resrow.productId">{{btn.name}}</a>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+
+
+
+                        <div id="v-results">
+                            <div class="orders-wrap" id="v-results__holder" style="margin-top: 30px;">
                                 <div class="results">
                                     <div class="results__top">
                                         <div class="row row--flex row--vcenter">
@@ -260,227 +311,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr id="last-orders__row--1234-1451">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1234</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">1451</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Установка врезного замка в металлическую дверь</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr> 
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">1574463422</td>
-                                                                <td>сайт</td>
-                                                                <td>оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="new">новый</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-assign-master" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="1467">назначить</a>
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="1467">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                                <!-- js-popup-form-ajax -->
-                                                            </tr>
-                                                            <tr id="last-orders__row--1234-1467">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1234</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell--article">1467</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Повесить зеркало квадратное</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">2725050650</td>
-                                                                <td>сайт</td>
-                                                                <td>не оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="in-progress">в обработке</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="1467">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--1234-1481">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1234</a></td>
-                                                                <td class="last-orders__date">02.01.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">1481</td>
-                                                                            <td><a href="#" class="order-detail__link">Поклеить обои</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">3</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1500 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">4500 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">8543942725</td>
-                                                                <td>приложение</td>
-                                                                <td>ожидает оплаты</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="appointed">назначен</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1234" data-product-id="1481">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--1237-1467">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1237</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">1467</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Повесить зеркало квадратное</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">9673535380</td>
-                                                                <td>сайт</td>
-                                                                <td>оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="run">выполняется</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1237" data-product-id="1467">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--1238-1467">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1238</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">1467</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Повесить зеркало квадратное</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">2373087660</td>
-                                                                <td>сайт</td>
-                                                                <td>не оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="ready">выполнен</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-сhange-status" class="button button--no-fill js-popup-form-ajax" data-order-id="1238" data-product-id="1467">закрыть</a>
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="1238" data-product-id="1467">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--1239-1467">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">1239</a></td>
-                                                                <td class="last-orders__date">02.01.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">1467</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Повесить зеркало квадратное</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">1574463422</td>
-                                                                <td>приложение</td>
-                                                                <td>ожидает оплаты</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="canceled">отменен</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-сhange-status" class="button button--no-fill js-popup-form-ajax" data-order-id="1239" data-product-id="1467">открыть</a>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--3456-2007">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">3456</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">2007</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Помыть ковер</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">2725050650</td>
-                                                                <td>сайт</td>
-                                                                <td>оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="closed">закрыт</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder"></div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr id="last-orders__row--8000-8000">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">8000</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">8000</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Помыть кресло</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr> 
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">1574463422</td>
-                                                                <td>сайт</td>
-                                                                <td>оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="new">новый</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-assign-master" class="button button--no-fill js-popup-form-ajax" data-order-id="8000" data-product-id="8000">назначить</a>
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="5000" data-product-id="8000">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                                <!-- js-popup-form-ajax -->
-                                                            </tr>
-                                                            <tr id="last-orders__row--5000-6000">
-                                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">5000</a></td>
-                                                                <td class="last-orders__date">04.02.2017<br>16:43</td>
-                                                                <td colspan="5">
-                                                                    <table class="order-detail no-rotate">
-                                                                        <tr>
-                                                                            <td class="order-detail__cell order-detail__cell--article">6000</td>
-                                                                            <td class="order-detail__cell"><a href="#" class="order-detail__link">Помыть кресло</a></td>
-                                                                            <td class="order-detail__cell order-detail__cell--count">1</td>
-                                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                                        </tr> 
-                                                                    </table>
-                                                                </td>
-                                                                <td class="last-orders__lc">1574463422</td>
-                                                                <td>сайт</td>
-                                                                <td>оплачен</td>
-                                                                <td><span class="last-orders__status js-order-status" data-status="new">новый</span></td>
-                                                                <td class="last-orders__actions">
-                                                                    <div class="js-order-actions-holder">
-                                                                        <a href="#popup-assign-master" class="button button--no-fill js-popup-form-ajax" data-order-id="5000" data-product-id="6000">назначить</a>
-                                                                        <a href="#popup-cancell" class="button button--no-fill js-popup-form-ajax" data-order-id="5000" data-product-id="6000">отменить</a>
-                                                                    </div>
-                                                                </td>
-                                                                <!-- js-popup-form-ajax -->
-                                                            </tr>
+                                                            <tr is="results-rows" v-for="resrow in resrows" v-bind:resrow="resrow"></tr>
                                                         </tbody>
                                                     </table>
                                                 </div>

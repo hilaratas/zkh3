@@ -43,6 +43,7 @@ import psevdoTable from './components/psevdo-table';
 import uslugi from './components/uslugi';
 import sticky from './components/sticky';
 import kladr from './components/kladr';
+import results from './components/results';
 
 
 $(function(){
@@ -91,6 +92,7 @@ $(function(){
     uslugi();
     sticky();
     kladr();
+    results();
 });
 
 
