@@ -29,204 +29,22 @@
                     <div class="col-sm-12">
                     
                         <!-- Контентная часть -->
+                        <!-- <div class="form" id="v-filter-mode">
+                                <div class="form__row form__row--not-last">
+                                    <span for="useVueFilter" v-on:click='changeFilterMode(true)' v-bind:class="{'label-selected': sOnPage}">Использовать поиск по загруженной странице</span>
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="useVueFilter" name="sOnPage" v-model="sOnPage">
+                                        <span class="checkbox__indicator"></span>
+                                    </label>
+                                    <span for="useVueFilter" v-on:click='changeFilterMode(false)' v-bind:class="{'label-selected': !sOnPage}">Использовать поиск по базе данных</span>
+                                </div>
+                            </div> -->
 
                         <script>   
                             window.filterParams = {
-                                lc: 123456789,
-                                start_date: '04.02.2017',
-                                end_date: '05.02.2017'
+                                lc: 123456789
                             };
-                        </script>
-
-                        
-                        <div class="shadow-block shadow-block--radius shadow-block--mb0">
-
-                            <div class="form" id="v-filter-mode">
-                                <div class="form__row form__row--not-last">
-                                    <span for="useVueFilter" v-on:click='changeFilterMode(true)' v-bind:class="{'label-selected': useVue}">Использовать поиск по загруженной странице</span>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="useVueFilter" name="useVue" v-model="useVue">
-                                        <span class="checkbox__indicator"></span>
-                                    </label>
-                                    <span for="useVueFilter" v-on:click='changeFilterMode(false)' v-bind:class="{'label-selected': !useVue}">Использовать поиск по базе данных</span>
-                                </div>
-                            </div>
-
-                            <form action="" method="POST" id="v-filter-form" v-on:submit='submitHdl' >
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div class="form__label form__label--mt0">Категория</div>
-                                                    <div class="select">
-                                                        <select name="category" id="js-category-filter" class="select__native">
-                                                            <option value="" data-subcat-id="0">Любая</option>
-                                                            <option value="9" data-subcat-id="9">Безопасность для семьи и дома</option>
-                                                            <option value="10" data-subcat-id="10">Установка и обслуживание приборов учета</option>
-                                                            <option value="11" data-subcat-id="11">Бытовые и сервисные услуги</option>
-                                                            <option value="16" data-subcat-id="16">Специальные услуги</option>
-                                                            <option value="17" data-subcat-id="17">Документы</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Подкатегория</div>
-                                                    <div class="select">
-                                                        <select name="subcategory" id="js-subcategory-filter__0" class="select__native select-filter is-active js-subcategory-filter" data-subcat-id="0">
-                                                            <option value="">Все подкатегории</option>
-                                                        </select>
-                                                        <select name="subcategory9" id="js-subcategory-filter__9" class="select__native select-filter  js-subcategory-filter" data-subcat-id="9">
-                                                            <option value="">Все подкатегории</option>
-                                                            <option value="20">Сигнализация</option>
-                                                            <option value="21">Видеонаблюдение</option>
-                                                        </select>
-                                                        <select name="subcategory10" id="js-subcategory-filter__10" class="select__native select-filter  js-subcategory-filter" data-subcat-id="10">
-                                                            <option value="">Все подкатегории</option>
-                                                            <option value="22">Установка счетчиков воды</option>
-                                                            <option value="23">Поверка счетчиков воды</option>
-                                                        </select>
-                                                        <select name="subcategory11" id="js-subcategory-filter__11" class="select__native select-filter  js-subcategory-filter" data-subcat-id="11">
-                                                            <option value="">Все подкатегории</option>
-                                                            <option value="24">Электромонтажные работы</option>
-                                                            <option value="25">Сантехнические работы</option>
-                                                            <option value="26">Мелкий бытовой ремонт</option>
-                                                            <option value="27">Клининговые услуги</option>
-                                                        </select>
-                                                        <select name="subcategory16" id="js-subcategory-filter__16" class="select__native select-filter  js-subcategory-filter" data-subcat-id="16">
-                                                            <option value="">Все подкатегории</option>
-                                                        </select>
-                                                        <select name="subcategory17" id="js-subcategory-filter__17" class="select__native select-filter  js-subcategory-filter" data-subcat-id="17">
-                                                            <option value="">Все подкатегории</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Источник:</div>
-                                                    <div class="select">
-                                                        <select name="source" class="select__native">
-                                                            <option value="">Любой</option>
-                                                            <option value="site">Сайт</option>
-                                                            <option value="app">Приложение</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Статус заказа</div>
-                                                    <div class="select">
-                                                        <select name="status" class="select__native">
-                                                            <option value="">Любой</option>
-                                                            <option value="G">Не обслуживается</option>
-                                                            <option value="N">В обработке</option>
-                                                            <option value="T">Новый</option>
-                                                            <option value="A">Назначен</option>
-                                                            <option value="R">Принят в работу</option>
-                                                            <option value="P">Выполняется</option>
-                                                            <option value="F">Выполнен</option>
-                                                            <option value="C">Закрыт</option>
-                                                            <option value="D">Отменен</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Статус оплаты</div>
-                                                    <div class="select">
-                                                        <select name="payed" class="select__native">
-                                                            <option value="">Любой</option>
-                                                            <option value="Y">Оплачен</option>
-                                                            <option value="N">Ожидает оплаты</option>
-                                                            <option value="D">Долг</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Способ оплаты:</div>
-                                                    <div class="select">
-                                                        <select name="pay_system" class="select__native">
-                                                            <option value="">Любой</option>
-                                                            <option value="1">Наличный расчет</option>
-                                                            <option value="9">Банковская карта</option>
-                                                            <option value="10">Розовый бланк</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Лицевой счет:</div>
-                                                    <input type="tel" class="input" name="lc" v-model="filterParams.lc"> </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Дата заказа</div>
-                                                    <div class="row row--10px">
-                                                        <div class="col-xs-6">
-                                                            <div class="form__date-holder">
-                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="start_date" value="" id="dp1509555460624" v-model="filterParams.start_date"> </div>
-                                                        </div>
-                                                        <div class="col-xs-6">
-                                                            <div class="form__date-holder">
-                                                                <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="end_date" value="" id="dp1509555460625" v-model="filterParams.start_date"> </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="form__row form__row--middle form__row--not-last">
-                                                    <div for="" class="form__label form__label--mt0">Поиск</div>
-                                                    <input type="text" class="input" name="search" value=""> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="row">
-                                            <div class="col-sm-6 inline-align">
-                                                <div class="form__label form__label--mt0 hidden-xs">&nbsp;</div>
-                                                <button class="button button--fw button--xs-normal" type="submit" value="Y" name="use_filter">Применить</button>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form__label form__label--mt0">&nbsp;</div>
-                                                <button class="button button--no-fill button--fw button--xs-normal filter-reset" type="submit" value="Y" name="reset_filter">Сброс</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                        
-
-                        <script>
+                            window.searchParams = ['lc', 'date', 'source', 'implStatus'];
                             window.type = "agent";
                             window.oresrows = [
                                 { id: '1231', date: '04.02.2017', time: '16:43', lc: '123456789', source: 'сайт', costStatus: 'оплачен', implStatus: 'new', count: 1,  price: 1400, cost: 14000,
@@ -290,7 +108,8 @@
                             ];
                         </script>
 
-                        <template id="results-rows-template" v-bind:resrow="resrow">
+
+                        <template id="results-rows-template" >
                             <div class="table-responsive-wrap">
                                 <div class="table-responsive">
                                     <table class="last-orders__table no-rotate no-scroll">
@@ -311,27 +130,27 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr v-for="resrow in resrows" v-bind:id="'last-orders__row--' + resrow.id + '-' + resrow.productId">
-                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrow.id}}</a></td>
-                                                <td class="last-orders__date">{{resrow.date}}<br>{{resrow.time}}</td>
+                                            <tr v-for="rowIdx in rowIdxs" v-bind:id="'last-orders__row--' + resrows4Display[rowIdx].id + '-' + resrows4Display[rowIdx].productId">
+                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrows4Display[rowIdx].id}}</a></td>
+                                                <td class="last-orders__date">{{resrows4Display[rowIdx].date}}<br>{{resrows4Display[rowIdx].time}}</td>
                                                 <td colspan="5">
                                                     <table class="order-detail no-rotate">
                                                         <tr>
-                                                            <td class="order-detail__cell order-detail__cell--article">{{resrow.product}}</td>
-                                                            <td class="order-detail__cell"><a v-bind:href="resrow.serviceLink" class="order-detail__link">{{resrow.serviceName}}</a></td>
-                                                            <td class="order-detail__cell order-detail__cell--count">{{resrow.count}}</td>
+                                                            <td class="order-detail__cell order-detail__cell--article">{{resrows4Display[rowIdx].product}}</td>
+                                                            <td class="order-detail__cell"><a v-bind:href="resrows4Display[rowIdx].serviceLink" class="order-detail__link">{{resrows4Display[rowIdx].serviceName}}</a></td>
+                                                            <td class="order-detail__cell order-detail__cell--count">{{resrows4Display[rowIdx].count}}</td>
                                                             <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
                                                             <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
                                                         </tr> 
                                                     </table>
                                                 </td>
-                                                <td class="last-orders__lc">{{resrow.lc}}</td>
-                                                <td>{{resrow.source}}</td>
-                                                <td>{{resrow.costStatus}}</td>
-                                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrow.implStatus">{{resrow.implStatusName}}</span></td>
+                                                <td class="last-orders__lc">{{resrows4Display[rowIdx].lc}}</td>
+                                                <td>{{resrows4Display[rowIdx].source}}</td>
+                                                <td>{{resrows4Display[rowIdx].costStatus}}</td>
+                                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrows4Display[rowIdx].implStatus">{{resrows4Display[rowIdx].implStatusName}}</span></td>
                                                 <td class="last-orders__actions">
                                                     <div class="js-order-actions-holder">
-                                                        <a v-for="btn in resrow.actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrow.orderId" v-bind:data-product-id="resrow.productId">{{btn.name}}</a>
+                                                        <a v-for="btn in resrows4Display[rowIdx].actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrows4Display[rowIdx].orderId" v-bind:data-product-id="resrows4Display[rowIdx].productId">{{btn.name}}</a>
                                                         
                                                     </div>
                                                 </td>
@@ -341,61 +160,231 @@
                                 </div>
                             </div>
                         </template>
-
-
-
-                        <div id="v-results">
-                            <div class="orders-wrap" id="v-results__holder" style="margin-top: 30px;">
-                                <div class="results">
-                                    <div class="results__top">
-                                        <div class="row row--flex row--vcenter">
-                                            <div class="col-sm-4">
-                                                Показано <span class="results__count">15</span> из <span class="results__count">65</span> заказов
-                                            </div>
-                                            <div class="col-sm-4 inline-align inline-align--center">
-                                                Выводить по 
-                                                <div class="pagination pagination--results">
-                                                    <div class="pagination__list pagination__list--inline-block">
-                                                        <div class="pagination__item"><a href="#" class="pagination__link">15</a></div>
-                                                        <div class="pagination__item"><a href="#" class="pagination__link">50</a></div>
-                                                        <div class="pagination__item"><a href="#" class="pagination__link">100</a></div>
+                        
+                        <div  id="v-results">
+                            <div class="shadow-block shadow-block--radius shadow-block--mb0">
+                                <form action="" method="POST" id="v-filter-form" v-on:submit='submitHdl' >
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div class="form__label form__label--mt0">Категория</div>
+                                                        <div class="select">
+                                                            <select name="category" id="js-category-filter" class="select__native">
+                                                                <option value="" data-subcat-id="0">Любая</option>
+                                                                <option value="9" data-subcat-id="9">Безопасность для семьи и дома</option>
+                                                                <option value="10" data-subcat-id="10">Установка и обслуживание приборов учета</option>
+                                                                <option value="11" data-subcat-id="11">Бытовые и сервисные услуги</option>
+                                                                <option value="16" data-subcat-id="16">Специальные услуги</option>
+                                                                <option value="17" data-subcat-id="17">Документы</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                </div> записей
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Подкатегория</div>
+                                                        <div class="select">
+                                                            <select name="subcategory" id="js-subcategory-filter__0" class="select__native select-filter is-active js-subcategory-filter" data-subcat-id="0">
+                                                                <option value="">Все подкатегории</option>
+                                                            </select>
+                                                            <select name="subcategory9" id="js-subcategory-filter__9" class="select__native select-filter  js-subcategory-filter" data-subcat-id="9">
+                                                                <option value="">Все подкатегории</option>
+                                                                <option value="20">Сигнализация</option>
+                                                                <option value="21">Видеонаблюдение</option>
+                                                            </select>
+                                                            <select name="subcategory10" id="js-subcategory-filter__10" class="select__native select-filter  js-subcategory-filter" data-subcat-id="10">
+                                                                <option value="">Все подкатегории</option>
+                                                                <option value="22">Установка счетчиков воды</option>
+                                                                <option value="23">Поверка счетчиков воды</option>
+                                                            </select>
+                                                            <select name="subcategory11" id="js-subcategory-filter__11" class="select__native select-filter  js-subcategory-filter" data-subcat-id="11">
+                                                                <option value="">Все подкатегории</option>
+                                                                <option value="24">Электромонтажные работы</option>
+                                                                <option value="25">Сантехнические работы</option>
+                                                                <option value="26">Мелкий бытовой ремонт</option>
+                                                                <option value="27">Клининговые услуги</option>
+                                                            </select>
+                                                            <select name="subcategory16" id="js-subcategory-filter__16" class="select__native select-filter  js-subcategory-filter" data-subcat-id="16">
+                                                                <option value="">Все подкатегории</option>
+                                                            </select>
+                                                            <select name="subcategory17" id="js-subcategory-filter__17" class="select__native select-filter  js-subcategory-filter" data-subcat-id="17">
+                                                                <option value="">Все подкатегории</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-4 inline-align inline-align--right">
-                                                Выгрузить отчет в&nbsp;&nbsp;
-                                                <div class="select select--aw select--baseline">
-                                                    <select name="" id="" class="js-select-open-new-tab">
-                                                        <option value="0" disabled selected>формате</option>
-                                                        <option value="http://zkh2.dev2.msoft.su/download?format=xls">XLS</option>
-                                                        <option value="http://zkh2.dev2.msoft.su/download?format=csv">CSV</option>
-                                                        <option value="http://zkh2.dev2.msoft.su/download?format=xml">XML</option>
-                                                    </select> 
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Источник:</div>
+                                                        <div class="select">
+                                                            <select name="source" class="select__native">
+                                                                <option value="">Любой</option>
+                                                                <option value="site">Сайт</option>
+                                                                <option value="app">Приложение</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Статус заказа</div>
+                                                        <div class="select">
+                                                            <select name="status" class="select__native">
+                                                                <option value="">Любой</option>
+                                                                <option value="G">Не обслуживается</option>
+                                                                <option value="N">В обработке</option>
+                                                                <option value="T">Новый</option>
+                                                                <option value="A">Назначен</option>
+                                                                <option value="R">Принят в работу</option>
+                                                                <option value="P">Выполняется</option>
+                                                                <option value="F">Выполнен</option>
+                                                                <option value="C">Закрыт</option>
+                                                                <option value="D">Отменен</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="results__main-content">
-                                        <div class="last-orders">
-                                            
-                                            <div v-show='!load' class="last-orders__loading">
-                                                <div class="loading"></div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Статус оплаты</div>
+                                                        <div class="select">
+                                                            <select name="payed" class="select__native">
+                                                                <option value="">Любой</option>
+                                                                <option value="Y">Оплачен</option>
+                                                                <option value="N">Ожидает оплаты</option>
+                                                                <option value="D">Долг</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Способ оплаты:</div>
+                                                        <div class="select">
+                                                            <select name="pay_system" class="select__native">
+                                                                <option value="">Любой</option>
+                                                                <option value="1">Наличный расчет</option>
+                                                                <option value="9">Банковская карта</option>
+                                                                <option value="10">Розовый бланк</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div v-show='load'>
-                                                <component is="results-rows"></component>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Лицевой счет:</div>
+                                                        <input type="tel" class="input" name="lc" v-model="filterParams.lc"> </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Дата заказа</div>
+                                                        <div class="row row--10px">
+                                                            <div class="col-xs-6">
+                                                                <div class="form__date-holder">
+                                                                    <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="start_date" value="" id="dp1509555460624" v-model="filterParams.start_date"> </div>
+                                                            </div>
+                                                            <div class="col-xs-6">
+                                                                <div class="form__date-holder">
+                                                                    <input type="tel" class="input input--date js-datepicker hasDatepicker" placeholder="дд.мм.гггг" name="end_date" value="" id="dp1509555460625" v-model="filterParams.end_date"> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            
-
-                                            
-                                
                                         </div>
                                     </div>
-                                    <div class="results__bottom">
-                                        @@include('./pagination.html')
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form__row form__row--middle form__row--not-last">
+                                                        <div for="" class="form__label form__label--mt0">Поиск</div>
+                                                        <input type="text" class="input" name="search" value=""> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-sm-6 inline-align">
+                                                    <div class="form__label form__label--mt0 hidden-xs">&nbsp;</div>
+                                                    <button class="button button--fw button--xs-normal" type="submit" value="Y" name="use_filter">Применить</button>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form__label form__label--mt0">&nbsp;</div>
+                                                    <button class="button button--no-fill button--fw button--xs-normal filter-reset" type="submit" value="Y" name="reset_filter">Сброс</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form> 
+                            </div>
+
+                            <div>
+                                <div class="orders-wrap" id="v-results__holder" style="margin-top: 30px;">
+                                    <div class="results">
+                                        <div class="results__top">
+                                            <div class="row row--flex row--vcenter">
+                                                <div class="col-sm-4">
+                                                    Показано <span class="results__count">15</span> из <span class="results__count">65</span> заказов
+                                                </div>
+                                                <div class="col-sm-4 inline-align inline-align--center">
+                                                    Выводить по 
+                                                    <div class="pagination pagination--results">
+                                                        <div class="pagination__list pagination__list--inline-block">
+                                                            <div class="pagination__item"><a href="#" class="pagination__link">15</a></div>
+                                                            <div class="pagination__item"><a href="#" class="pagination__link">50</a></div>
+                                                            <div class="pagination__item"><a href="#" class="pagination__link">100</a></div>
+                                                        </div>
+                                                    </div> записей
+                                                </div>
+                                                <div class="col-sm-4 inline-align inline-align--right">
+                                                    Выгрузить отчет в&nbsp;&nbsp;
+                                                    <div class="select select--aw select--baseline">
+                                                        <select name="" id="" class="js-select-open-new-tab">
+                                                            <option value="0" disabled selected>формате</option>
+                                                            <option value="http://zkh2.dev2.msoft.su/download?format=xls">XLS</option>
+                                                            <option value="http://zkh2.dev2.msoft.su/download?format=csv">CSV</option>
+                                                            <option value="http://zkh2.dev2.msoft.su/download?format=xml">XML</option>
+                                                        </select> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="results__main-content">
+                                            <div class="last-orders">
+                                                
+                                                <div v-show='!load' class="last-orders__loading">
+                                                    <div class="loading"></div>
+                                                </div>
+                                                <div v-show='load'>
+                                                    <component is="results-rows" v-bind:lc="rowsFilterParams.lc" v-bind:show-all="showAll"></component>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="results__bottom">
+                                            @@include('./pagination.html')
+                                        </div>
                                     </div>
                                 </div>
+                            </div> 
                         </div>
-                        </div>
+                        
 
                         <!-- /Контентная часть -->
 
