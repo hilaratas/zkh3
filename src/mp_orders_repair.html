@@ -25,28 +25,7 @@
     </div>
 
     @@include('./html_include/widget.html')
-
+    
     @@include('./html_include/scripts.html')
-
-    <!-- /Не копировать на сайт -->
-    <!-- Скрипты из script.js аналогичного раздела с запрограммированного сайта -->
-    <script>
-        setTimeout(function updateOrderList() {
-            $.ajax({
-                url: '/ajax/updateAgentOrderList.html',
-                type: 'get',
-                data: {type: 'operator'},
-                success: function(html) {
-                    if (html.length) {
-                        $('#js-results-holder').html(html);
-                        $('#js-results-block').trigger('update');
-                    }
-                }
-            });
-            setTimeout(updateOrderList, 10000);
-        }, 10000);
-    </script>
-    <!-- /Не копировать на сайт -->
-
 </body>
 </html>
