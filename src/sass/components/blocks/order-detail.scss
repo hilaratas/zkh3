@@ -76,6 +76,10 @@
 			width: 110px;
 			padding-right: 10px;
 		}
+		&.order-detail__cell--full-cost {
+			width: 120px;
+			white-space: nowrap;
+		}
 	}
 
 	&__link {

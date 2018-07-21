@@ -92,6 +92,7 @@ $lo-lh-ratio: 1.4;
 		&--count { width: 55px; }
 		&--price { width: 95px;	}
 		&--cost { width: 95px; }
+		&--full-cost { width: 120px; }
 	}
 	&__rub { position: relative;
 		&:before { position: absolute; content: ""; top: 50%; margin-top: 2px; left: 0; right: 0; border-top: 1px solid $color-brand-1; }

@@ -115,13 +115,16 @@
                                     <table class="last-orders__table no-rotate no-scroll">
                                         <thead>
                                             <tr>
-                                                <th class="last-orders__th last-orders__number">#</th>
-                                                <th class="last-orders__th last-orders__date">Дата</th>
-                                                <th class="last-orders__th last-orders__article">Арт.</th>
-                                                <th class="last-orders__th">Услуга</th>
-                                                <th class="last-orders__th last-orders__th--count">Кол-<br>во</th>
-                                                <th class="last-orders__th last-orders__th--price">Цена</th>
-                                                <th class="last-orders__th last-orders__th--cost">Стоимость</th>
+                                                <th class="last-orders__th" colspan="2">
+                                                    <table>
+                                                        <tr>
+                                                            <th class="last-orders__th last-orders__number">#</th>
+                                                            <th class="last-orders__th last-orders__date">Дата</th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="last-orders__th"><b>Арт.</b>: Услуга</th>
+                                                <th class="last-orders__th last-orders__th--full-cost">Цена * Кол-во = Стоимость</th>
                                                 <th class="last-orders__th last-orders__lc">Лицевой счет</th>
                                                 <th class="last-orders__th last-orders__source">Источник</th>
                                                 <th class="last-orders__th last-orders__payment-status">Статус<br>оплаты</th>
@@ -131,27 +134,24 @@
                                         </thead>
                                         <tbody>
                                             <tr v-for="rowIdx in rowIdxs" v-bind:id="'last-orders__row--' + resrows4Display[rowIdx].id + '-' + resrows4Display[rowIdx].productId">
-                                                <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrows4Display[rowIdx].id}}</a></td>
-                                                <td class="last-orders__date">{{resrows4Display[rowIdx].date}}<br>{{resrows4Display[rowIdx].time}}</td>
-                                                <td colspan="5">
+                                                <td colspan="2" class="last-orders__number" data-label="Заказ / Дата">
                                                     <table class="order-detail no-rotate">
                                                         <tr>
-                                                            <td class="order-detail__cell order-detail__cell--article">{{resrows4Display[rowIdx].product}}</td>
-                                                            <td class="order-detail__cell"><a v-bind:href="resrows4Display[rowIdx].serviceLink" class="order-detail__link">{{resrows4Display[rowIdx].serviceName}}</a></td>
-                                                            <td class="order-detail__cell order-detail__cell--count">{{resrows4Display[rowIdx].count}}</td>
-                                                            <td class="order-detail__cell order-detail__cell--price">1000 <span class="last-orders__rub">Р</span></td>
-                                                            <td class="order-detail__cell order-detail__cell--cost">1000 <span class="last-orders__rub">Р</span></td>
-                                                        </tr> 
+                                                            <td class="last-orders__number"><a href="#" class="last-orders__link2">{{resrows4Display[rowIdx].id}}</a></td>
+                                                            <td class="last-orders__date">{{resrows4Display[rowIdx].date}} <br class="hidden-xs"> {{resrows4Display[rowIdx].time}}</td>
+                                                        </tr>
                                                     </table>
                                                 </td>
-                                                <td class="last-orders__lc">{{resrows4Display[rowIdx].lc}}</td>
-                                                <td>{{resrows4Display[rowIdx].source}}</td>
-                                                <td>{{resrows4Display[rowIdx].costStatus}}</td>
-                                                <td><span class="last-orders__status js-order-status" v-bind:data-status="resrows4Display[rowIdx].implStatus">{{resrows4Display[rowIdx].implStatusName}}</span></td>
-                                                <td class="last-orders__actions">
+                                                <td class="order-detail__cell" data-label="Арт.: Услуга"><a v-bind:href="resrows4Display[rowIdx].serviceLink" class="order-detail__link"><b>{{resrows4Display[rowIdx].productId}}</b>: {{resrows4Display[rowIdx].serviceName}}</a></td>
+                                                <td class="order-detail__cell order-detail__cell--full-cost" data-label="Цена * Кол-во = Стоимость">{{resrows4Display[rowIdx].count}} * 1000 = 1000 <span class="last-orders__rub">Р</span></td>
+                                                </td>
+                                                <td class="last-orders__lc" data-label="Лицевой счет">{{resrows4Display[rowIdx].lc}}</td>
+                                                <td data-label="Источник">{{resrows4Display[rowIdx].source}}</td>
+                                                <td data-label="Статус оплаты">{{resrows4Display[rowIdx].costStatus}}</td>
+                                                <td data-label="Статус выполнения"><span class="last-orders__status js-order-status" v-bind:data-status="resrows4Display[rowIdx].implStatus" data-label="Статус вылнения">{{resrows4Display[rowIdx].implStatusName}}</span></td>
+                                                <td class="last-orders__actions" data-label="Действия" >
                                                     <div class="js-order-actions-holder">
-                                                        <a v-for="btn in resrows4Display[rowIdx].actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrows4Display[rowIdx].orderId" v-bind:data-product-id="resrows4Display[rowIdx].productId">{{btn.name}}</a>
-                                                        
+                                                        <a v-for="btn in resrows4Display[rowIdx].actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrows4Display[rowIdx].orderId" v-bind:data-product-id="resrows4Display[rowIdx].productId">{{btn.name}}</a> 
                                                     </div>
                                                 </td>
                                             </tr>
