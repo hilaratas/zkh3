@@ -41,7 +41,25 @@ export default function () {
 			};
 
 			ws.onerror = function(err) {
-				console.log('Произошла ошибка', err);
+				var popupHtml = `<div class="popup">
+				        <div class="popup__header-holder">
+				            <div class="popup-toggle-menu">
+				                <div class="popup-toggle-menu__list">
+				                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Внимание!</span></div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="popup__text-holder">
+				        	Соединение с сервером разорвано. <br> Данные в таблице не обновляются
+				        </div>
+				    </div>`;
+
+				$.magnificPopup.open({
+				  items: {
+				    src: popupHtml,
+				    type: 'inline'
+				  }
+				});
 			}
 
 			ws.onmessage = function(event) {
@@ -51,11 +69,28 @@ export default function () {
 			}
 
 			ws.onclose = function(event) {
-				if (ws.wasClean) {
-					alert("Соединение закрыто чисто");
-				} else {
-					alert("Соединение закрытом в экстренном порядке");
-				}
+				if (!ws.wasClean) return;
+
+				var popupHtml = `<div class="popup">
+				        <div class="popup__header-holder">
+				            <div class="popup-toggle-menu">
+				                <div class="popup-toggle-menu__list">
+				                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Внимание!</span></div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="popup__text-holder">
+				        	Соединение с сервером разорвано
+				        </div>
+				    </div>`;
+
+				$.magnificPopup.open({
+				  items: {
+				    src: popupHtml, // can be a HTML string, jQuery object, or CSS selector
+				    type: 'inline'
+				  }
+				});
+
 			}
 
 			Object.assign(this.oresrows, window.oresrows);
