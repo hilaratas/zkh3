@@ -34,7 +34,8 @@ export default function () {
 			rowsFilterParams: rowsFilterParams
 		},
 		created: function () {
-			var ws = new WebSocket("ws://127.0.0.1:8080/soket.js");
+			var ws = new WebSocket("ws://127.0.0.1:8080/mp_orders_repair.js");
+			var self = this;
 			ws.onopen = function(){
 				console.log("Соединение установлено");
 			};
@@ -44,7 +45,9 @@ export default function () {
 			}
 
 			ws.onmessage = function(event) {
-
+				var data = event.data;
+				self.oresrows = JSON.parse(data);
+				console.log(self.oresrows);
 			}
 
 			ws.onclose = function(event) {
