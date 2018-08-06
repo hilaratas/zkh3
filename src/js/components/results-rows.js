@@ -3,28 +3,13 @@ import {bntStatuses} from '../database';
 import {bntLinks} from '../database';
 import {getNameByStatus} from '../utils/utils-common.js';
 
-var oresrows = {};
-
-Object.assign(oresrows, window.oresrows);
-
 export var resultsRows = {
 	name: 'results-rows',
 	template: "#results-rows-template",
-	props: { filterSubmitted: Boolean, lc: Number, showAll: Boolean},
+	props: { filterSubmitted: Boolean, lc: Number, showAll: Boolean, oresrows: Array},
 	data: function() {
 		return {
-			searchParams: ['id', 'serviceName', 'lc'],
-			oresrows: oresrows
-		}
-	},
-	created: function () {
-		var ws = new WebSocket("ws://127.0.0.1:8080/soket.js");
-		ws.onopen = function(){
-			console.log("Соединение установлено");
-		};
-
-		ws.onerror = function(err) {
-			console.log('Произошла ошибка', err);
+			searchParams: ['id', 'serviceName', 'lc']
 		}
 	},
 	computed: {

@@ -109,7 +109,7 @@
                         </script>
 
 
-                        <template id="results-rows-template" >
+                        <template id="results-rows-template">
                             <div class="table-responsive-wrap">
                                 <div class="table-responsive">
                                     <table class="last-orders__table no-rotate no-scroll">
@@ -373,7 +373,7 @@
                                                     <div class="loading"></div>
                                                 </div>
                                                 <div v-show='load'>
-                                                    <component is="results-rows" v-bind:lc="rowsFilterParams.lc" v-bind:show-all="showAll"></component>
+                                                    <component is="results-rows" v-bind:lc="rowsFilterParams.lc" v-bind:show-all="showAll" v-bind:oresrows="oresrows"></component>
                                                 </div>
                                             </div>
                                         </div>

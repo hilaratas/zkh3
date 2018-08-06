@@ -13,7 +13,7 @@ export default function () {
 		return;
 	}
 
-	var oresrows = {};
+	var oresrows = [];
 	var oldFilterParams = {};
 	var rowsFilterParams = {};
 
@@ -29,8 +29,36 @@ export default function () {
 			showAll: true,
 			filterSubmitted: false,
 			filterParams: window.filterParams,
+			oresrows: [],
 			oldFilterParams: oldFilterParams,
 			rowsFilterParams: rowsFilterParams
+		},
+		created: function () {
+			var ws = new WebSocket("ws://127.0.0.1:8080/soket.js");
+			ws.onopen = function(){
+				console.log("Соединение установлено");
+			};
+
+			ws.onerror = function(err) {
+				console.log('Произошла ошибка', err);
+			}
+
+			ws.onmessage = function(event) {
+
+			}
+
+			ws.onclose = function(event) {
+				if (ws.wasClean) {
+					alert("Соединение закрыто чисто");
+				} else {
+					alert("Соединение закрытом в экстренном порядке");
+				}
+			}
+
+			Object.assign(this.oresrows, window.oresrows);
+
+			return this.oresrows;
+
 		},
 		mounted: function() {
 			this.load = true;
