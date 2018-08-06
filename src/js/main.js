@@ -1,3 +1,4 @@
+//import Vue from 'vue';
 import breakpoints from './components/breakpoints';
 import sliders from './components/sliders';
 import gumburger from './components/gumburger';

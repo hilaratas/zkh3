@@ -35,7 +35,9 @@ var	gulp = require('gulp'),
     run = require('run-sequence').use(gulp),
     zip = require('gulp-zip'),
     webpack = require('webpack-stream'),
-    webpackConfig = require('./webpack.config.js');
+    webpackConfig = require('./webpack.config.js'),
+    vueify = require('vueify');
+
 
 var path = {
 	src: {

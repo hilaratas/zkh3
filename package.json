@@ -14,11 +14,13 @@
     "async": "^2.1.4",
     "babel-core": "latest",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browser-sync": "latest",
     "browserify": "latest",
     "del": "latest",
+    "express": "^4.16.3",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-cheerio": "latest",
@@ -50,6 +52,7 @@
     "gulp-watch": "latest",
     "gulp-zip": "^4.0.0",
     "gulp.spritesmith": "latest",
+    "http": "0.0.0",
     "imagemin-pngquant": "latest",
     "owl.carousel": "^2.2.0",
     "path": "^0.12.7",
@@ -58,11 +61,18 @@
     "run-sequence": "^1.2.2",
     "vinyl-buffer": "latest",
     "vinyl-source-stream": "latest",
-    "webpack": "^2.4.1",
-    "webpack-stream": "^3.2.0"
+    "vue": "^2.5.16",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^15.2.6",
+    "vue-style-loader": "^4.1.1",
+    "vue-template-compiler": "^2.5.16",
+    "vueify": "^9.4.1",
+    "webpack": "^4.16.2",
+    "webpack-stream": "^3.2.0",
+    "ws": "^5.2.2"
   },
   "dependencies": {
-    "node-static": "^0.7.10",
-    "ws": "^5.2.0"
+    "css-loader": "^1.0.0",
+    "node-static": "^0.7.10"
   }
 }
