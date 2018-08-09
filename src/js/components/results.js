@@ -65,12 +65,9 @@ export default function () {
 			ws.onmessage = function(event) {
 				var data = event.data;
 				self.oresrows = JSON.parse(data);
-				console.log(self.oresrows);
 			}
 
 			ws.onclose = function(event) {
-				if (!ws.wasClean) return;
-
 				var popupHtml = `<div class="popup">
 				        <div class="popup__header-holder">
 				            <div class="popup-toggle-menu">
@@ -80,7 +77,7 @@ export default function () {
 				            </div>
 				        </div>
 				        <div class="popup__text-holder">
-				        	Соединение с сервером разорвано
+				        	Соединение с сервером разорвано <br> Данные в таблице не обновляются
 				        </div>
 				    </div>`;
 

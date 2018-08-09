@@ -1,10 +1,14 @@
-function newArray(arr) {
+function newOrder(arr) {
   var res = arr.slice();
   var length = res.length;
+  var randIx;
+  var newEl = {};
 
-  for (let i = 0; i < 5; i++ ) {
-    var rand = randomInteger(0,length);
-    res.unshift(arr[rand]);
+  for (let i = 0; i < 1; i++ ) {
+    randIx = randomInteger(0,length);
+    Object.assign(newEl, arr[randIx]);
+    newEl.millitime = Date.now();
+    res.unshift(newEl);
   }
 
   return res;
@@ -17,4 +21,4 @@ function newArray(arr) {
 
 }
 
-module.exports = newArray;
+module.exports = newOrder;
