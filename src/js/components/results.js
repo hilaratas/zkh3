@@ -44,13 +44,13 @@ export default function () {
 				self.oresrows = JSON.parse(data);
 			}
 
+			Object.assign(this.oresrows, window.oresrows);
+
 			return this.oresrows;
 
 		},
 		mounted: function() {
 			this.load = true;
-
-			Object.assign(this.oresrows, window.oresrows);
 		},
 		methods: {
 			submitHdl: function(event) {
