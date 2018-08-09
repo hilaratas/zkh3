@@ -3,6 +3,8 @@ import {bntStatuses} from '../database';
 import {bntLinks} from '../database';
 import {getNameByStatus} from '../utils/utils-common.js';
 import {resultsRows} from '../components/results-rows.js';
+import ws from '../components/socket.js';
+
 
 export default function () {
 
@@ -34,69 +36,21 @@ export default function () {
 			rowsFilterParams: rowsFilterParams
 		},
 		created: function () {
-			var ws = new WebSocket("ws://127.0.0.1:8080/mp_orders_repair.js");
 			var self = this;
-			ws.onopen = function(){
-				console.log("Соединение установлено");
-			};
+			var wsInst = ws("ws://127.0.0.1:8080/mp_orders_repair.js",); 	
 
-			ws.onerror = function(err) {
-				var popupHtml = `<div class="popup">
-				        <div class="popup__header-holder">
-				            <div class="popup-toggle-menu">
-				                <div class="popup-toggle-menu__list">
-				                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Внимание!</span></div>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="popup__text-holder">
-				        	Соединение с сервером разорвано. <br> Данные в таблице не обновляются
-				        </div>
-				    </div>`;
-
-				$.magnificPopup.open({
-				  items: {
-				    src: popupHtml,
-				    type: 'inline'
-				  }
-				});
-			}
-
-			ws.onmessage = function(event) {
+			wsInst.onmessage = function(event) {
 				var data = event.data;
 				self.oresrows = JSON.parse(data);
 			}
-
-			ws.onclose = function(event) {
-				var popupHtml = `<div class="popup">
-				        <div class="popup__header-holder">
-				            <div class="popup-toggle-menu">
-				                <div class="popup-toggle-menu__list">
-				                    <div class="popup-toggle-menu__item"><span class="popup-toggle-menu__link is-active">Внимание!</span></div>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="popup__text-holder">
-				        	Соединение с сервером разорвано <br> Данные в таблице не обновляются
-				        </div>
-				    </div>`;
-
-				$.magnificPopup.open({
-				  items: {
-				    src: popupHtml, // can be a HTML string, jQuery object, or CSS selector
-				    type: 'inline'
-				  }
-				});
-
-			}
-
-			Object.assign(this.oresrows, window.oresrows);
 
 			return this.oresrows;
 
 		},
 		mounted: function() {
 			this.load = true;
+
+			Object.assign(this.oresrows, window.oresrows);
 		},
 		methods: {
 			submitHdl: function(event) {

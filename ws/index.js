@@ -87,12 +87,12 @@ webSocketServer.on('connection', function(ws) {
     ws.send(JSON.stringify(oresrows), function(error) {
       // handle errors 
     });
-  }, 2000);
+  }, 5000);
 
   console.log('WebSocketServer: клиент подключился');
 
   ws.on('close', function() {
-    console.log('ebSocketServer: клиент отключился');
+    console.log('WebSocketServer: клиент отключился');
     clearInterval(timer);
   });
 });
