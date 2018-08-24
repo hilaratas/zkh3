@@ -18,8 +18,8 @@ export const bntStatuses = {
 }
 
 export const bntLinks = {
-	'appoint' : '#popup-assign-master',
-	'cancel' : '#popup-cancel',
-	'close' : '#popup-change-status',
-	'open' : '#popup-change-status'
+	'appoint' : '#popup-plug',
+	'cancel' : '#popup-plug',
+	'close' : '#popup-plug',
+	'open' : '#popup-plug'
 }

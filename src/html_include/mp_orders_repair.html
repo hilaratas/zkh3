@@ -133,7 +133,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr v-for="rowIdx in rowIdxs" v-bind:id="'last-orders__row--' + resrows4Display[rowIdx].id + '-' + resrows4Display[rowIdx].productId" v-bind:key="resrows4Display[rowIdx].millitime">
+                                            <tr class="last-orders__row" v-for="rowIdx in rowIdxs" v-bind:id="resrows4Display[rowIdx].millitime" v-bind:key="resrows4Display[rowIdx].millitime" >
                                                 <td colspan="2" class="last-orders__number" data-label="Заказ / Дата">
                                                     <table class="order-detail no-rotate">
                                                         <tr>
@@ -151,7 +151,7 @@
                                                 <td data-label="Статус выполнения"><span class="last-orders__status js-order-status" v-bind:data-status="resrows4Display[rowIdx].implStatus" data-label="Статус вылнения">{{resrows4Display[rowIdx].implStatusName}}</span></td>
                                                 <td class="last-orders__actions" data-label="Действия" >
                                                     <div class="js-order-actions-holder">
-                                                        <a v-for="btn in resrows4Display[rowIdx].actions" v-bind:href="btn.link" class="button button--no-fill js-popup-form-ajax" v-bind:data-order-id="resrows4Display[rowIdx].orderId" v-bind:data-product-id="resrows4Display[rowIdx].productId">{{btn.name}}</a> 
+                                                        <a v-for="btn in resrows4Display[rowIdx].actions" v-bind:data-src="btn.link" href="javascript:;" v-on:click="popupHdl()" class="button button--no-fill" v-bind:data-order-id="resrows4Display[rowIdx].orderId" v-bind:data-product-id="resrows4Display[rowIdx].productId">{{btn.name}}</a> 
                                                     </div>
                                                 </td>
                                             </tr>

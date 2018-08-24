@@ -86,6 +86,27 @@ export var resultsRows = {
 		},
 		isEmptySearchQ: function(lc){
 			return !lc;
+		},
+		popupHdl: function(){
+			var btn = event.target;
+			var target = btn.getAttribute('data-src');
+			var row = btn.closest('tr');
+
+			row.classList.add('is-selected');
+			$.fancybox.open({
+				src  : target,
+				type : 'inline',
+				opts : {
+					beforeClose: function( instance, current ) {
+						var $opElem = instance.$lastFocus;
+						var $row = $opElem.closest('tr');
+
+						$row.removeClass('is-selected');			
+					} 
+				}
+			});
+
+			return false;
 		}
 	}
 };

@@ -45,6 +45,7 @@ import uslugi from './components/uslugi';
 import sticky from './components/sticky';
 import kladr from './components/kladr';
 import results from './components/results';
+import fancy from './components/fancy';
 
 
 $(function(){
@@ -94,6 +95,7 @@ $(function(){
     sticky();
     kladr();
     results();
+    fancy();
 });
 
 

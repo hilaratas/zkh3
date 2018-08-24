@@ -159,4 +159,9 @@ $lo-lh-ratio: 1.4;
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+
+	&__row {
+		transition: background 0.3s;
+		&.is-selected { background-color: $red-brand-1;}
+	}
 }
