@@ -69,7 +69,7 @@
     "vueify": "^9.4.1",
     "webpack": "^4.16.2",
     "webpack-stream": "^3.2.0",
-    "ws": "^5.2.2"
+    "ws": "^7.4.6"
   },
   "dependencies": {
     "css-loader": "^1.0.0",
